@@ -33,6 +33,22 @@ Migration tests and publication results are recorded in the infrastructure
 repository. Historical deployment evidence is retained locally; it is not
 re-executed or represented as a new production deployment by the import.
 
+### Current publication blocker
+
+GitHub created all ten repositories and accepted the initial code pushes for web,
+node, miner and explorer. Their remote commits were verified at that time. The
+protocol push then received an Internal Server Error. Subsequent Git access reports
+`Your account is suspended`, and the GitHub API independently reports HTTP 403
+`Sorry. Your account was suspended` for `flybrainwork`.
+
+All remaining code and English documents are retained in local component Git
+repositories. Their upload is pending account restoration; it has not been
+reported as completed. SSH can still recognize the key's login while repository
+access is suspended, so that greeting alone is not proof that access has recovered.
+The account owner must resolve the platform suspension with GitHub Support.
+Resume normal, verified pushes using the same business/source commits afterward;
+do not route around the suspension with the retired account or another identity.
+
 ## Marketplace progress
 
 The ten-project/five-product catalog, eight draft price templates, additive
