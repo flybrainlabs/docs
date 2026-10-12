@@ -70,12 +70,42 @@ finalized commitment; exact supply, pool balances and Metaplex fungible metadata
 were independently read back. Mint authority is revoked; freeze authority is
 absent. Metadata update authority remains with the supplied test wallet.
 
-The three test token accounts are controlled by that wallet. They are not a
-completed service-contract escrow, reward-distribution or historical-claim loop.
+The initial three token accounts were controlled by that wallet. Wallet mining
+V3 subsequently adopted the same supply into the program-controlled fixed pools.
+The two-FBW Devnet discovery acceptance budget has been paid; this does not
+complete service-contract escrow or historical-claim business flows.
 Existing production and formal FLY configuration remain unchanged. See the
 contract repository's `deploy/fbw-devnet.json` and `tools/fbw-devnet/README.md`
 for public receipts and repeatable verification. Private wallet/mint/account keys
 and the transaction journal stay outside repositories and website artifacts.
+
+## Wallet mining V3 Devnet acceptance
+
+The prospective finite plan paid two different complete-model discovery units
+under one funded miner grant. Each payment atomically wrote a canonical 1024-byte
+Result and transferred 100,000,000 atoms (one FBW) to the original miner ATA.
+Both transactions are finalized. A holder burned ten atoms between the payments;
+the following payment and prior-payment recovery continued without reissuance.
+
+Program: `5yxjnH1PSk8iQKfK3ejG4jfSkewkTKfcpJygojdb6sam`.
+The wallet interface is published on the existing website; local and public
+Chromium each passed 24 read-only viewport/language/route checks.
+The initial two-unit budget is complete; new deposits and paid work stop until a
+new prospectively frozen budget and calibrated task supply are available.
+The first dedicated Result was closed with the real project signature and two
+archive attestations. The second Result remains readable. Actual finalized replay
+after closure charged no second rent and paid no duplicate token. The miner
+explicitly revoked the grant and withdrew 11,704,320 unused lamports.
+
+Evidence and commands: [wallet mining V3](WALLET_MINING_V3_EXECUTION.md).
+Local SBF: 60 main checks and 11 boundaries. Authority: 16 tests. SIWS/session:
+15 checks. Durable transport: nine checks. Browser: actual Chromium with seven
+mock Wallet Standard/RPC checks. Public Devnet: two complete-model winners,
+actual authorized full native replay and four close/refund checks.
+These are scripted local signing and mock-wallet browser evidence. Actual
+extension-wallet confirmation and physical Android acceptance remain unverified.
+One operator controls three verifier/signing identities; independent operation
+is not claimed. Mainnet and production funding remain disabled.
 
 ## Marketplace progress
 

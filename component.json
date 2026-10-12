@@ -15,11 +15,13 @@
     "docs/PROTOCOL_EN.md": "docs/PROTOCOL_EN.md",
     "docs/STATUS.md": "docs/STATUS.md",
     "docs/TESTNET_VERIFICATION.md": "docs/TESTNET_VERIFICATION.md",
+    "docs/WALLET_MINING_V3_EXECUTION.md": "docs/WALLET_MINING_V3_EXECUTION.md",
     "docs/WEB_VERIFICATION.md": "docs/WEB_VERIFICATION.md",
     "docs/WHITEPAPER_EN.md": "docs/WHITEPAPER_EN.md",
     "docs/WORKSPACE.md": "docs/WORKSPACE.md",
     "docs/history/v1/PROTOCOL_EN.md": "docs/history/v1/PROTOCOL_EN.md",
-    "docs/history/v1/WHITEPAPER_EN.md": "docs/history/v1/WHITEPAPER_EN.md"
+    "docs/history/v1/WHITEPAPER_EN.md": "docs/history/v1/WHITEPAPER_EN.md",
+    "docs/WALLET_MINING_V3_RESULT_LAYOUT.md": "docs/WALLET_MINING_V3_RESULT_LAYOUT.md"
   },
   "project": "flybrainlabs"
 }
