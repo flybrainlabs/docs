@@ -1,4 +1,4 @@
-# FlyPoW v0.2 local testnet verification — 2026-09-14
+# flybrainlabs v0.2 local testnet verification — 2026-09-14
 
 Service: `http://127.0.0.1:8787/`, managed by the local `flypow-web` user service. This is a local coordinator, not a deployed P2P mainnet.
 

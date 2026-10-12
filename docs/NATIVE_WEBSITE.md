@@ -1,4 +1,4 @@
-# FlyPoW native website
+# flybrainlabs native website
 
 This is the initial website delivery record. The current v0.2 release replaces the procedural fly with an official-data 3D brain, adds English/Chinese, wallets, validators, community and economics. See [TESTNET_VERIFICATION.md](TESTNET_VERIFICATION.md) for current checks; the historical results below describe the earlier implementation.
 

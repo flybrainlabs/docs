@@ -1,4 +1,4 @@
-# flybrain finite neural experiment protocol v1 — development build
+# flybrainlabs finite neural experiment protocol v1 — development build
 
 A browser Worker computes a deterministic control/stimulus experiment across the full registered MaleCNS graph. Independent processes replay the complete result. A native Solana program records each frozen scientific task once, conditional integer entitlements and storage escrow. Issuance occurs only after all required tasks are accepted, archived and sealed. Failed campaigns never mint and expose permissionless refunds to fixed recipients.
 

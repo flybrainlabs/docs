@@ -1,4 +1,4 @@
-# Flybrain assembled development workspace
+# flybrainlabs assembled development workspace
 
 This layout is generated from uniquely owned source components. It is not an
 additional maintained monorepo and has no publication remote. See

@@ -1,21 +1,21 @@
-# Flybrain repository architecture
+# flybrainlabs repository architecture
 
-The project is maintained by `flybrainwork` in ten repositories. The ownership
+The project is maintained by `flybrainlabs` in ten repositories. The ownership
 boundary separates code, not scientific identities or historical accounting.
 Every build input has exactly one owner in `component.json`.
 
 | Repository | Responsibility | Main consumers |
 | --- | --- | --- |
-| [web](https://github.com/flybrainwork/web) | Product website, atlas, public pages and export | Website visitors |
-| [node](https://github.com/flybrainwork/node) | Authority, archives, replay coordination, product and service APIs | Miner, SDK, projection writer |
-| [miner](https://github.com/flybrainwork/miner) | Native/WASM simulation, browser workers, storage and mining workflow | Browser miner, native replay |
-| [explorer](https://github.com/flybrainwork/explorer) | Public projection, independent query process and Explorer UI | Public readers |
-| [protocol](https://github.com/flybrainwork/protocol) | Versioned identity, receipt, task and financial primitives | Node, miner, SDK, contracts |
-| [contracts](https://github.com/flybrainwork/contracts) | Solana campaign and economic settlement programs | Authorized settlement clients |
-| [sdk](https://github.com/flybrainwork/sdk) | Codecs, wallet integration, request clients and outbox | Website, tools, developers |
-| [infra](https://github.com/flybrainwork/infra) | Dependency pins, workspace assembly, publication and operations | Maintainers and operators |
-| [research](https://github.com/flybrainwork/research) | Model preparation, calibration, task definitions and evaluation | Miner and scientific reviewers |
-| [docs](https://github.com/flybrainwork/docs) | English architecture, protocol, status and runbooks | Contributors and operators |
+| [web](https://github.com/flybrainlabs/web) | Product website, atlas, public pages and export | Website visitors |
+| [node](https://github.com/flybrainlabs/node) | Authority, archives, replay coordination, product and service APIs | Miner, SDK, projection writer |
+| [miner](https://github.com/flybrainlabs/miner) | Native/WASM simulation, browser workers, storage and mining workflow | Browser miner, native replay |
+| [explorer](https://github.com/flybrainlabs/explorer) | Public projection, independent query process and Explorer UI | Public readers |
+| [protocol](https://github.com/flybrainlabs/protocol) | Versioned identity, receipt, task and financial primitives | Node, miner, SDK, contracts |
+| [contracts](https://github.com/flybrainlabs/contracts) | Solana campaign and economic settlement programs | Authorized settlement clients |
+| [sdk](https://github.com/flybrainlabs/sdk) | Codecs, wallet integration, request clients and outbox | Website, tools, developers |
+| [infra](https://github.com/flybrainlabs/infra) | Dependency pins, workspace assembly, publication and operations | Maintainers and operators |
+| [research](https://github.com/flybrainlabs/research) | Model preparation, calibration, task definitions and evaluation | Miner and scientific reviewers |
+| [docs](https://github.com/flybrainlabs/docs) | English architecture, protocol, status and runbooks | Contributors and operators |
 
 ```mermaid
 flowchart LR

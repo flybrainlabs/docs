@@ -1,4 +1,4 @@
-# flybrain: Verifiable computation and finite-budget settlement V2
+# flybrainlabs: Verifiable computation and finite-budget settlement V2
 
 Version: 2026-10-11. Brain Simulation Mining is a verifiable computation network
 based on neural simulation. Make computation produce verifiable, reusable results.

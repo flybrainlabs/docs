@@ -21,33 +21,32 @@ were zero in the retained-cache public acceptance. Recovery testing used real OP
 with synthetic archives and quota injection; it does not prove recovery of a
 particular user's physical Android storage.
 
-## New repository migration
+## Current repository ownership and publication
 
-The maintained organization consists of ten actual source repositories: web,
-node, miner, explorer, protocol, contracts, sdk, infra, research and docs.
-Each component has an English README, ownership map and development policy.
-The assembler preserves import paths and pins dependency commits. GitHub SSH
-and API authentication have both been verified as `flybrainwork`.
+The owner selected `flybrainlabs` as both the project name and GitHub account on
+2026-10-12 and authorized recreating all ten component repositories: web, node,
+miner, explorer, protocol, contracts, sdk, infra, research and docs. Each has an
+English README, an ownership map and the English development agreement.
+See [project identity](PROJECT_IDENTITY.md) for the branding and compatibility
+policy and the infrastructure `release-manifest.json` for verified publication
+status and exact dependency revisions.
 
-Migration tests and publication results are recorded in the infrastructure
-repository. Historical deployment evidence is retained locally; it is not
-re-executed or represented as a new production deployment by the import.
+The replacement SSH key authenticates as `flybrainlabs`. CLI/API authentication
+is verified independently before repository creation. Repository access and exact
+remote commits must be checked even when SSH recognizes a key. Publication uses
+normal fast forwards to the new account and never falls back to a retired one.
 
-### Current publication blocker
+Historical deployment evidence is retained locally. Repository publication does
+not re-execute it or claim a new production deployment.
 
-GitHub created all ten repositories and accepted the initial code pushes for web,
-node, miner and explorer. Their remote commits were verified at that time. The
-protocol push then received an Internal Server Error. Subsequent Git access reports
-`Your account is suspended`, and the GitHub API independently reports HTTP 403
-`Sorry. Your account was suspended` for `flybrainwork`.
+### Historical migration attempt
 
-All remaining code and English documents are retained in local component Git
-repositories. Their upload is pending account restoration; it has not been
-reported as completed. SSH can still recognize the key's login while repository
-access is suspended, so that greeting alone is not proof that access has recovered.
-The account owner must resolve the platform suspension with GitHub Support.
-Resume normal, verified pushes using the same business/source commits afterward;
-do not route around the suspension with the retired account or another identity.
+The earlier `flybrainwork` account created ten repositories and accepted four
+initial source uploads before GitHub reported an account suspension. The protocol
+upload was unconfirmed and six uploads remained unverified or pending. Those
+records describe the earlier attempt only; they are not evidence of current
+`flybrainlabs` access or publication. Source commits and verified local bundles
+were retained during the account transition.
 
 ## Marketplace progress
 

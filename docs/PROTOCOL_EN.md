@@ -1,6 +1,6 @@
-# Flybrain: verifiable computation and finite settlement budgets V2
+# flybrainlabs: verifiable computation and finite settlement budgets V2
 
-Version: 2026-10-12. Flybrain is a neural simulation computation network.
+Version: 2026-10-12. flybrainlabs is a neural simulation computation network.
 Its purpose is to produce verifiable and reusable simulation results.
 
 ## Computation and scientific scope

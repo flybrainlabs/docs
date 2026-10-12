@@ -1,12 +1,12 @@
 > Archived historical FlyHash / local coordinator material. Not the current finite campaign.
 
-# flybrain protocol v0.2 — local testnet implementation
+# flybrainlabs protocol v0.2 — local testnet implementation
 
 > **Historical FlyHash specification.** Its nonce search, halving and legacy wallet rules are not the new campaign. Current browser whole-network experiment status and its uncalibrated limits are recorded in [RESEARCH_CAMPAIGN_STATUS_ZH.md](RESEARCH_CAMPAIGN_STATUS_ZH.md). No new Solana rewards or FLY mint are active.
 
 The public website at https://flybrain.work is a static research showcase: mining, staking, transfers and rewards are not live there. This brand update does not change existing protocol identifiers, address derivation, signatures or local balances.
 
-flybrain combines a fixed public connectome, deterministic FlyHash work, signed native wallets, bonded validator attestations and a fixed-supply reward ledger. The running service is a **local coordinator**, not an independent P2P mainnet.
+flybrainlabs combines a fixed public connectome, deterministic FlyHash work, signed native wallets, bonded validator attestations and a fixed-supply reward ledger. The running service is a **local coordinator**, not an independent P2P mainnet.
 
 ## Data and computation
 

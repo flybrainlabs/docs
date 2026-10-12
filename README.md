@@ -1,6 +1,8 @@
-# Flybrain docs
+# flybrainlabs docs
 
-English project documentation for [Flybrain](https://flybrain.work/).
+English project documentation for [flybrainlabs](https://flybrain.work/).
+See [project identity](docs/PROJECT_IDENTITY.md) for the required project name,
+repository ownership and publication language.
 
 ## Scope
 
@@ -16,7 +18,7 @@ Architecture, scientific and financial protocol, component ownership, contributo
 
 Each imported file has one owning repository. `component.json` maps maintained
 files into the shared build layout. Dependencies are pinned by commit in the
-[infrastructure release manifest](https://github.com/flybrainwork/infra/blob/main/release-manifest.json).
+[infrastructure release manifest](https://github.com/flybrainlabs/infra/blob/main/release-manifest.json).
 
 ## Build and test
 
@@ -28,17 +30,17 @@ the compatible Solana/Agave build tools.
 First assemble the exact source revisions:
 
 ```sh
-git clone https://github.com/flybrainwork/infra.git flybrain/infra
-python3 flybrain/infra/tools/workspace.py checkout --repos flybrain
-python3 flybrain/infra/tools/workspace.py assemble --repos flybrain --output flybrain-workspace
-cd flybrain-workspace
+git clone https://github.com/flybrainlabs/infra.git flybrainlabs/infra
+python3 flybrainlabs/infra/tools/workspace.py checkout --repos flybrainlabs
+python3 flybrainlabs/infra/tools/workspace.py assemble --repos flybrainlabs --output flybrainlabs-workspace
+cd flybrainlabs-workspace
 npm ci
 ```
 
 Run the applicable checks from the assembled workspace:
 
 ```sh
-python3 ../flybrain/infra/tools/check_sources.py --repos ../flybrain
+python3 ../flybrainlabs/infra/tools/check_sources.py --repos ../flybrainlabs
 ```
 
 This transition keeps the existing cross-component import paths intact. Cloning
@@ -57,16 +59,16 @@ production funds and addresses are never substituted.
 - All maintained documentation, commit messages, issues, PRs and release notes
   are written in English. Product interfaces may remain bilingual.
 - Completed, verified updates are committed and pushed automatically to
-  `flybrainwork/docs` using normal fast forwards.
+  `flybrainlabs/docs` using normal fast forwards.
 - Keys, wallets, customer inputs, node databases, private artifacts, browser
   profiles and model caches stay outside Git and website exports.
 - Production payment and reward configuration remains disabled until its actual
   asset identities, authorities, funds and operating gates are satisfied.
 
 See [AGENTS.md](AGENTS.md), the
-[development guide](https://github.com/flybrainwork/docs/blob/main/docs/DEVELOPMENT.md),
-[architecture](https://github.com/flybrainwork/docs/blob/main/docs/ARCHITECTURE.md)
-and [status](https://github.com/flybrainwork/docs/blob/main/docs/STATUS.md).
+[development guide](https://github.com/flybrainlabs/docs/blob/main/docs/DEVELOPMENT.md),
+[architecture](https://github.com/flybrainlabs/docs/blob/main/docs/ARCHITECTURE.md)
+and [status](https://github.com/flybrainlabs/docs/blob/main/docs/STATUS.md).
 
 ## License and provenance
 

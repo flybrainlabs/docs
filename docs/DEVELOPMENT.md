@@ -7,11 +7,11 @@ UI remains bilingual. This rule is also recorded in every `AGENTS.md`.
 ## Checkout and build
 
 ```sh
-git clone https://github.com/flybrainwork/infra.git flybrain/infra
-python3 flybrain/infra/tools/workspace.py checkout --repos flybrain
-python3 flybrain/infra/tools/workspace.py verify --repos flybrain
-python3 flybrain/infra/tools/workspace.py assemble --repos flybrain --output flybrain-workspace
-cd flybrain-workspace
+git clone https://github.com/flybrainlabs/infra.git flybrainlabs/infra
+python3 flybrainlabs/infra/tools/workspace.py checkout --repos flybrainlabs
+python3 flybrainlabs/infra/tools/workspace.py verify --repos flybrainlabs
+python3 flybrainlabs/infra/tools/workspace.py assemble --repos flybrainlabs --output flybrainlabs-workspace
+cd flybrainlabs-workspace
 npm ci
 npm run build:web
 cargo test -p flypow --lib --test target_authority --test product_api --test explorer --test market_catalog
@@ -43,13 +43,13 @@ assemble with `--working-tree` for validation. This mode uses reviewed local
 changes and does not claim to be a pinned release.
 
 ```sh
-python3 flybrain/infra/tools/workspace.py assemble --repos flybrain --output flybrain-workspace --working-tree
+python3 flybrainlabs/infra/tools/workspace.py assemble --repos flybrainlabs --output flybrainlabs-workspace --working-tree
 ```
 
 If an intentional edit was made in the assembled layout, first route it back:
 
 ```sh
-python3 flybrain/infra/tools/workspace.py sync --repos flybrain --output flybrain-workspace
+python3 flybrainlabs/infra/tools/workspace.py sync --repos flybrainlabs --output flybrainlabs-workspace
 ```
 
 Sync rejects concurrent source edits and does not silently remove files. New
@@ -60,12 +60,12 @@ it preserves build outputs and caches on refresh.
 ## Validate and publish automatically
 
 Run the checks needed for the actual change, then inspect the diff and staged
-files. The publication helper accepts only the maintained `flybrainwork` SSH
+files. The publication helper accepts only the maintained `flybrainlabs` SSH
 origins, scans source paths/documentation and uses normal fast forwards:
 
 ```sh
-python3 flybrain/infra/tools/check_sources.py --repos flybrain
-python3 flybrain/infra/tools/publish_components.py --repos flybrain \
+python3 flybrainlabs/infra/tools/check_sources.py --repos flybrainlabs
+python3 flybrainlabs/infra/tools/publish_components.py --repos flybrainlabs \
   --only node protocol --message "feat(marketplace): validate finite service authorization" \
   --report /private/path/publication.json
 ```

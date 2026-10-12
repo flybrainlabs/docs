@@ -71,7 +71,7 @@ If a primary page returns 404/410, the importer may use a side page registered f
 - Neuron type details and annotations are parsed from the source pages; source JavaScript is not executed or copied into the website.
 - Representative body IDs are taken from each source page's selected Neuroglancer neurons.
 - Coarse skeletons come directly from the official `flyem-male-cns` Google Cloud Storage bucket, using the download location published by the source explorer.
-- The type catalogue and morphology data are used under CC BY 4.0. Attribution: Reiser Lab Cell Type Explorer; HHMI Janelia FlyEM, Cambridge and Google Research. Source projects do not endorse FlyPoW.
+- The type catalogue and morphology data are used under CC BY 4.0. Attribution: Reiser Lab Cell Type Explorer; HHMI Janelia FlyEM, Cambridge and Google Research. Source projects do not endorse flybrainlabs.
 - Geometry is centered and uniformly scaled for display, with axes transformed to x, -z, y. Previews are orthographic projections of that same skeleton. These are visualization derivatives, not an official synapse-data mirror or a complete cell-type population model.
 - SHA-256 source digests and source URLs are stored with the catalogue, details and geometry.
 

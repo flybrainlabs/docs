@@ -1,23 +1,25 @@
 {
   "schema": "flybrain-component-v1",
   "repository": "docs",
-  "owner": "flybrainwork",
+  "owner": "flybrainlabs",
   "workspaceFiles": {
+    "README.md": "docs/WORKSPACE.md",
+    "docs/ARCHITECTURE.md": "docs/ARCHITECTURE.md",
+    "docs/DEVELOPMENT.md": "docs/DEVELOPMENT.md",
     "docs/LEGACY_WHITEPAPER_EN.md": "docs/LEGACY_WHITEPAPER_EN.md",
+    "docs/MARKETPLACE.md": "docs/MARKETPLACE.md",
     "docs/NATIVE_WEBSITE.md": "docs/NATIVE_WEBSITE.md",
     "docs/NEURON_ATLAS.md": "docs/NEURON_ATLAS.md",
+    "docs/OPERATIONS.md": "docs/OPERATIONS.md",
+    "docs/PROJECT_IDENTITY.md": "docs/PROJECT_IDENTITY.md",
     "docs/PROTOCOL_EN.md": "docs/PROTOCOL_EN.md",
+    "docs/STATUS.md": "docs/STATUS.md",
     "docs/TESTNET_VERIFICATION.md": "docs/TESTNET_VERIFICATION.md",
     "docs/WEB_VERIFICATION.md": "docs/WEB_VERIFICATION.md",
     "docs/WHITEPAPER_EN.md": "docs/WHITEPAPER_EN.md",
-    "docs/history/v1/PROTOCOL_EN.md": "docs/history/v1/PROTOCOL_EN.md",
-    "docs/history/v1/WHITEPAPER_EN.md": "docs/history/v1/WHITEPAPER_EN.md",
     "docs/WORKSPACE.md": "docs/WORKSPACE.md",
-    "docs/DEVELOPMENT.md": "docs/DEVELOPMENT.md",
-    "docs/ARCHITECTURE.md": "docs/ARCHITECTURE.md",
-    "docs/MARKETPLACE.md": "docs/MARKETPLACE.md",
-    "docs/STATUS.md": "docs/STATUS.md",
-    "docs/OPERATIONS.md": "docs/OPERATIONS.md",
-    "README.md": "docs/WORKSPACE.md"
-  }
+    "docs/history/v1/PROTOCOL_EN.md": "docs/history/v1/PROTOCOL_EN.md",
+    "docs/history/v1/WHITEPAPER_EN.md": "docs/history/v1/WHITEPAPER_EN.md"
+  },
+  "project": "flybrainlabs"
 }

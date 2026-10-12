@@ -1,6 +1,6 @@
 # Node and website operations
 
-The public computation UI is [Flybrain mining](https://flybrain.work/mining/).
+The public computation UI is [flybrainlabs mining](https://flybrain.work/mining/).
 The public record interface is [Explorer](https://flybrain.work/explorer/).
 Actual endpoint identity and readiness come from reviewed public configuration;
 SSH credentials and private runtime configuration are not repository inputs.
