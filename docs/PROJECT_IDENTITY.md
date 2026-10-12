@@ -41,3 +41,10 @@ Completed and verified updates are committed and pushed automatically using
 normal fast forwards. Preserve remote changes, skip empty commits and refresh
 the infrastructure dependency pins. A source release is complete only when every
 component and the containing infrastructure commit have been verified remotely.
+
+## Test token naming
+
+The owner separately selected `flybrainwork` as the name of the FBW token on
+Solana Devnet. This asset name does not rename the `flybrainlabs` project or
+GitHub owner. Its supply and allocation follow the V2 model; immutable legacy
+identifiers and production FLY configuration retain their existing meanings.

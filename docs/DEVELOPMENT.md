@@ -6,6 +6,13 @@ UI remains bilingual. This rule is also recorded in every `AGENTS.md`.
 
 ## Checkout and build
 
+The `web` component is private. Complete checkout requires an authorized GitHub
+identity. The default HTTPS transport uses the user's Git credential helper;
+authenticated SSH is also supported with `workspace.py checkout --transport ssh`.
+The maintained operator environment uses `--ssh-host github-flybrainlabs` and
+`GIT_SSH_COMMAND='ssh -F /workspace/.ssh/config'`. Never place credentials in a
+manifest URL. Public-only checkout does not produce the complete website build.
+
 ```sh
 git clone https://github.com/flybrainlabs/infra.git flybrainlabs/infra
 python3 flybrainlabs/infra/tools/workspace.py checkout --repos flybrainlabs

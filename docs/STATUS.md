@@ -48,6 +48,35 @@ records describe the earlier attempt only; they are not evidence of current
 `flybrainlabs` access or publication. Source commits and verified local bundles
 were retained during the account transition.
 
+## Logo release and FBW Devnet token
+
+The owner made `flybrainlabs/web` private on 2026-10-12. Authenticated API
+visibility and SSH clone access were verified; anonymous access returns 404.
+Complete source assembly requires private web access. Other repositories remain
+public.
+
+The supplied monochrome logo is deployed in the website header, footer, favicon
+and download link. Desktop and simulated viewport checks passed at seven widths
+in both languages for home, mining and Explorer: 42 layouts locally and 42 on the
+public website. Official model download requests were zero. The source is the
+readable 500px message preview; original decoding failed, so original-quality
+acceptance is not claimed. The retained atlas, model and results were preserved.
+
+The separately requested **flybrainwork / FBW** token is issued on **Solana
+Devnet** using the V2 supply/allocation model: 311,833,243 tokens, eight decimals,
+and miner/verifier/community pools of 224,519,936 / 56,129,984 / 31,183,323.
+Mint: `HCdV49RkqtC7pPwzHCYg5KtkmU8opifjojLbAyZXKgQW`. Both transactions reached
+finalized commitment; exact supply, pool balances and Metaplex fungible metadata
+were independently read back. Mint authority is revoked; freeze authority is
+absent. Metadata update authority remains with the supplied test wallet.
+
+The three test token accounts are controlled by that wallet. They are not a
+completed service-contract escrow, reward-distribution or historical-claim loop.
+Existing production and formal FLY configuration remain unchanged. See the
+contract repository's `deploy/fbw-devnet.json` and `tools/fbw-devnet/README.md`
+for public receipts and repeatable verification. Private wallet/mint/account keys
+and the transaction journal stay outside repositories and website artifacts.
+
 ## Marketplace progress
 
 The ten-project/five-product catalog, eight draft price templates, additive
