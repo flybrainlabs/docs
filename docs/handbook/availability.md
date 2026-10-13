@@ -20,7 +20,7 @@ This page describes the documented release as of **13 October 2026**. It is a ca
 
 Wallet Standard UI, origin-bound sign-in, finite grants, durable financial intents, atomic Result creation/payment and history are implemented. Public Devnet acceptance completed two distinct full-model winners under one grant, paying **one FBW each**.
 
-The two-unit plan is complete. New deposits and paid work stop until another calibrated task plan and finite budget are frozen. Model preparation, public reading, wallet history and applicable unused-principal withdrawal remain usable. An exhausted budget is an expected plan state.
+The initial two-unit acceptance plan is complete. A separate **task-supply-20261013-v1** stage now funds two unused, prospectively calibrated full-model targets: **one FBW each, two FBW total**. Scientific plan revision 3 opened round 32, with the next goal queued. The mining page shows live availability; only the corresponding frozen unit can pay its verified winner. Model preparation, wallet history and applicable unused-principal withdrawal remain usable after a finite stage completes.
 
 The first dedicated Result was closed after archive certification; the second remains readable. Permanent payment evidence prevents a closed Result from causing a second payment or a second rent debit. See [FBW Devnet reference](/docs/devnet/) for the public receipts.
 

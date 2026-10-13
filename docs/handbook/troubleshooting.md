@@ -10,7 +10,9 @@ If there is a quota error, stop adding work and preserve/export available record
 
 ## Mining says it is waiting
 
-The initial Devnet plan is complete. Waiting for another calibrated task and finite budget is expected; there is no remaining paid unit in the old plan. A wallet signature or deposit cannot reopen it.
+The initial Devnet acceptance plan is complete. Task-supply revision 3 now opens two new calibrated targets under a separate two-FBW stage. Refresh once to load the current deployment and budget. The selected provider's existing permission and the model cache are retained. If an already open page detects a stage change, the client checks the published budget against the live gateway while keeping its pinned asset, roles and permission defaults.
+
+Check the authority's actual task state before diagnosing an empty queue as a network fault. If it reports exhausted supply with no open round, another prospectively calibrated and funded plan is required. A wallet signature or deposit cannot reopen a paid unit.
 
 **Model ready** describes local preparation. **No open task** describes the authority's supply. Both can be true at the same time. Select **Check for new tasks** to refresh availability. Until a task is admitted, **Not running** is the honest local rate and no candidate should be counted as attempted computation.
 

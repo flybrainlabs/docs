@@ -18,7 +18,7 @@ The primary mining entry asks you to connect a Wallet Standard wallet, then sign
 
 Only the current stage heading and its controls are visible. Download and build headings disappear once the model is ready; this does not delete their cached data. The prepared stage is separate from task availability.
 
-The current completed Devnet plan admits no fresh rewarded units. With a prepared model, the interface states **Current test plan complete · no open task** and offers **Check for new tasks**. This checks the authority without starting a worker. Preparation can remain available while the financial gate waits for another frozen budget. A retained ready model does not mean a task is open.
+The initial Devnet acceptance plan is completed. A separately frozen two-FBW task-supply stage now supports two new calibrated goals, one FBW per unique verified winner. When the authority has an open target, the page displays **Current goal open** and its round evidence. Connect and sign in, prepare or restore the retained model, and provide valid finite rent credit before starting rewarded work. When supply is exhausted, **Check for new tasks** synchronizes availability without starting a worker. A retained ready model and a usable task remain separate prerequisites.
 
 ## Work controls and telemetry
 

@@ -36,4 +36,4 @@ Archive certification and chain closure are different from erasing scientific hi
 
 The initial grant deposited 23,408,640 lamports and consumed 11,704,320 for two Results. After explicit revoke, 11,704,320 unused lamports were withdrawn. Each actual Result rent was 5,852,160 lamports in that acceptance; future rent must use its current quoted and frozen limits.
 
-The two-unit budget is completed and rejects new deposits. These figures describe completed Devnet acceptance, not a deposit offer. Read [FBW Devnet reference](/docs/devnet/) to inspect the actual finalized receipts.
+These figures describe the completed initial Devnet acceptance. The separate task-supply stage now reserves two additional one-FBW units. Read the currently displayed account-specific grant review before funding; a new task budget does not increase your grant's signed spending or result limits. Existing usable permission can remain valid under the same genesis, program and policy. Read [FBW Devnet reference](/docs/devnet/) for both stages and finalized budget receipts.

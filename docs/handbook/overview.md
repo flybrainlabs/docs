@@ -47,7 +47,7 @@ You do not need a wallet to read documentation, browse the atlas or inspect publ
 
 The registered graph contains 165,122 neurons and 25,563,197 directed neuron pairs. These counts describe the prepared graph; directed pairs are not the original biological synapse count. The model uses deterministic integer point-neuron dynamics. It is a computational model with explicit assumptions, rather than a measured reconstruction of all biological dynamics.
 
-The deployed wallet settlement program and FBW asset use Solana **Devnet**. The two-unit acceptance budget is complete. Further rewarded work requires new prospectively calibrated tasks and a frozen finite budget. Mainnet, formal emission and production payments remain inactive. See [Feature availability](/docs/availability/) for the current boundary.
+The deployed wallet settlement program and FBW asset use Solana **Devnet**. The initial two-unit acceptance budget is complete. A separate two-FBW task-supply stage now funds two additional calibrated targets, without changing the initial paid tasks or supply. Mainnet, formal emission and production payments remain inactive. See [Feature availability](/docs/availability/) for the current boundary.
 
 ## Project and token names
 

@@ -2,6 +2,28 @@
 
 Updated: 2026-10-13. Repository organization does not change production capability.
 
+## Renewed finite Devnet task supply
+
+`task-supply-20261013-v2` restores actual task availability. Two previously unused
+and preregistered/calibrated downstream goals have distinct scientific/economic
+identities. A separate two-FBW stage reserves one FBW per verified winner before
+publication. Three budget transactions finalized; the existing mint, initial
+paid stage, authorities and fixed pool policy were retained.
+
+Scientific plan revision 3 opened round 32 and queued the next goal. Signed
+current-round/readiness responses, full round validation, active funded-unit
+membership and public Chromium task reading passed. The page displayed Current
+goal open and Round 32, with the wallet-first gate and no automatic computation.
+The operator did not consume the new units for another paid acceptance run.
+
+Eighteen budget-adoption cases and 37 isolated wallet/session checks passed.
+Actual extension confirmation and physical-device acceptance remain open.
+SQLite and its coherent backup passed integrity checks; historical business
+counts were retained and two new funded-goal registrations were added. The
+authority/verifiers, model cache and private archives were retained.
+See [task renewal](TASK_SUPPLY_RENEWAL.md) and
+[acceptance](https://github.com/flybrainlabs/infra/blob/main/docs/TASK_SUPPLY_ACCEPTANCE.json).
+
 ## Public UI name and immediately visible language control
 
 The official website is published as `public-ui-20261013-v1`. Its public UI name
@@ -91,8 +113,8 @@ was required.
 ## Public handbook and compact navigation
 
 The documentation center is published at [flybrain.work/docs](https://flybrain.work/docs/)
-with 26 English guides, eight categories, 15,321 rendered words, eight diagram
-designs in eleven figures and 175 searchable title/section entries. Header/footer
+with 26 English guides, eight categories, 15,650 rendered words, eight diagram
+designs in eleven figures and 176 searchable title/section entries. Header/footer
 navigation and Help link to the handbook. Categories cover project introduction,
 mining, storage, wallets/grants, scientific model/tasks/replay, atlas/results,
 economics/Explorer, community contributions, services/Marketplace, development/operations and support.

@@ -26,7 +26,7 @@ The progress display follows the active phase. During download, watch transferre
 
 When a funded plan is available, connect a compatible Wallet Standard wallet, confirm the selected account, complete sign-in and review the finite grant transaction. These are separate steps with separate permissions. Read [Wallet connection and sign-in](/docs/wallets/) and [Grants, rent and refunds](/docs/grants/) before approving a transaction.
 
-The initial Devnet plan is completed and rejects new deposits. Connecting a wallet or preparing the model cannot reopen that plan. Wait for a new frozen plan rather than submitting another deposit for the old one.
+The initial acceptance plan is completed. A separate two-FBW user task-supply stage now admits two new calibrated targets. Refresh the mining page to read the active target and current budget, then review the finite grant if your account has no usable credit. Existing wallet permissions and model storage are retained; opening the page does not start computation. A deposit does not guarantee winning a task.
 
 ## During a computation
 

@@ -30,7 +30,7 @@ Authorized verifiers completely replay all required backgrounds. Infrastructure 
 
 ScientificTaskId deduplication preserves the original task and historical outcomes. Changing the wallet, nonce, outer ID or display name cannot reopen a solved semantic task for another discovery reward.
 
-The current two-unit Devnet plan is complete. New paid mining needs new prospectively calibrated scientific goals and a separately frozen finite budget. Historical unbudgeted work does not gain retroactive compensation merely because the new plan exists.
+The initial two-unit Devnet acceptance plan is complete. Scientific plan revision 3 adds two previously unused downstream populations with their existing preregistered complete-event calibration. A separate stage freezes one FBW per goal before admission. Each goal has a distinct ScientificTaskId and permanent economic unit; the initial paid tasks remain unchanged. Historical unbudgeted work does not gain retroactive compensation because a new plan exists.
 
 ## Difficulty and calibration
 
