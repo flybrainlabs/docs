@@ -77,3 +77,15 @@ and third-party assets retain their own source attribution and licenses; this
 code license does not relicense MaleCNS data or third-party libraries. The
 import preserves numerical/identity fixtures and does not reinterpret existing
 scientific or financial records. See [NOTICE](NOTICE).
+
+## Website handbook
+
+Read the [public documentation center](https://flybrain.work/docs/). The initial
+handbook has 25 English guides in seven categories, spanning the project, mining,
+wallets, science, economics, Explorer, services, development and support.
+
+Maintained human-readable sources are under [docs/handbook](docs/handbook).
+[Documentation maintenance](docs/DOCUMENTATION_CENTER.md) explains the deterministic
+web generator, local search, public downloads, validation and scoped publication.
+Edit the Markdown and navigation in this repository; generated HTML and browser
+assets are maintained by web. Current capabilities and future gates are explicit.

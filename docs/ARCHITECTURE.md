@@ -67,7 +67,7 @@ Working-tree mode is explicit and cannot be mistaken for a reproducible release.
 
 ## Financial boundary
 
-FLY service consumption will use a complete, verified asset identity rather than
+FBW service consumption will use a complete, verified asset identity rather than
 a symbol. The host-tested service domain enforces finite allowances, reservations,
 refund upper bounds, stable entitlements and aggregate vault coverage. These
 primitives are not a deployed Marketplace contract. The existing V2 issuance and

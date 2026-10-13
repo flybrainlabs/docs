@@ -78,8 +78,8 @@ upload local history or automatically download the complete model.
 ## EconomicPolicyV2
 
 The normative policy object is `web/data/economic-policy-v2.json`. The supply
-design is 311,833,243 FLY with eight decimals: 31,183,324,300,000,000 atoms.
-The fixed issuance pools are 224,519,936 FLY for miners, 56,129,984 for
+design is 311,833,243 FBW with eight decimals: 31,183,324,300,000,000 atoms.
+The fixed issuance pools are 224,519,936 FBW for miners, 56,129,984 for
 verification services and 31,183,323 for community and ecosystem. These exact
 integers sum to the cap. Amounts use checked integers or decimal strings, never
 JavaScript Number accounting. A supply cap is neither circulation nor a price.

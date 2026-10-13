@@ -57,7 +57,7 @@ browsing never starts workers or uploads local history.
 
 ## EconomicPolicyV2
 
-One policy defines a cap of 311833243 FLY at 8 decimals: 31183324300000000 atoms.
+One policy defines a cap of 311833243 FBW at 8 decimals: 31183324300000000 atoms.
 Pools are 224519936 miners, 56129984 verification and 31183323 community/ecosystem,
 approximately 72%, 18%, 10%, with exact integer conservation. Checked integers and
 canonical decimal strings are mandatory. The cap is not circulating supply or a

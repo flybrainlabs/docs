@@ -1,6 +1,40 @@
 # Implementation and acceptance status
 
-Updated: 2026-10-12. Repository organization does not change production capability.
+Updated: 2026-10-13. Repository organization does not change production capability.
+
+## Public handbook and compact navigation
+
+The documentation center is published at [flybrain.work/docs](https://flybrain.work/docs/)
+with 25 English guides, seven categories, 12,712 rendered words, seven diagram
+designs in ten figures and 158 searchable title/section entries. Header/footer
+navigation and Help link to the handbook. Categories cover project introduction,
+mining, storage, wallets/grants, scientific model/tasks/replay, atlas/results,
+economics/Explorer, services/Marketplace, development/operations and support.
+
+The native HTML guides include breadcrumbs, section links, previous/next reading,
+Markdown download, explicit print/PDF and copy-link actions. Search filters only
+a public static index in the browser. Content and ordinary navigation remain
+readable without JavaScript. Current implementation, finite Devnet scope and
+pending acceptance are clearly identified. Maintenance: [documentation center](DOCUMENTATION_CENTER.md).
+
+Compact headers place the existing language switch inside the menu. The menu,
+document directory, section navigation, search results, tables, figures and
+footer stay in document flow with bounded scrolling and no overlap over prose.
+Current public token labels, translations and whitepaper downloads use **FBW**;
+its name remains **flybrainwork**. Published supply amounts remain readable when
+the product API is unavailable, from the unchanged public policy reference.
+Frozen policy objects, scientific identities, token/program addresses and
+historical contracts remain unchanged. No token issuance or payment was repeated.
+
+Acceptance: 26 documentation pages, 1,960 internal links, 25 checksum-matched
+Markdown downloads; eight export tests and native web compilation passed.
+Local and public Chromium each passed 50 viewport/language reading layouts.
+Local and public compact regression each passed 24 menu/language/reflow cases,
+including 125% zoom and unchanged supply/pool values displayed as FBW. Public
+HTTP readback matched 64 release objects. These are simulated viewports, not
+physical Android or extension-wallet acceptance. Website revision:
+`documentation-20261013-v2`. The full 11,751-type atlas and 13 checked core/config
+assets are retained byte-for-byte; no model download or state reset was required.
 
 ## Deployed capabilities from the retained release
 
@@ -74,7 +108,7 @@ The initial three token accounts were controlled by that wallet. Wallet mining
 V3 subsequently adopted the same supply into the program-controlled fixed pools.
 The two-FBW Devnet discovery acceptance budget has been paid; this does not
 complete service-contract escrow or historical-claim business flows.
-Existing production and formal FLY configuration remain unchanged. See the
+Existing production and formal FBW configuration remain unchanged. See the
 contract repository's `deploy/fbw-devnet.json` and `tools/fbw-devnet/README.md`
 for public receipts and repeatable verification. Private wallet/mint/account keys
 and the transaction journal stay outside repositories and website artifacts.
@@ -118,7 +152,7 @@ The shared service financial domain passes host tests for complete asset identit
 legal burn below a verified cap, finite allowances, aggregate shared-vault
 coverage, request idempotency, refund limits, cumulative pools/claims, beneficiary
 changes and exact inheritance. These tests do not claim a deployed service
-contract or a completed FLY API payment loop.
+contract or a completed FBW API payment loop.
 
 Still required: independent service SBF adapter and actual SPL integration,
 budgeted assignment/lease/fencing endpoints, native service workers, real Ridge
@@ -142,5 +176,5 @@ created by importing definitions.
   authorized acquisition inventory/routes and operating agreements.
 - Full snapshot disaster recovery and measured archive/queue/cost capacity.
 
-No production issuance, paid service, formal FLY reward or mainnet change is
+No production issuance, paid service, formal FBW reward or mainnet change is
 activated by this repository work.

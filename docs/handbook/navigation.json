@@ -1,0 +1,206 @@
+{
+  "schema": "flybrainlabs-handbook-v1",
+  "updated": "2026-10-13",
+  "language": "en",
+  "categories": [
+    {
+      "id": "start",
+      "title": "Start here",
+      "description": "Understand the project and find your first useful action.",
+      "articles": [
+        {
+          "slug": "overview",
+          "title": "Project overview",
+          "description": "What flybrainlabs computes, who it serves and how the pieces fit together.",
+          "label": "Guide"
+        },
+        {
+          "slug": "quickstart",
+          "title": "Your first session",
+          "description": "A practical path from visiting the site to preserving evidence.",
+          "label": "Guide"
+        },
+        {
+          "slug": "availability",
+          "title": "Feature availability",
+          "description": "Published capabilities, finite Devnet scope and remaining acceptance.",
+          "label": "Reference"
+        }
+      ]
+    },
+    {
+      "id": "mining",
+      "title": "Mining and wallets",
+      "description": "Prepare the model, control computation and understand authorization.",
+      "articles": [
+        {
+          "slug": "mining",
+          "title": "Mining workflow",
+          "description": "Download, build, search, submit and read the outcome of a computation.",
+          "label": "Guide"
+        },
+        {
+          "slug": "storage",
+          "title": "Model cache and recovery",
+          "description": "Verified downloads, persistent results, snapshots and safe recovery.",
+          "label": "Guide"
+        },
+        {
+          "slug": "wallets",
+          "title": "Wallet connection and sign-in",
+          "description": "Wallet Standard, sign-in messages, account isolation and session keys.",
+          "label": "Devnet"
+        },
+        {
+          "slug": "grants",
+          "title": "Grants, rent and refunds",
+          "description": "Finite authorization, Result rent, renewal, revocation and unused principal.",
+          "label": "Devnet"
+        },
+        {
+          "slug": "performance",
+          "title": "Performance and graphics",
+          "description": "Real throughput, worker controls, 3D views and device expectations.",
+          "label": "Guide"
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "title": "Science and evidence",
+      "description": "Read the model, task definitions and reproducible results.",
+      "articles": [
+        {
+          "slug": "model",
+          "title": "The scientific model",
+          "description": "MaleCNS anatomy, integer LIF dynamics and the scope of scientific claims.",
+          "label": "Reference"
+        },
+        {
+          "slug": "tasks",
+          "title": "Tasks and competition",
+          "description": "Frozen tasks, candidate eligibility, commit/reveal and the winner rule.",
+          "label": "Reference"
+        },
+        {
+          "slug": "verification",
+          "title": "Complete verification",
+          "description": "Full replay, evidence classes and the current operator trust boundary.",
+          "label": "Reference"
+        },
+        {
+          "slug": "atlas",
+          "title": "Neuron atlas",
+          "description": "Find anatomical types, explore representative skeletons and interpret annotations.",
+          "label": "Guide"
+        },
+        {
+          "slug": "results",
+          "title": "Results and reproduction",
+          "description": "Read published evidence, download packages and reproduce explicitly.",
+          "label": "Guide"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "Economics and Explorer",
+      "description": "Interpret budgets, finalized payments and public records.",
+      "articles": [
+        {
+          "slug": "economics",
+          "title": "Economic model",
+          "description": "Supply allocation, finite stages, distinct ledgers and historical rights.",
+          "label": "Reference"
+        },
+        {
+          "slug": "devnet",
+          "title": "FBW Devnet reference",
+          "description": "The existing flybrainwork asset, public receipts and completed test budget.",
+          "label": "Devnet"
+        },
+        {
+          "slug": "explorer",
+          "title": "Explorer guide",
+          "description": "Follow rounds, candidates, verification and on-chain settlement evidence.",
+          "label": "Guide"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Services and Marketplace",
+      "description": "Request scoped work and understand the proposed product catalog.",
+      "articles": [
+        {
+          "slug": "services",
+          "title": "Compute service requests",
+          "description": "Private tickets, quotes, authorization, delivery and retention.",
+          "label": "Guide"
+        },
+        {
+          "slug": "marketplace",
+          "title": "Marketplace roadmap",
+          "description": "Product families, real training, finite API usage and planned settlement.",
+          "label": "Planned"
+        }
+      ]
+    },
+    {
+      "id": "developers",
+      "title": "Developers and operators",
+      "description": "Build a pinned release and operate it while preserving state.",
+      "articles": [
+        {
+          "slug": "architecture",
+          "title": "System architecture",
+          "description": "Component ownership, data flow, trust boundaries and repository dependencies.",
+          "label": "Reference"
+        },
+        {
+          "slug": "development",
+          "title": "Build and contribute",
+          "description": "Authenticated checkout, assembly, builds, English changes and publication.",
+          "label": "Guide"
+        },
+        {
+          "slug": "integrations",
+          "title": "Integration principles",
+          "description": "Versioned identities, browser clients, Explorer access and finite permissions.",
+          "label": "Reference"
+        },
+        {
+          "slug": "operations",
+          "title": "Operations and recovery",
+          "description": "Readiness, coherent backups, scoped deployments and financial reconciliation.",
+          "label": "Guide"
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "title": "Support and reference",
+      "description": "Resolve common problems and learn the language used across the site.",
+      "articles": [
+        {
+          "slug": "troubleshooting",
+          "title": "Troubleshooting",
+          "description": "Preparation, graphics, wallets, unknown payments and completed stages.",
+          "label": "Guide"
+        },
+        {
+          "slug": "privacy",
+          "title": "Privacy and security",
+          "description": "Public evidence, private data, browser storage, permissions and support.",
+          "label": "Reference"
+        },
+        {
+          "slug": "glossary",
+          "title": "Glossary",
+          "description": "A plain-language reference for scientific, wallet and financial terms.",
+          "label": "Reference"
+        }
+      ]
+    }
+  ]
+}

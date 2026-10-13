@@ -1,4 +1,4 @@
-# FLY Marketplace implementation contract
+# FBW Marketplace implementation contract
 
 The supplied 2026-10-12 Marketplace specification was read in full: 1,572 lines,
 128,137 bytes, SHA-256
@@ -24,7 +24,7 @@ and explicit approval before becoming active.
 
 Authorized work must pass complete verification, produce actual training data,
 train a small Ridge model, export all weights/bias/normalization and freeze its
-share manifest. A finite FLY authorization then pays an actual service call.
+share manifest. A finite FBW authorization then pays an actual service call.
 Only delivered, settled and mature income becomes historical entitlement. The
 original miner can claim it. A second call without new mining must create new
 historical earnings, while every retry of the same call must avoid duplicate
@@ -39,10 +39,10 @@ response they predict. Train/validation/test split by underlying trajectory.
 Distributed Ridge merges sufficient statistics, never independently trained W.
 Controlled shard recomputation checks sample coverage and matrix integrity.
 
-## FLY accounting and storage
+## FBW accounting and storage
 
-FLY is the only new API payment, refund, immediate reward and royalty asset.
-Buying FLY is separate from consuming it. There is no fallback API asset.
+FBW is the only new API payment, refund, immediate reward and royalty asset.
+Buying FBW is separate from consuming it. There is no fallback API asset.
 Eight decimals and the existing 31,183,324,300,000,000 atom cap remain fixed;
 service operations cannot mint. Amounts use decimal integer strings and checked
 wide arithmetic. Cumulative four-pool floor and cumulative individual floor
@@ -55,14 +55,14 @@ duplicate edges and impossible exact coefficients are rejected.
 
 Settlement actions and outbox commit together. Unknown RPC/history states retain
 the original locked liability. Blockhash expiry alone proves no nonexecution.
-Block height and slot are distinct. FLY issuance evidence is checked; legitimate
+Block height and slot are distinct. FBW issuance evidence is checked; legitimate
 burn below the cap must not be rejected as counterfeit issuance.
 
 A new service economy program must preserve old programs and account layouts,
 execute real SPL transfers and seal complete small-model content. Chunk order,
 length, content, reference count and rent-refund authority are checked. A hash-only
 manifest is not a complete on-chain model. Hybrid storage is explicitly labeled.
-SOL sponsorship has its own bounded allowlist/budget, never hidden FLY charges.
+SOL sponsorship has its own bounded allowlist/budget, never hidden FBW charges.
 
 ## Privacy and launch
 

@@ -47,4 +47,16 @@ component and the containing infrastructure commit have been verified remotely.
 The owner separately selected `flybrainwork` as the name of the FBW token on
 Solana Devnet. This asset name does not rename the `flybrainlabs` project or
 GitHub owner. Its supply and allocation follow the V2 model; immutable legacy
-identifiers and production FLY configuration retain their existing meanings.
+identifiers and production FBW configuration retain their existing meanings.
+
+## Current public token and compact navigation
+
+The token name is flybrainwork and its public symbol is FBW. Current website
+labels, guides and whitepaper explanations use FBW. Frozen scientific/financial
+objects and archived contracts retain their exact original bytes. The existing
+mint and its supply/authorities are unchanged by a label update.
+
+Compact website headers place language selection inside the navigation menu.
+Documentation panels use normal flow, responsive disclosures and bounded scroll
+regions so that controls do not overlap the prose. See the public handbook and
+its maintenance guide for the current reading and build behavior.
