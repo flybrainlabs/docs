@@ -18,6 +18,25 @@ Check the authority's actual task state before diagnosing an empty queue as a ne
 
 For an admitted future task, check model readiness, wallet sign-in, grant validity, selected account/generation and the actual frozen unit. Do not reuse a solved task ID or treat partial work as completed.
 
+## The model is prepared, but no worker is computing
+
+**Requested 1 · prepared 1 · computing 0** means one worker has loaded the model. It does not establish that the wallet has permission to start a candidate. An open target and an idle prepared worker can coexist.
+
+The main control now names the next admission step. Connection, login, scientific task availability and finite rent authorization are checked separately:
+
+| Visible state or action | Meaning | Next step |
+| --- | --- | --- |
+| **Sign in** | The connected wallet has no current site login. | Review the sign-in message. |
+| **Check wallet state** | Balances and grants have not synchronized. | Retry the wallet read; no compute or transfer is triggered. |
+| **Review rent grant** | No usable grant exists, or its remaining credit or per-result limit is insufficient. | Review the finite limits and explicitly confirm a create/renew operation if you want to proceed. |
+| **Renew device authorization** | A grant exists, but its nonextractable signing key is unavailable on this browser/device. | Explicitly renew on this device; connection restoration does not restore a grant key from another device. |
+| **Check for new tasks** with a funding message | This round has no usable frozen reward unit. | Check the published plan and current gateway state. A deposit cannot supply a missing reward budget. |
+| **Start mining** | The visible admission checks permit a start attempt. | Select it; the client rechecks live funding, actual rent and the device key before any worker dispatch. |
+
+Opening a review does not sign a transaction, change a grant or start the CPU. Canceling leaves the prepared model and saved artifacts intact. A successful grant review also does not start computation automatically; select **Start mining** when ready.
+
+If another failure appears, expand **Technical diagnostics** and report its exact text, the time and the visible wallet state. Network, browser storage, model-lock and funding errors retain distinct explanations. A generic error alone cannot identify the cause. Cached public addresses, local preparation and a task lookup returning 404 are not evidence of wallet authorization or active computation.
+
 ## A claim lookup returns 404
 
 The claim endpoint reads an existing submission; it does not provide a new task. A response with `NOT_FOUND: claim` means that particular claim was not found by the responding authority. Check the signed current-round and readiness responses to establish service health and task supply separately.

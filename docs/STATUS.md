@@ -2,6 +2,32 @@
 
 Updated: 2026-10-13. Repository organization does not change production capability.
 
+## Mining admission and prepared-worker diagnostics
+
+`mining-start-20261013-v1` is published. Live signed supply still showed open
+round 32 and one queued goal at verification, and the existing funded Devnet
+stage was retained. Prepared model workers and an open goal are now displayed
+separately from wallet login, balance synchronization and finite rent permission.
+The primary control offers grant review or device renewal when required, with
+structured English/Chinese explanations. Opening or canceling a review does not
+start computation or sign a transaction.
+
+An isolated reproduction confirmed that a signed-in wallet without usable credit
+previously received Start mining followed by a generic error. The original user's
+exact technical failure remains unconfirmed. Admission transport faults retain
+the selected candidate for explicit retry and surface their original diagnostics.
+
+The local and public runs each passed 17 admission checks and 37 wallet/session
+checks. Twenty-three funding predicates, 28 action-policy checks, 18 approved
+budget cases, scheduler fault/resume regression and eight static-export tests
+passed. Server backup/baseline verification and all 82 updated object hashes
+passed; public HTTP matched 70 changed and nine retained objects. The tests used
+fixture wallets, rent/grant responses and prepared-worker presentation. No new
+budget, transaction, paid candidate, model download or cache reset was introduced.
+Actual extension confirmation and full mining on the owner's device remain open.
+See [diagnosis and implementation](MINING_START_DIAGNOSTICS.md) and
+[acceptance](https://github.com/flybrainlabs/infra/blob/main/docs/MINING_ADMISSION_ACCEPTANCE.json).
+
 ## Renewed finite Devnet task supply
 
 `task-supply-20261013-v2` restores actual task availability. Two previously unused
