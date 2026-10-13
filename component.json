@@ -54,7 +54,8 @@
     "docs/SOCIAL_COMMUNITY_ACCEPTANCE.json": "docs/SOCIAL_COMMUNITY_ACCEPTANCE.json",
     "docs/PUBLIC_UI_UPDATE.md": "docs/PUBLIC_UI_UPDATE.md",
     "docs/TASK_SUPPLY_RENEWAL.md": "docs/TASK_SUPPLY_RENEWAL.md",
-    "docs/MINING_START_DIAGNOSTICS.md": "docs/MINING_START_DIAGNOSTICS.md"
+    "docs/MINING_START_DIAGNOSTICS.md": "docs/MINING_START_DIAGNOSTICS.md",
+    "docs/WALLET_RPC_V3.md": "docs/WALLET_RPC_V3.md"
   },
   "project": "flybrainlabs"
 }

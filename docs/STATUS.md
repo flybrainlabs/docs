@@ -2,6 +2,22 @@
 
 Updated: 2026-10-13. Repository organization does not change production capability.
 
+## Private wallet RPC transport prepared
+
+The owner's latest browser log confirms HTTP 429 from the public Devnet RPC.
+Sources now support a credential-free authenticated gateway backed by a private
+provider endpoint, with independent Devnet genesis checks, finite RPC scope,
+bounded requests, reviewed grant submission and finalized HTTP polling. Failed
+rent reads cannot become a zero-cost admission quote. RPC admission faults retain
+the original candidate for explicit retry; no chain write was introduced by
+these checks.
+
+The requested Helius credential is unavailable in the current private inputs.
+Activation is pending; the live website and runtime still use the existing
+public RPC and `mining-start-20261013-v1`. The 24 transport, 41 gateway and 10
+Chromium fixture checks do not verify an actual Helius key or real-device mining.
+See [transport and activation](WALLET_RPC_V3.md).
+
 ## Mining admission and prepared-worker diagnostics
 
 `mining-start-20261013-v1` is published. Live signed supply still showed open
