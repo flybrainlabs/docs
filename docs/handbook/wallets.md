@@ -12,6 +12,16 @@ The website uses Wallet Standard for the new Solana mining experience. The walle
 
 A connected account can still need sign-in. A signed-in wallet can still have no valid grant. An active grant can still encounter a completed plan or an exhausted result-count limit.
 
+## Reloading and restoring the connection
+
+After a successful connection, this browser remembers the selected wallet's name and public account, scoped to the test network and program. Reloading or navigating to another page asks that wallet to restore its existing connection silently. The site confirms the account supplied by the wallet before showing it as connected; a saved address alone is not a connection.
+
+An unexpired site login is retained in the same tab and checked against that account. Connection restoration does not request a signature, create a grant, deposit SOL or restart mining. If the login has expired, the wallet can remain connected while the site asks you to sign in again.
+
+If the wallet is locked, missing or no longer permits silent connection, unlock it and select **Connect wallet**. Late wallet registration can complete restoration without another selection. Selecting **Sign out / disconnect** clears the remembered connection and this tab's login, so the next refresh stays disconnected. An account change invalidates the old connection and keeps accepted rewards with their original beneficiary.
+
+Only the wallet name and public account preference go into local storage. The existing short-lived login stays in tab session storage; wallet keys and grant signing keys are not copied there. If browser settings block storage or a different browser profile is used, restoration may be unavailable. These conditions do not remove the saved scientific model or results.
+
 ## Sign-in message
 
 The server generates a one-use SIWS challenge. The message binds the account, origin, URI and chain. Review it in the wallet before signing. A challenge that has expired or already been consumed must be replaced; changing a visible label cannot make it valid again.

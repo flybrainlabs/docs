@@ -2,11 +2,39 @@
 
 Updated: 2026-10-13. Repository organization does not change production capability.
 
+## Mining availability and restored wallet sessions
+
+The current-stage mining header now shows only one of download, build or mining.
+A prepared model and an open task are separate prerequisites. The live authority
+reports `RESEARCH_STAGE_COMPLETE`, no open round and exhausted calibrated supply;
+the interface explains the completed test plan instead of suggesting that Start
+mining will begin work. Check for new tasks synchronizes the authority without
+starting a worker. New rewarded work still requires prospective calibrated supply
+and a new finite frozen budget; the prior two-unit plan is not reused.
+
+The browser remembers the selected Wallet Standard provider and public account,
+scoped to the Devnet genesis and program. Refresh and navigation silently restore
+existing provider permission, and retain an unexpired same-tab login for that
+account. A stored address alone is never a connected session. Locked/missing
+providers request reconnection; expired login requests sign-in while retaining
+the connection. Temporary node failures retain a valid login. Explicit disconnect
+clears restoration preference, and stale/different account responses stay isolated.
+Restoration requests no signatures, deposits, new grants or computation. Wallet
+keys and nonextractable grant keys retain their existing private storage.
+
+Acceptance: 37 local and 37 public Chromium checks passed, including 18
+width/language/stage presentations per run. The provider and prepared-model
+presentation are fixtures, not extension confirmation or full-model computation.
+All 67 changed uncompressed HTTP objects and 77 scoped deployment objects matched
+the verified release. Eleven core execution/configuration assets and the complete
+atlas stayed unchanged; no model download, financial transaction or state reset
+was required.
+
 ## Public handbook and compact navigation
 
 The documentation center is published at [flybrain.work/docs](https://flybrain.work/docs/)
-with 25 English guides, seven categories, 12,887 rendered words, seven diagram
-designs in ten figures and 160 searchable title/section entries. Header/footer
+with 25 English guides, seven categories, 13,353 rendered words, seven diagram
+designs in ten figures and 162 searchable title/section entries. Header/footer
 navigation and Help link to the handbook. Categories cover project introduction,
 mining, storage, wallets/grants, scientific model/tasks/replay, atlas/results,
 economics/Explorer, services/Marketplace, development/operations and support.
@@ -34,8 +62,9 @@ including 125% zoom and unchanged supply/pool values displayed as FBW, with
 64 HTTP objects matched. The V3 wallet-entry update additionally matched all
 43 changed uncompressed HTTP objects and the scoped remote deployment hashes.
 These are simulated viewports, not physical Android or extension-wallet
-acceptance. Current website revision:
-`documentation-20261013-v3`. The full 11,751-type atlas and 11 checked
+acceptance. The preceding documentation/wallet-entry revision was
+`documentation-20261013-v3`; current session corrections use
+`mining-session-20261013-v1`. The full 11,751-type atlas and 11 checked
 execution/configuration assets are retained byte-for-byte. Research-app and
 wallet-interface wrappers were deliberately updated for wallet-first entry;
 no model download or state reset was required.

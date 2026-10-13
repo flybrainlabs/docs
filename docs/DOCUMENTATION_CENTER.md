@@ -6,7 +6,7 @@ The main navigation, footer and Help page provide entry points.
 
 ## Content and information architecture
 
-The current release contains 25 English guides in seven categories and 12,887
+The current release contains 25 English guides in seven categories and 13,353
 rendered words. Seven diagram designs are used in ten figures. Categories are:
 
 1. Start here: project overview, first session and feature availability.
@@ -27,6 +27,16 @@ planned work. A completed test budget is never described as an open reward offer
 The project name remains flybrainlabs. The existing test asset remains
 flybrainwork / FBW on Devnet. Current issuance, payment, Result-close and refund
 effects are documentation inputs; no transaction driver is part of this build.
+
+## Current session corrections
+
+The V4 handbook explains silent wallet restoration, same-tab login expiry,
+explicit disconnect, and the distinction between a prepared model and task
+availability. The related website revision is `mining-session-20261013-v1`.
+The mining header shows only the current stage and explains completed supply;
+Check for new tasks synchronizes availability without starting computation.
+These changes preserve the existing asset, grant keys, model cache and results.
+Actual extension and physical-device acceptance remain separate pending gates.
 
 ## Maintained source and generated files
 
@@ -81,7 +91,7 @@ date, previous/next links and per-section permalinks. The article subtree declar
 English and is excluded from automatic interface translation. The shell can
 retain its normal language toggle.
 
-The public search index has 160 title/section entries. It is loaded on an actual
+The public search index has 162 title/section entries. It is loaded on an actual
 search; queries are filtered in the browser and are not sent to the authority or
 a third-party search engine. Keyboard navigation, highlighted snippets, no-result
 messages and recoverable index-fetch errors use native elements and text nodes.

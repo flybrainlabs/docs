@@ -16,7 +16,9 @@ The primary mining entry asks you to connect a Wallet Standard wallet, then sign
 
 **Start mining.** Once prerequisites are satisfied, an explicit start action searches eligible candidates using browser workers and the WebAssembly numerical core. The display focuses on the current phase rather than presenting three competing panels.
 
-The current completed Devnet plan admits no fresh rewarded units. Preparation can remain available while the financial gate waits for another frozen budget.
+Only the current stage heading and its controls are visible. Download and build headings disappear once the model is ready; this does not delete their cached data. The prepared stage is separate from task availability.
+
+The current completed Devnet plan admits no fresh rewarded units. With a prepared model, the interface states **Current test plan complete · no open task** and offers **Check for new tasks**. This checks the authority without starting a worker. Preparation can remain available while the financial gate waits for another frozen budget. A retained ready model does not mean a task is open.
 
 ## Work controls and telemetry
 
