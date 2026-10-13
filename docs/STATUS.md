@@ -2,6 +2,40 @@
 
 Updated: 2026-10-13. Repository organization does not change production capability.
 
+## Social community participation
+
+[Social](https://flybrain.work/social/) and its authorized administration page are
+published as `social-community-20261013-v1`. The separate loopback service uses
+8791; the existing authority on 8790 and financial gateway on 8789 are preserved.
+The additive checksummed schema V1 shares existing SIWS sessions and SQLite/WAL.
+A coherent database backup, integrity check, migration checksum, unchanged
+private runtime and historical business counts were verified.
+
+The first task verifies original public X body/author evidence and awards its
+initial 100 community points atomically. Evidence failures remain in durable
+review; refresh recovers binding, completion, real ranking and point history.
+Known identity/post reuse and repeated requests cannot earn the first reward
+again. Username visibility is optional. Administration includes audited review,
+point corrections, task configuration, immutable ranking snapshots and rules,
+candidate allocation, internal budget approval/cancellation and CSV/JSON export.
+
+The 25,000,000 FBW budget belongs to the existing 31,183,323 FBW community pool;
+6,183,323 FBW remains for other ecosystem uses. Points are not tokens, and this
+module announces no conversion, guaranteed personal amount or payout date.
+Approved unexecuted allocations count against the cap. No transfer route,
+issuance, real distribution, paid scientific task or financial driver was added.
+The public ranking was genuinely empty at deployment; no fixture users were
+installed. Live X oEmbed returned official public evidence (HTTP 200, no redirect)
+on a historical-post probe; actual human X/wallet-extension acceptance and OAuth
+remain separate. Physical-device and independent-operator gates remain open.
+
+Acceptance: 45 SQLite/Ed25519 backend checks, 31 isolated Chromium checks,
+18 read-only public Chromium checks, 24 native library tests and eight static
+export tests passed. New API/provider/client type checks, syntax lint and browser
+bundling passed. All 78 scoped deployment objects and 70 changed uncompressed
+public HTTP objects matched. Read the [technical delivery](social-community-system.md),
+[human guide](handbook/social.md) and [acceptance](SOCIAL_COMMUNITY_ACCEPTANCE.json).
+
 ## Mining availability and restored wallet sessions
 
 The current-stage mining header now shows only one of download, build or mining.
@@ -33,11 +67,11 @@ was required.
 ## Public handbook and compact navigation
 
 The documentation center is published at [flybrain.work/docs](https://flybrain.work/docs/)
-with 25 English guides, seven categories, 13,353 rendered words, seven diagram
-designs in ten figures and 162 searchable title/section entries. Header/footer
+with 26 English guides, eight categories, 15,177 rendered words, eight diagram
+designs in eleven figures and 174 searchable title/section entries. Header/footer
 navigation and Help link to the handbook. Categories cover project introduction,
 mining, storage, wallets/grants, scientific model/tasks/replay, atlas/results,
-economics/Explorer, services/Marketplace, development/operations and support.
+economics/Explorer, community contributions, services/Marketplace, development/operations and support.
 
 The native HTML guides include breadcrumbs, section links, previous/next reading,
 Markdown download, explicit print/PDF and copy-link actions. Search filters only
@@ -54,8 +88,9 @@ the product API is unavailable, from the unchanged public policy reference.
 Frozen policy objects, scientific identities, token/program addresses and
 historical contracts remain unchanged. No token issuance or payment was repeated.
 
-Acceptance: 26 documentation pages, 1,964 internal links, 25 checksum-matched
-Markdown downloads; eight export tests and native web compilation passed.
+The Social extension now validates 27 documentation pages, 2,117 internal links
+and 26 checksum-matched Markdown downloads. Earlier reading acceptance included
+26 documentation pages and 1,964 links; eight export tests and native web compilation passed.
 The V2 reading release passed 50 local and 50 public viewport/language layouts.
 Its local and public compact regression each passed 24 menu/language/reflow cases,
 including 125% zoom and unchanged supply/pool values displayed as FBW, with

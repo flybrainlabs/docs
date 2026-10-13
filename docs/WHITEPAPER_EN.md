@@ -122,3 +122,8 @@ https://male-cns.janelia.org/download/ — source anatomy and source-specific li
 https://www.nature.com/articles/s41586-024-07763-9 — evaluation methodology reference,
 not this project's accuracy. Public tasks, results and methods:
 https://flybrain.work/tasks/ https://flybrain.work/results/ https://flybrain.work/methods/
+
+
+## Community budget and points
+
+Within the existing 31,183,323 FBW Community & Ecosystem Pool, 25,000,000 FBW is budgeted for future community airdrops and 6,183,323 FBW remains for other ecosystem uses. The approximately 80.17% share refers to this pool, not total supply. Community points and rankings are contribution records; they are not tokens, carry no fixed conversion and do not guarantee a personal amount or date. Frozen approved snapshots and published rules precede any separately authorized distribution. This budget does not change frozen EconomicPolicyV2 bytes or issue additional tokens. Read [Social](/social/) and the [community guide](/docs/social/).

@@ -44,3 +44,8 @@ Installable open validators, non-fixed-domain admission, staking and independent
 ## How to interpret status
 
 A numerical replay confirms the declared model computation. A browser test confirms its tested interaction or layout. A finalized chain receipt confirms that financial action. Physical-device and external-science claims require their respective evidence. Each guide keeps these scopes separate so you can assess what an outcome actually establishes.
+
+
+## Community participation
+
+Social provides signed-in wallet challenges, X public evidence verification, durable manual review, community points and a real leaderboard. Published budgets are preparation scope: no token transfer or immediate claim is enabled. Official OAuth and actual extension/human X confirmation require separate external acceptance. See the [community guide](/docs/social/).

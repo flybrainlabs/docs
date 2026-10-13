@@ -48,3 +48,8 @@ RPC timeout, missing history or blockhash expiry cannot alone establish that a t
 Issuance is not sales revenue; deposits are not profit; prepayments are not completed revenue. Different assets retain separate ledgers, and a missing exchange price means a valuation is unknown rather than zero.
 
 The proposed Marketplace requires cumulative historical entitlement, claims, refund limits and exact inheritance. Those host-tested primitives do not mean a deployed paid service exists. Read [Marketplace roadmap](/docs/marketplace/) for the remaining loop.
+
+
+## Community budget and points
+
+Within the existing 31,183,323 FBW Community & Ecosystem Pool, 25,000,000 FBW is budgeted for future community airdrops and 6,183,323 FBW remains for other ecosystem uses. The approximately 80.17% share refers to this pool, not total supply. Community points and rankings are contribution records; they are not tokens, carry no fixed conversion and do not guarantee a personal amount or date. Frozen approved snapshots and published rules precede any separately authorized distribution. This budget does not change frozen EconomicPolicyV2 bytes or issue additional tokens. Read [Social](/social/) and the [community guide](/docs/social/).

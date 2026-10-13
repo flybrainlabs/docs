@@ -128,6 +128,19 @@
       ]
     },
     {
+      "id": "community",
+      "title": "Community contributions",
+      "description": "Verify your identity, understand community points and read future allocation rules.",
+      "articles": [
+        {
+          "slug": "social",
+          "title": "Community contributions and Social",
+          "description": "Wallet sign-in, X public challenges, contribution points, real rankings and the community allocation budget.",
+          "label": "Guide"
+        }
+      ]
+    },
+    {
       "id": "services",
       "title": "Services and Marketplace",
       "description": "Request scoped work and understand the proposed product catalog.",

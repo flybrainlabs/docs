@@ -48,7 +48,10 @@
     "docs/handbook/architecture.md": "docs/handbook/architecture.md",
     "docs/handbook/wallets.md": "docs/handbook/wallets.md",
     "docs/handbook/economics.md": "docs/handbook/economics.md",
-    "docs/DOCUMENTATION_CENTER.md": "docs/DOCUMENTATION_CENTER.md"
+    "docs/DOCUMENTATION_CENTER.md": "docs/DOCUMENTATION_CENTER.md",
+    "docs/social-community-system.md": "docs/social-community-system.md",
+    "docs/handbook/social.md": "docs/handbook/social.md",
+    "docs/SOCIAL_COMMUNITY_ACCEPTANCE.json": "docs/SOCIAL_COMMUNITY_ACCEPTANCE.json"
   },
   "project": "flybrainlabs"
 }

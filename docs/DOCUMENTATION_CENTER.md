@@ -6,16 +6,17 @@ The main navigation, footer and Help page provide entry points.
 
 ## Content and information architecture
 
-The current release contains 25 English guides in seven categories and 13,353
-rendered words. Seven diagram designs are used in ten figures. Categories are:
+The current release contains 26 English guides in eight categories and 15,177
+rendered words. Eight diagram designs are used in eleven figures. Categories are:
 
 1. Start here: project overview, first session and feature availability.
 2. Mining and wallets: workflow, cache/recovery, sign-in, grants and performance.
 3. Science and evidence: model, tasks, verification, atlas and reproduction.
 4. Economics and Explorer: policy, FBW Devnet reference and public evidence.
-5. Services and Marketplace: scoped requests and the proposed service roadmap.
-6. Developers and operators: architecture, builds, integration and operations.
-7. Support and reference: troubleshooting, privacy/security and glossary.
+5. Community contributions: X identity, points, ranking and future allocations.
+6. Services and Marketplace: scoped requests and the proposed service roadmap.
+7. Developers and operators: architecture, builds, integration and operations.
+8. Support and reference: troubleshooting, privacy/security and glossary.
 
 Guides explain practical actions, terminology, state transitions and limitations.
 Source coverage includes the maintained protocol, product/chain descriptors,
@@ -27,6 +28,16 @@ planned work. A completed test budget is never described as an open reward offer
 The project name remains flybrainlabs. The existing test asset remains
 flybrainwork / FBW on Devnet. Current issuance, payment, Result-close and refund
 effects are documentation inputs; no transaction driver is part of this build.
+
+## Community extension
+
+The V5 handbook adds `/docs/social/`, a practical contribution guide with a
+wallet-to-allocation diagram. Current website revision is
+`social-community-20261013-v1`; it preserves the mining-session corrections below.
+The new guide distinguishes 25,000,000 FBW pool-internal budget from points and
+actual transfers. All 27 handbook pages, 26 Markdown sources, 2,117 internal
+links and 174 searchable sections validate. See `SOCIAL_COMMUNITY_ACCEPTANCE.json`
+for live service, migration and browser acceptance.
 
 ## Current session corrections
 
