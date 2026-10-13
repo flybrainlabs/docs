@@ -1,6 +1,6 @@
 # The scientific model
 
-The source of anatomy is **MaleCNS v1.0**, an official fruit-fly central nervous system connectome. flybrainlabs prepares a registered numerical graph from that source, then executes a frozen integer point-neuron model. Dataset anatomy, numerical assumptions and observed biological performance are different parts of the evidence.
+The source of anatomy is **MaleCNS v1.0**, an official fruit-fly central nervous system connectome. flybrainwork prepares a registered numerical graph from that source, then executes a frozen integer point-neuron model. Dataset anatomy, numerical assumptions and observed biological performance are different parts of the evidence.
 
 ## Graph and data counts
 

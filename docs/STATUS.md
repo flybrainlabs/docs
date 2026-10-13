@@ -2,6 +2,30 @@
 
 Updated: 2026-10-13. Repository organization does not change production capability.
 
+## Public UI name and immediately visible language control
+
+The official website is published as `public-ui-20261013-v1`. Its public UI name
+is **flybrainwork**; source ownership and GitHub publication remain **flybrainlabs**.
+All 56 rendered page shells use the selected name. The compact menu places the
+single language button first, outside its bounded scrolling links. It remains
+visible immediately on short portrait and landscape screens, including when
+Resources is expanded. Documentation and desktop navigation remain in normal flow.
+
+The local and public runs each passed 24 document layouts and eight short-screen
+cases in both languages. Four branding tests, eight static-export tests, nine
+candidate reconciliation cases and native library compilation passed. Deployment
+verified a backup and all 80 scoped object hashes; public HTTP comparison matched
+70 changed uncompressed objects and nine retained core/configuration objects.
+Physical-device and actual extension confirmation retain their separate gates.
+
+The pinned signed authority responses confirmed `RESEARCH_STAGE_COMPLETE`, no
+open round and exhausted supply. The related services were active. A missing
+unreceipted claim in a signed closed round is now recorded as not admitted and
+removed from automatic polling while keeping local outputs. No new tasks, budgets,
+payments, database migrations or model downloads were introduced.
+See [delivery and diagnosis](PUBLIC_UI_UPDATE.md) and the
+[acceptance record](https://github.com/flybrainlabs/infra/blob/main/docs/PUBLIC_UI_ACCEPTANCE.json).
+
 ## Social community participation
 
 [Social](https://flybrain.work/social/) and its authorized administration page are
@@ -67,8 +91,8 @@ was required.
 ## Public handbook and compact navigation
 
 The documentation center is published at [flybrain.work/docs](https://flybrain.work/docs/)
-with 26 English guides, eight categories, 15,177 rendered words, eight diagram
-designs in eleven figures and 174 searchable title/section entries. Header/footer
+with 26 English guides, eight categories, 15,321 rendered words, eight diagram
+designs in eleven figures and 175 searchable title/section entries. Header/footer
 navigation and Help link to the handbook. Categories cover project introduction,
 mining, storage, wallets/grants, scientific model/tasks/replay, atlas/results,
 economics/Explorer, community contributions, services/Marketplace, development/operations and support.

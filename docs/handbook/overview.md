@@ -1,6 +1,6 @@
 # Project overview
 
-flybrainlabs produces verifiable, reusable computations over a fruit-fly neural connectivity graph. A browser can prepare the registered model, search a frozen stimulus task and preserve its output. An authority coordinates submission and complete replay. Public results and the Explorer make the resulting evidence easier to inspect.
+flybrainwork produces verifiable, reusable computations over a fruit-fly neural connectivity graph. A browser can prepare the registered model, search a frozen stimulus task and preserve its output. An authority coordinates submission and complete replay. Public results and the Explorer make the resulting evidence easier to inspect.
 
 The project combines scientific computation with a finite funding model. Every payable discovery belongs to a defined task and reserved budget. A successful numerical result, a competition win and a finalized token payment are separate events.
 
@@ -51,4 +51,4 @@ The deployed wallet settlement program and FBW asset use Solana **Devnet**. The 
 
 ## Project and token names
 
-The project and GitHub owner are **flybrainlabs**. The existing test token is named **flybrainwork**, with symbol **FBW** and eight decimals. The official website remains [flybrain.work](https://flybrain.work/), and the project X link is [flybrainwork](https://x.com/flybrainwork). A matching symbol is insufficient to identify an asset; use the complete Devnet identity in [FBW Devnet reference](/docs/devnet/).
+The website UI name is **flybrainwork**. The maintained project and GitHub owner remain **flybrainlabs**. The existing test token is also named **flybrainwork**, with symbol **FBW** and eight decimals. The official website remains [flybrain.work](https://flybrain.work/), and the project X link is [flybrainwork](https://x.com/flybrainwork). A matching symbol is insufficient to identify an asset; use the complete Devnet identity in [FBW Devnet reference](/docs/devnet/).

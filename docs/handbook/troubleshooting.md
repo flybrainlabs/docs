@@ -16,6 +16,12 @@ The initial Devnet plan is complete. Waiting for another calibrated task and fin
 
 For an admitted future task, check model readiness, wallet sign-in, grant validity, selected account/generation and the actual frozen unit. Do not reuse a solved task ID or treat partial work as completed.
 
+## A claim lookup returns 404
+
+The claim endpoint reads an existing submission; it does not provide a new task. A response with `NOT_FOUND: claim` means that particular claim was not found by the responding authority. Check the signed current-round and readiness responses to establish service health and task supply separately.
+
+A browser can retain a candidate and its calculated claim ID before the server accepts the commitment. When the signed round is closed, the deadline has passed and no acceptance receipt exists, the website marks a missing claim as **Round closed · candidate not admitted; results retained**. It stops automatically polling that candidate while keeping its identity, metrics and downloadable outputs. A missing receipted claim, an open round or a transport error still requires reconciliation; these cases are not treated as completed submissions.
+
 ## 3D is blank or slow
 
 Use graphics retry or disable graphics while retaining computation controls. Compare the normal [Neuron atlas](/atlas/) as a structural control and record whether WebGL is available. Check the display-resource error before touching scientific model storage.

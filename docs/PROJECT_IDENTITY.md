@@ -1,8 +1,13 @@
 # flybrainlabs project identity
 
-The current project name and GitHub owner are both `flybrainlabs`. Use this exact
-lowercase spelling for project headings, repository descriptions, website
-branding, release notes and contributor-facing explanations.
+The maintained project name and GitHub owner are both `flybrainlabs`. Use this
+exact lowercase spelling for source ownership, repository descriptions and
+contributor-facing technical explanations.
+
+The owner selected **flybrainwork** as the public website UI name on 2026-10-13.
+Website wordmarks, page titles, metadata and reader-facing product introductions
+use this name. The official website remains `https://flybrain.work/`. This display
+change does not transfer repositories or alter compatibility identifiers.
 
 ## Maintained repositories
 
@@ -57,6 +62,9 @@ objects and archived contracts retain their exact original bytes. The existing
 mint and its supply/authorities are unchanged by a label update.
 
 Compact website headers place language selection inside the navigation menu.
+The language row comes first, outside the independently scrolling links, so it
+is visible immediately on short screens. Navigation links use two columns in the
+compact layout and remain accessible when the Resources disclosure is expanded.
 Documentation panels use normal flow, responsive disclosures and bounded scroll
 regions so that controls do not overlap the prose. See the public handbook and
 its maintenance guide for the current reading and build behavior.
