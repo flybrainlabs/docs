@@ -1,6 +1,6 @@
 # Wallet connection and sign-in
 
-The website uses Wallet Standard for the new Solana mining experience. The wallet entry appears in the header, while mining and account pages show the relevant grant and history controls. Public reading and model preparation do not require a wallet signature.
+The website uses Wallet Standard for the new Solana mining experience. The wallet entry appears in the header, while mining and account pages show the relevant grant and history controls. Public reading does not require a wallet signature. The primary mining entry starts with wallet connection and sign-in; it never starts computation merely by opening the wallet selector.
 
 ## Three separate states
 

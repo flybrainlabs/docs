@@ -5,8 +5,8 @@ Updated: 2026-10-13. Repository organization does not change production capabili
 ## Public handbook and compact navigation
 
 The documentation center is published at [flybrain.work/docs](https://flybrain.work/docs/)
-with 25 English guides, seven categories, 12,712 rendered words, seven diagram
-designs in ten figures and 158 searchable title/section entries. Header/footer
+with 25 English guides, seven categories, 12,887 rendered words, seven diagram
+designs in ten figures and 160 searchable title/section entries. Header/footer
 navigation and Help link to the handbook. Categories cover project introduction,
 mining, storage, wallets/grants, scientific model/tasks/replay, atlas/results,
 economics/Explorer, services/Marketplace, development/operations and support.
@@ -26,15 +26,32 @@ the product API is unavailable, from the unchanged public policy reference.
 Frozen policy objects, scientific identities, token/program addresses and
 historical contracts remain unchanged. No token issuance or payment was repeated.
 
-Acceptance: 26 documentation pages, 1,960 internal links, 25 checksum-matched
+Acceptance: 26 documentation pages, 1,964 internal links, 25 checksum-matched
 Markdown downloads; eight export tests and native web compilation passed.
-Local and public Chromium each passed 50 viewport/language reading layouts.
-Local and public compact regression each passed 24 menu/language/reflow cases,
-including 125% zoom and unchanged supply/pool values displayed as FBW. Public
-HTTP readback matched 64 release objects. These are simulated viewports, not
-physical Android or extension-wallet acceptance. Website revision:
-`documentation-20261013-v2`. The full 11,751-type atlas and 13 checked core/config
-assets are retained byte-for-byte; no model download or state reset was required.
+The V2 reading release passed 50 local and 50 public viewport/language layouts.
+Its local and public compact regression each passed 24 menu/language/reflow cases,
+including 125% zoom and unchanged supply/pool values displayed as FBW, with
+64 HTTP objects matched. The V3 wallet-entry update additionally matched all
+43 changed uncompressed HTTP objects and the scoped remote deployment hashes.
+These are simulated viewports, not physical Android or extension-wallet
+acceptance. Current website revision:
+`documentation-20261013-v3`. The full 11,751-type atlas and 11 checked
+execution/configuration assets are retained byte-for-byte. Research-app and
+wallet-interface wrappers were deliberately updated for wallet-first entry;
+no model download or state reset was required.
+
+The primary mining entry now requires wallet connection and then sign-in before
+preparation or computation. Pause and pending artifact recovery remain available.
+Inactive throughput displays **Not running** with no updates-per-second unit;
+only actual measured active rates display the unit. Nine wallet/task state checks
+and six local plus six public Chromium entry/layout cases passed without
+transactions. The layout check reveals the idle presentation panel without
+loading a model. Actual extension-wallet confirmation remains pending.
+
+The current authority reports `RESEARCH_STAGE_COMPLETE` with no open round after
+the two paid Devnet units. A connected wallet cannot reopen this plan. Further
+reward mining needs new calibrated task supply and a prospectively frozen finite
+budget; no idle page can report an active simulation rate.
 
 ## Deployed capabilities from the retained release
 

@@ -6,7 +6,7 @@ The main navigation, footer and Help page provide entry points.
 
 ## Content and information architecture
 
-The initial release contains 25 English guides in seven categories and 12,712
+The current release contains 25 English guides in seven categories and 12,887
 rendered words. Seven diagram designs are used in ten figures. Categories are:
 
 1. Start here: project overview, first session and feature availability.
@@ -81,7 +81,7 @@ date, previous/next links and per-section permalinks. The article subtree declar
 English and is excluded from automatic interface translation. The shell can
 retain its normal language toggle.
 
-The public search index has 158 title/section entries. It is loaded on an actual
+The public search index has 160 title/section entries. It is loaded on an actual
 search; queries are filtered in the browser and are not sent to the authority or
 a third-party search engine. Keyboard navigation, highlighted snippets, no-result
 messages and recoverable index-fetch errors use native elements and text nodes.
@@ -114,8 +114,12 @@ failure/recovery checks. These are simulated viewports, not physical-device or
 wallet-extension acceptance.
 
 `tools/build_documentation_release.py` refreshes an independent complete retained
-export. It preserves existing page bodies and executable modules while updating
-the shared navigation, public handbook, downloads, search assets and sitemap.
+export. It updates shared navigation, public handbook, downloads, search assets,
+sitemap and the reviewed wallet-entry/throughput presentation. The current
+revision is `documentation-20261013-v3`. Scientific WASM, worker execution,
+candidate submission and frozen financial configuration stay byte-identical;
+11 checked execution/configuration assets are retained. The research-app and
+wallet-interface wrappers change deliberately to implement wallet-first entry.
 Current public token labels and whitepaper downloads use FBW. The existing
 policy JSON and all chain/scientific identities remain byte-identical; the supply
 view renders a display reference from the published policy without depending on
@@ -139,3 +143,22 @@ switch, menu/document separation, mutually exclusive directory/section panels,
 prose reflow at 125% zoom, table/figure containment and the unchanged supply/pool
 values displayed as FBW in both shell languages. It is a layout/interaction check,
 not a claim of physical Android acceptance.
+
+## Wallet entry and throughput regression
+
+The primary mining entry opens the wallet selector before model preparation or
+computation and then requires sign-in. Pending artifact recovery and pause
+controls remain usable without a wallet. A disconnected wallet cannot start or
+resume new mining through the primary entry. The completed finite plan remains
+closed; connection does not create another task or reward budget.
+
+An idle rate displays **Not running** without a unit. A session without a usable
+sample displays **Measuring**; a finite measured rate alone displays the updates
+per second unit. The label and value share one aligned row.
+
+`tests/wallet_entry_gate.mjs` checks nine wallet/task/control states without
+transactions. `tests/mining_wallet_entry.py` checks the real wallet-selector
+entry and idle presentation at 320/390/1440 pixels in both shell languages.
+Six cases passed locally and on the public website. The idle presentation panel
+is revealed for its layout check; no model or simulated computation is run.
+These checks do not replace actual extension-wallet confirmation.

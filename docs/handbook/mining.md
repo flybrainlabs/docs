@@ -2,6 +2,10 @@
 
 Mining searches a frozen stimulus space for a response that meets a registered numerical objective. It uses the complete prepared graph and records the required backgrounds. A task is payable only when it belongs to an admitted, funded discovery unit.
 
+## Connect the wallet first
+
+The primary mining entry asks you to connect a Wallet Standard wallet, then sign in. It does not start a simulation or download the complete model when you select Connect wallet. After that, review preparation, the available task and finite credit. A connected wallet cannot reopen a completed budget.
+
 ## Read the active preparation phase
 
 :::diagram preparation

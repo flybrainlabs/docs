@@ -16,7 +16,7 @@ A useful first session begins with understanding the current task supply. The mo
 
 Use a browser supporting WebAssembly and workers. The workflow also uses persistent browser storage to reuse model chunks and retain results. Ordinary browsing and a private/incognito session may have different persistence behavior. Keep the same browser profile when returning to saved work.
 
-Open [Mining](/mining/) and review the displayed task, preparation and wallet states. Starting preparation is an explicit action. Allow the verified data download and model construction to finish; reopening other pages does not need another complete download when the retained cache is valid.
+Open [Mining](/mining/) and connect your wallet first using the primary button. Complete sign-in, then review the displayed task, preparation and funding states. Preparation and computation are explicit actions. Allow the verified data download and model construction to finish; reopening other pages does not need another complete download when the retained cache is valid.
 
 :::diagram preparation
 
