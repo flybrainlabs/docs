@@ -635,3 +635,22 @@ Continuous full-model campaign, physical-device and independent-operator
 acceptance remain pending. See `CONTINUOUS_TASK_SUPPLY_PLAN.md` and the
 infrastructure `CONTINUOUS_TASK_SUPPLY_ACCEPTANCE.json` for the implemented
 boundaries and retained evidence.
+
+
+## First 30-day mining incentive planning — 2026-10-14
+
+The owner clarified an initial 30-day phase and a target of 100 SOL/day in
+aggregate miner expenditure, not project operating expenditure or guaranteed
+project receipts. The previous 90-day opening schedule was illustrative and was
+never activated. A candidate 50-FBW standard winner reward, 860,000-FBW daily
+ceiling and 25,800,000-FBW phase ceiling are recorded for review in
+[the planning document](MINING_INCENTIVE_STAGE_30D_PLAN.md).
+
+Using the documented historical 0.00585216-SOL Result rent, the daily target
+would require approximately 17,088 distinct successfully settled units, excluding
+miner-paid wallet fees and prepaid Result balances. This throughput is unmeasured;
+a current public RPC quote was unavailable. The reward recommendation and ceiling
+are not funded or active. New scientific work, measured replay/archive capacity,
+verified balances and a separate verifier/operating budget remain prerequisites.
+No payment, grant change, task publication, server restart or deployment was
+performed for this planning record.
