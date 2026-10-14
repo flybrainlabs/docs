@@ -2,6 +2,50 @@
 
 Updated: 2026-10-14. Repository organization does not change production capability.
 
+## GitHub selected repository tasks
+
+Release `github-task-selection-20261014-v1` is deployed at `/social/`. The public
+interaction list contains only `Star miner`, `Star infra` and `Star node`, in
+that order, and its progress denominator is three. GitHub identity binding
+retains its independent once-only 50-point reward. The current configured maximum
+is 53 points, with Star rewards remaining unavailable under the documented
+platform review outcome.
+
+The v2 repository manifest preserves the original v1 manifest and stable task
+keys. The public API excludes Follow and the other seven repository tasks;
+stale or forged direct requests for them are rejected. Stored task definitions,
+historical completions, points, snapshots, credentials and private configuration
+are preserved. The narrow source update backed up SQLite coherently and restarted
+only the community process once. It repeated no migration and left scientific
+and financial process identities unchanged.
+
+Acceptance passed 61 backend checks, including retired-task history retention,
+42 GitHub Chromium checks, 14 read-only public Chromium checks and the hashes of
+all ten changed public objects. Complete-export validation and community type
+checking passed. The preceding availability-only update remains recorded below.
+See `COMMUNITY_GITHUB.md` and the infrastructure task-selection acceptance record.
+
+## GitHub verification availability follow-up
+
+Release `github-verification-state-20261014-v1` clarifies unavailable interaction
+verification at `/social/`. The original production node still enables binding
+and disables Follow/Star rewards. A completed binding and its 50-point credit
+were observed through aggregate counts, consistent with the owner's report.
+This is separate from physical-device or wallet-extension acceptance.
+
+The platform review has not approved the current reward-incentivized Follow/Star
+configuration under GitHub's Acceptable Use Policies, section 4. The interface
+now labels those buttons as unavailable, places a summary before the task list
+and supplies visible, accessible reasons beside each affected task in English
+and Chinese. Unavailable tasks no longer advertise claimable points. Existing
+completion records and enabled-task verification remain intact.
+
+Acceptance passed 42 isolated GitHub Chromium checks, 57 existing GitHub backend
+checks, 13 read-only public Chromium checks and all 12 changed public HTTP object
+hashes. The complete static export, its reviewed OAuth bridge and 11,751 atlas
+types also passed validation. This scoped website update required no production
+database migration, service restart, credential change or token transfer.
+
 ## GitHub community tasks
 
 Release `community-github-20261014-v1` is deployed at `/social/`. It reuses the

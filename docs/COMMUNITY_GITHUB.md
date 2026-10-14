@@ -1,6 +1,6 @@
 # GitHub community identity and tasks
 
-The `community-github-20261014-v1` update integrates GitHub into the existing
+The original `community-github-20261014-v1` update integrates GitHub into the existing
 `/social/` community service. It shares Wallet Mining V3 SIWS sessions, SQLite/WAL,
 the immutable points ledger, profile summaries, ranking and allocation snapshots.
 It never starts a token transfer, follows an account or stars a repository.
@@ -10,29 +10,61 @@ It never starts a token transfer, follows an account or stars a repository.
 | Task key | Public target | Points, once per identity |
 |---|---|---:|
 | `github_connect_v1` | Original GitHub user ID | 50 |
-| `github_follow_flybrainlabs_v1` | <https://github.com/flybrainlabs> | 10 |
 | `github_star_miner_v1` | <https://github.com/flybrainlabs/miner> | 1 |
-| `github_star_explorer_v1` | <https://github.com/flybrainlabs/explorer> | 1 |
-| `github_star_contracts_v1` | <https://github.com/flybrainlabs/contracts> | 1 |
-| `github_star_protocol_v1` | <https://github.com/flybrainlabs/protocol> | 1 |
-| `github_star_node_v1` | <https://github.com/flybrainlabs/node> | 1 |
-| `github_star_sdk_v1` | <https://github.com/flybrainlabs/sdk> | 1 |
 | `github_star_infra_v1` | <https://github.com/flybrainlabs/infra> | 1 |
-| `github_star_research_v1` | <https://github.com/flybrainlabs/research> | 1 |
-| `github_star_docs_v1` | <https://github.com/flybrainlabs/docs> | 1 |
-| `github_star_examples_v1` | <https://github.com/flybrainlabs/examples> | 1 |
+| `github_star_node_v1` | <https://github.com/flybrainlabs/node> | 1 |
 
-The maximum configured total is 70 points. Follow/Star rewards have a separate
+The owner reduced the interaction list to `miner`, `infra` and `node` on
+2026-10-14. Binding remains an independent identity prerequisite with its existing
+once-only reward. The current configured total is 53 points, including binding.
+Follow and the other seven Star task definitions, completion records and earned
+points remain stored for history. They are excluded from the public task list
+and cannot be verified through stale clients, even when the interaction gate is
+enabled. No GitHub repository is deleted by this selection.
+
+Star rewards have a separate
 `GITHUB_ENGAGEMENT_REWARDS_ENABLED` operational gate. It remains **off** until the
-platform rules review required by the owner is completed. Identity binding is
+platform rules review required by the owner has passed. Identity binding is
 independently enabled when the application credentials are configured. A paused
 interaction task is visible with disabled verification and an accurate status.
+
+### Verification availability review, 2026-10-14
+
+The original node reports that binding is enabled and engagement rewards are
+disabled. One completed production binding and its 50-point ledger credit were
+observed through aggregate counts. This confirms the reported binding flow; it
+does not establish physical-device or wallet-extension acceptance.
+
+The [GitHub Acceptable Use Policies, section 4](https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies#4-spam-and-inauthentic-activity-on-github)
+restrict reward-incentivized interactions, including credits and giveaways. The
+current Follow/Star points configuration has not passed that review. A successful
+identity binding does not authorize activating interaction rewards.
+
+The Social interface identifies unavailable verification explicitly, shows the
+reason beside each affected task and links it with `aria-describedby`. The
+summary appears before the interaction list. Unavailable tasks do not advertise
+points as claimable; completed records remain visible. Available tasks retain
+normal verification and server-enforced one-time crediting. No migration,
+credential replacement, reauthorization or service restart is needed for this
+presentation update.
+
+A future change can provide non-rewarded relationship checks or reward genuine
+reviewed code/documentation contributions. Either choice changes the requested
+task rules and requires a separate product decision before implementation.
 
 The auxiliary public `examples` repository contains original read-only API,
 SDK integration, byte-integrity and synthetic research-format demonstrations.
 It is outside the ten-component assembly. The `web` component remains private.
-Repository IDs are pinned in `node/config/github-community-tasks-v1.json` and
-verified again using the official API before any Star completion.
+Selected repository IDs are pinned in `node/config/github-community-tasks-v2.json`;
+the original v1 manifest is retained unchanged. Repository IDs and public
+visibility are verified again using the official API before any Star completion.
+
+The `github-task-selection-20261014-v1` rollout changes the manifest and two
+community source files through `infra/tools/upgrade_github_task_selection.sh`.
+It makes a coherent SQLite backup, checks historical rows and private
+configuration hashes, and restarts only the community service. It applies no
+new schema migration and retains the old manifest, credentials, completed
+receipts and ledger entries.
 
 ## OAuth and wallet isolation
 
@@ -100,11 +132,11 @@ reauthorization. Credentials never enter browser storage or public builds.
 | `GET /api/auth/github/callback` | One-use state + browser cookie + original session | Exchange code and verify identity |
 | `POST /api/social/github/complete` | Original SIWS + CSRF + cookie | Atomically bind and credit |
 | `GET /api/social/github/binding` | SIWS | Private identity and task progress |
-| `POST /api/social/github/verify` | SIWS + CSRF + Origin | Verify a fixed Follow/Star task |
+| `POST /api/social/github/verify` | SIWS + CSRF + Origin | Verify one of the three selected Star tasks |
 
 The only verification input is `taskId`. Owner, repository, user identity, wallet
-and points come from server records. Follow uses `/users/{bound_login}/following/`
-`flybrainlabs`; Star uses `/user/starred/flybrainlabs/{fixed_repository}`. A 204
+and points come from server records. Active Star tasks use
+`/user/starred/flybrainlabs/{fixed_repository}`. A 204
 proves the relationship, a 404 means it is absent, and authorization, rate-limit,
 timeout and service errors award no points. At most four provider requests are
 active in the process, with short retries, wallet/task leases and retry cooldowns.
@@ -126,7 +158,8 @@ and 2 remain byte-identical and are checked against their recorded hashes.
 One-time tasks use the existing `social_task_completions` table and immutable
 `community_points_ledger`; GitHub does not use daily completion slots.
 
-Upgrade uses `infra/tools/upgrade_community_v3.sh`. A coherent SQLite backup
+The original third-migration rollout used `infra/tools/upgrade_community_v3.sh`.
+A coherent SQLite backup
 includes committed WAL state. Raw database/WAL/SHM copies are retained separately.
 Before/after checks prove historical row prefixes, ledger/profile totals,
 migration hashes, wallet-runtime hashes and the unchanged process identities of
@@ -146,6 +179,7 @@ snapshots, atomic rollback and concurrent one-time rewards. Chromium checks cove
 both languages, narrow/desktop layouts and the actual front-end/API integration.
 
 The public checks are read-only. They create no production fixture users or GitHub
-relationships. Real wallet-extension consent and real OAuth completion remain
-separate acceptance items until a user performs them. Follow/Star production
-awards remain gated pending the specified platform review.
+relationships. The owner's reported production binding is supported by the
+aggregate one-binding and 50-point ledger observation. This update performs no
+direct wallet-extension or physical-device acceptance session. Star production
+awards remain gated because the specified platform review has not approved them.
