@@ -2,6 +2,37 @@
 
 Updated: 2026-10-14. Repository organization does not change production capability.
 
+## Community daily contributions and invitations
+
+Release `community-daily-invites-20261014-v1` is live at `/social/`. Public ranking
+uses full-length wallet displays with eight middle characters masked and no
+wallet-copy action or X username option. The leaderboard is on the desktop
+right column; narrow screens stack all sections. The requested allocation
+disclaimer is removed from Social and its English/Chinese guide.
+
+New X bindings earn 10 points. Daily authenticated check-in earns one point.
+Original X posts earn one point each, up to three per UTC day, using bound-author
+and original-body challenge verification. Invitation links fix attribution on
+first community registration; inviters earn 10 points only after a distinct
+invitee completes X verification, with no per-inviter count cap.
+
+Version 2 is an additive, separately hashed migration. Existing earned points,
+bindings, ledgers, snapshots and allocation/budget receipts retain their bytes.
+A coherent database backup and integrity check passed. Only the community
+service restarted; the private runtime and other services stayed unchanged.
+
+Acceptance passed 45 backend regressions, 29 daily/referral checks, 40 isolated
+Chromium interaction checks, 46 local layout/wallet checks, 20 read-only public
+checks and eight export tests. All 11,751 atlas types remain in the complete
+export. Verified deployment matched 21 website objects and four backend objects;
+public HTTP matched 23 changed/retained objects. Actual extension-wallet,
+human live X challenge and physical-device acceptance remain separate.
+
+See [Community daily contributions and invitations](COMMUNITY_DAILY_INVITES.md)
+and `infra/docs/COMMUNITY_DAILY_INVITES_ACCEPTANCE.json`. This release retains
+the existing mining/RPC configuration and does not resolve the earlier mining
+failure or activate the pending private RPC provider.
+
 ## Stitch Social and wallet presentation
 
 `stitch-social-wallet-20261014-v1` implements three actual Google Stitch design

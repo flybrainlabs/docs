@@ -20,14 +20,9 @@ comes from the existing **31,183,323 FBW Community & Ecosystem Pool**. The remai
 it does not create new tokens or mean tokens have already been sent or locked in
 a dedicated on-chain vault. The existing FBW asset is on Solana Devnet.
 
-**Points are not FBW.** Verified points determine your community rank and will be
-considered in future allocations. There is no fixed point-to-token conversion,
-guaranteed personal amount or announced distribution date. Before a real
-distribution, its eligibility, cutoff, calculation and claim terms must be
-published and authorized. Completing a task now updates points, not your wallet's
-token balance.
+Verified community points determine your rank and record your contributions.
 
-## The five sections
+## The six sections
 
 | Section | What you can learn or do |
 |---|---|
@@ -35,6 +30,7 @@ token balance.
 | My Community | Read your actual points, rank, completed tasks and X identity |
 | Community Tasks | Start available tasks and follow their verification state |
 | Community Leaderboard | Browse verified community contribution rankings |
+| Invitations | Create a link and track registrations, verified invitees and rewards |
 | Activity | Read the dated point entries behind your personal total |
 
 There are no sample participants inserted into the live leaderboard. An empty
@@ -63,7 +59,7 @@ The website never treats your token balance as your community score.
 ## Verify your X identity
 
 The first available task is **Connect X Identity**. Its initial reward is
-**100 Community Points**. It is a one-time contribution for each wallet and known
+**10 Community Points**. It is a one-time contribution for each wallet and known
 X identity. The server defines the reward; your browser cannot choose it.
 
 ### 1. Generate your verification post
@@ -131,8 +127,9 @@ OAuth verification is a future identity upgrade, not a claimed current feature.
 Each point change has a source and timestamp. Successful task completion appends
 one contribution entry. Corrections append a separate audited adjustment; the
 old entry remains. A retry, extra click or refresh cannot create a second first
-reward. The reward captured when your challenge was created remains fixed even
-if the administrator later changes points for new challenges.
+reward. Existing earned points remain unchanged. The community v2 migration changes
+uncompleted identity challenges to 10 points; subsequent task revisions keep
+the reward captured by their challenge.
 
 The leaderboard considers effective positive community points. Higher totals
 rank first. Ties use the time the current score was reached, then a stable wallet
@@ -145,21 +142,58 @@ A live leaderboard can change while you paginate. An approved immutable snapshot
 is the record used for a reproducible allocation, rather than an arbitrary later
 screen capture.
 
-## Privacy and identity settings
+## Daily check-in
 
-The public leaderboard displays a shortened wallet address. You can copy it or
-open its public contribution details. Showing your verified X username is
-**optional** and starts off by default. Enable the setting in My Community to
-publish it beside your rank.
+Sign in and choose **Check in**. One check-in earns **1 point** each UTC day.
+The next day starts at **00:00 UTC**. Repeated clicks and refreshes read the same
+receipt; they do not grant another reward. My Community and Activity show the
+updated total and its dated check-in entry.
 
-A public verification post itself remains public on X. The public contribution
-feed omits your session, private review reasons and administrator evidence.
-These are different privacy boundaries: choosing not to show the username on the
-leaderboard does not make an X post private.
+## Daily X posts
+
+After verifying your X identity, select **Publish a post**. Generate the current
+**FBW-POST-** code, publish it in a new original public post from the bound account,
+then paste the post URL and choose **Verify post**. Each verified post earns
+**1 point**, with at most **3 rewarded posts per UTC day**.
+
+Use a separate code and original post for each contribution. Verification uses
+the same official public evidence and original-author checks as identity binding.
+A reused identity-verification post, repeated URL, old post or different author
+cannot earn another reward. Codes expire after 30 minutes or at midnight UTC,
+whichever comes first. Failed provider checks enter the existing review workflow
+and do not consume a rewarded slot. The daily counter and limits are enforced by
+the server, including concurrent requests.
+
+## Invite new registrations
+
+Choose **Create invitation link** after signing in. Your link stays the same on
+refresh and is available to copy. Share it with a new participant, who opens the
+link and signs in with their wallet on Social. Their first community registration
+fixes the invitation attribution. Existing registered users cannot be reassigned,
+and creating or opening a link alone earns no points.
+
+The inviter earns **10 points** when the invited new user successfully completes
+their unique X identity verification. The invited user separately earns the
+normal 10 identity points. A replay, second login, previously rewarded X identity
+or duplicate wallet registration does not create a second invitation reward.
+There is **no invitation count limit**. The invitation panel shows actual
+registered invitees, verified invitees and earned invitation points.
+
+## Leaderboard privacy and layout
+
+On desktop, the leaderboard is on the right of the participation sections.
+Narrow screens use one column. Public ranking rows display the wallet at its
+original length with exactly the middle **8 characters replaced by <code>********</code>**.
+There is no wallet-copy action or X username display option. Public leaderboard
+responses also omit the underlying full wallet address and X username.
+
+Your own X binding remains visible only in your signed-in profile. Your public
+verification post remains on X. The public contribution feed omits sessions,
+private review reasons and administrator evidence.
 
 You can unlink your X identity after a fresh wallet sign-in. Earned points and
-first-task completion remain. Unlinking does not permit another first reward or
-allow another wallet to reuse the known identity's first contribution.
+first-task completion remain. Daily posting requires an active binding. Unlinking
+does not permit another first reward or another wallet to reuse the known identity.
 
 ## Future allocations and administration
 
@@ -196,9 +230,6 @@ while its login expires. A new signature proves control; it is not a transfer.
 
 **What happens if there is no rank yet?** An account without eligible positive
 community points is not ranked. This is an actual empty state.
-
-**Is an airdrop scheduled?** No date or guaranteed amount is announced by this
-module. Applicable allocation terms must be published before any actual execution.
 
 For operators and integrators, read the maintained technical delivery document
 `docs/social-community-system.md` in the docs component. For asset identity and

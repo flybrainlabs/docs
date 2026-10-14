@@ -8,13 +8,18 @@ It uses the existing Wallet Standard browser connection and SIWS authentication;
 it does not introduce another wallet, session store or token issuer.
 
 The public route is `/social/`. The administration route is `/social/admin/`.
-Five sections appear in order: Community Airdrop Allocation, My Community,
-Community Tasks, Community Leaderboard and Activity. Visitors can read the
+Six sections provide Community Airdrop Allocation, My Community, Community Tasks,
+Invitations, Community Leaderboard and Activity. The desktop leaderboard is on
+the right; narrow screens use one column. Visitors can read the
 budget, published rules and real leaderboard without connecting a wallet.
 Authenticated participants can generate challenges, submit public evidence,
-choose public username visibility and read their private contribution history.
+check in, verify daily posts, invite new participants and read private point history.
 A contribution link exposes sanitized public point sources, never session
 identifiers, private reasons, risk flags or administrator evidence.
+
+The community v2 daily, referral, privacy and migration contract is detailed in
+[Community daily contributions and invitations](COMMUNITY_DAILY_INVITES.md).
+Its version 2 migration supplements the unchanged version 1 checksum and receipts.
 
 ## Budget and asset identity
 
@@ -38,9 +43,8 @@ airdrop vault or imply that the budget is locked on chain. Approved community
 reservations are internal bookkeeping. Operators must reconcile future uses of
 the same community pool before authorizing any asset execution.
 
-Community points are not tokens. There is no fixed conversion, distribution
-calendar, guaranteed personal amount or automatic claim. The service has no
-payment signer, relayer loop, mint instruction or transfer endpoint.
+The community service records points and has no payment signer, relayer loop,
+mint instruction or transfer endpoint.
 
 ## Wallet authentication
 
@@ -66,9 +70,10 @@ A normal wallet cannot access administration through a hidden button or direct A
 
 ## X public challenge
 
-The initial enabled task is `connect_x_identity_v1`, worth 100 community points.
-The reward/revision is captured when each challenge is admitted. Later task
-configuration changes do not alter that challenge or historical completions.
+The initial enabled task is `connect_x_identity_v1`, worth 10 community points.
+Migration v2 changes uncompleted identity challenges to 10 points while retaining
+all completed receipts. Subsequent reward/revision changes are captured when
+a new challenge is admitted.
 
 1. An authenticated user requests a challenge.
 2. The backend generates 16 random bytes (128 bits), rendered as
@@ -216,10 +221,13 @@ Public GET: `/api/social/tasks`, `/api/social/leaderboard`,
 
 Authenticated GET: `/api/social/profile`, `/api/social/x/challenge`,
 `/api/social/x/binding`, `/api/social/leaderboard/me`,
-`/api/social/points/history`.
+`/api/social/points/history`, `/api/social/invite`, `/api/social/daily-x/challenge`.
 
 Authenticated POST: `/api/social/x/challenge`, `/api/social/x/verify`,
-`/api/social/x/unbind`, `/api/social/profile/visibility`.
+`/api/social/x/unbind`, `/api/social/register`, `/api/social/invite`,
+`/api/social/check-in`, `/api/social/daily-x/challenge`, `/api/social/daily-x/verify`.
+The compatibility visibility endpoint accepts only `showX: false`; enabling
+public X identity returns `public_identity_disabled`.
 
 Administrator GET: `/api/social/admin`, `/api/social/admin/users?wallet=...`,
 `/api/social/admin/snapshots/{id}/export?format=json|csv`,
