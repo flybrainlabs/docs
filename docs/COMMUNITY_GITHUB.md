@@ -22,35 +22,42 @@ points remain stored for history. They are excluded from the public task list
 and cannot be verified through stale clients, even when the interaction gate is
 enabled. No GitHub repository is deleted by this selection.
 
-Star rewards have a separate
-`GITHUB_ENGAGEMENT_REWARDS_ENABLED` operational gate. It remains **off** until the
-platform rules review required by the owner has passed. Identity binding is
-independently enabled when the application credentials are configured. A paused
-interaction task is visible with disabled verification and an accurate status.
+Star verification and points have independent operational controls. A configured
+service permits read-only Star checks by default (`starVerificationEnabled` can
+pause them). `GITHUB_ENGAGEMENT_REWARDS_ENABLED` remains off until the platform
+rules review requested in the original specification passes. The existing
+GitHub AUP review did not approve the incentive-based Star configuration.
 
-### Verification availability review, 2026-10-14
+### Open GitHub and verify, 2026-10-14
 
-The original node reports that binding is enabled and engagement rewards are
-disabled. One completed production binding and its 50-point ledger credit were
-observed through aggregate counts. This confirms the reported binding flow; it
-does not establish physical-device or wallet-extension acceptance.
+The owner requested an explicit two-button flow. For each of `miner`, `infra` and
+`node`, **Open GitHub** opens its fixed public repository in a separate tab with
+opener/referrer isolation. After the wallet is signed in and GitHub is bound,
+opening that repository enables only its **Verify** button. This prerequisite
+survives language changes and normal renders, and resets on refresh, disconnect
+or wallet/session changes. It never proves that the user starred a repository.
 
-The [GitHub Acceptable Use Policies, section 4](https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies#4-spam-and-inauthentic-activity-on-github)
-restrict reward-incentivized interactions, including credits and giveaways. The
-current Follow/Star points configuration has not passed that review. A successful
-identity binding does not authorize activating interaction rewards.
+Verify checks the original numeric GitHub identity, the fixed repository ID and
+its public visibility, then the authenticated `/user/starred` relationship. A
+successful check with rewards paused records `star_verified` evidence in the
+existing immutable audit table. The profile exposes `verifiedTaskIds`, displays
+**Verified**, and retains progress on refresh. The points ledger and reward
+completion receipts are untouched. Repeat checks reuse the proof without adding
+provider requests or duplicate evidence. Missing Stars, revoked authorization,
+provider errors and rate limits retain explicit retry/reconnect feedback.
 
-The Social interface identifies unavailable verification explicitly, shows the
-reason beside each affected task and links it with `aria-describedby`. The
-summary appears before the interaction list. Unavailable tasks do not advertise
-points as claimable; completed records remain visible. Available tasks retain
-normal verification and server-enforced one-time crediting. No migration,
-credential replacement, reauthorization or service restart is needed for this
-presentation update.
+When the separately reviewed reward gate is enabled, verified-but-unrewarded
+relationships must be checked again before the existing once-only award can
+commit. Opening a repository cannot award points; editable task metadata cannot
+bypass either operational gate. Historical points and completion records remain
+intact. The interface shows that Star points are paused and does not advertise
+those credits as claimable. This is a specific current availability status, not
+an additional generic points disclaimer.
 
-A future change can provide non-rewarded relationship checks or reward genuine
-reviewed code/documentation contributions. Either choice changes the requested
-task rules and requires a separate product decision before implementation.
+The `github-star-flow-20261014-v1` source rollout replaces only three community
+service files with a coherent database backup and unchanged private configuration.
+It adds no migration and restarts only the community service. Its website update
+retains the complete atlas, science, mining, wallets, RPC and OAuth bridge.
 
 The auxiliary public `examples` repository contains original read-only API,
 SDK integration, byte-integrity and synthetic research-format demonstrations.
@@ -103,7 +110,7 @@ Local authorized application inputs are stored outside repositories in
 private location. The original wallet runtime is retained unchanged.
 
 Configuration fields are `clientId`, `clientSecret`, `encryptionKey`, `callbackUrl`,
-`bindingEnabled` and `engagementRewardsEnabled`. The encryption key is 32 random
+`bindingEnabled`, optional `starVerificationEnabled` and `engagementRewardsEnabled`. The encryption key is 32 random
 bytes encoded as 64 hexadecimal characters. Protect the production file with
 root ownership, `flypow` group and mode `0640`; back up its key securely. The public
 template is `infra/deploy/target-v2/github-community.example.json` and contains
@@ -138,7 +145,7 @@ The only verification input is `taskId`. Owner, repository, user identity, walle
 and points come from server records. Active Star tasks use
 `/user/starred/flybrainlabs/{fixed_repository}`. A 204
 proves the relationship, a 404 means it is absent, and authorization, rate-limit,
-timeout and service errors award no points. At most four provider requests are
+timeout and service errors save no positive proof and award no points. At most four provider requests are
 active in the process, with short retries, wallet/task leases and retry cooldowns.
 
 The existing client retains `credentials: omit` for ordinary requests. Only Start
@@ -182,4 +189,4 @@ The public checks are read-only. They create no production fixture users or GitH
 relationships. The owner's reported production binding is supported by the
 aggregate one-binding and 50-point ledger observation. This update performs no
 direct wallet-extension or physical-device acceptance session. Star production
-awards remain gated because the specified platform review has not approved them.
+checks are available after opening the target; awards remain gated because the specified platform review has not approved them.

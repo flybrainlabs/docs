@@ -2,6 +2,31 @@
 
 Updated: 2026-10-14. Repository organization does not change production capability.
 
+## GitHub Star opening and verification
+
+Release `github-star-flow-20261014-v1` separates Star verification from points.
+The three selected repositories retain individual **Open GitHub** buttons. With
+a signed-in wallet and bound GitHub identity, opening one repository enables
+only its **Verify** button. Language rerenders preserve the prerequisite; wallet
+changes, disconnect and refresh reset it. The server verifies the actual bound
+identity and public repository relationship, so opening the tab proves nothing.
+
+Successful checks with rewards paused are retained as immutable audit evidence,
+shown as **Verified** and included in the three-repository progress on refresh.
+They add no points and consume no reward receipt. Historical credits, identities,
+private configuration and snapshots are retained. Star points remain off under
+the existing platform review; GitHub identity binding retains its 50-point reward.
+
+Acceptance passed 67 GitHub backend checks, 50 GitHub Chromium checks, 45 existing
+Social backend checks and 29 daily/invitation checks. Type checking, syntax,
+complete-export validation for all 11,751 atlas types and source/history secret
+scanning passed. Fifteen public Chromium checks and all 12 changed HTTP object
+hashes also passed. The scoped node update repeats no migration and restarts only
+the community service for the flow update and the subsequent one-file success
+audit classification correction. No other service is restarted. Public
+verification and publication evidence are
+recorded in the infrastructure `GITHUB_STAR_FLOW_ACCEPTANCE.json`.
+
 ## GitHub selected repository tasks
 
 Release `github-task-selection-20261014-v1` is deployed at `/social/`. The public
