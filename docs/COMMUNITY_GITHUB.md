@@ -44,7 +44,24 @@ existing immutable audit table. The profile exposes `verifiedTaskIds`, displays
 **Verified**, and retains progress on refresh. The points ledger and reward
 completion receipts are untouched. Repeat checks reuse the proof without adding
 provider requests or duplicate evidence. Missing Stars, revoked authorization,
-provider errors and rate limits retain explicit retry/reconnect feedback.
+provider errors and rate limits retain explicit failure and retry feedback.
+
+### Community presentation refinement, 2026-10-14
+
+The owner removed user-facing GitHub reauthorization. Once an identity is bound,
+the Connect GitHub control is hidden, disabled and has no action handler. An
+expired authorization keeps the binding and contributions visible with an
+honest unavailable status; it does not restore a reconnect entry. A binding
+discovered while signing in is checked before the unbound screen can start
+OAuth. Backend credential refresh and identity compatibility remain unchanged.
+
+My Community is directly above Community Leaderboard in the right-side desktop
+column. Compact layouts follow the same document order before the task list.
+The monochrome panels, orbital allocation artwork and task cards were adapted
+from actual Google Stitch screen `35bc362868e741a386d51f833aabb5a3`. Existing
+English/Chinese text, 44px actions, real empty states and per-repository
+Open GitHub prerequisites are retained. See the web component's
+`docs/STITCH_COMMUNITY_REFINEMENT.md` for the design-to-code mapping.
 
 When the separately reviewed reward gate is enabled, verified-but-unrewarded
 relationships must be checked again before the existing once-only award can
@@ -128,8 +145,10 @@ establish them.
 Tokens and refresh tokens use AES-256-GCM with wallet/GitHub identity-bound
 authenticated context. The database holds ciphertext and expiration metadata.
 Expiring tokens are refreshed using a bounded, shared in-process refresh request;
-revocation, expired refresh credentials and wrong numeric identities require
-reauthorization. Credentials never enter browser storage or public builds.
+revocation, expired refresh credentials and wrong numeric identities prevent
+verification and preserve existing records. The community page does not expose
+reauthorization controls. Credentials never enter browser storage or public
+builds.
 
 ## Routes and verification
 

@@ -2,6 +2,31 @@
 
 Updated: 2026-10-14. Repository organization does not change production capability.
 
+## Community page refinement with Stitch
+
+Release `social-stitch-refinement-20261014-v1` is deployed at `/social/`. Actual
+Google Stitch screen `35bc362868e741a386d51f833aabb5a3` supplied the design
+reference. My Community is immediately above Community Leaderboard in the
+right-side desktop column, with matching document order on compact screens.
+Graphite surfaces, fine borders, faint orbital artwork and bounded task cards
+retain the website's monochrome identity and existing typography.
+
+Bound accounts no longer expose a GitHub reconnect control or instruction.
+Authorization-unavailable bindings keep their identity and records with an
+honest status. The initial binding and the three repository Open GitHub/Verify
+flows remain available. Existing backend refresh, points, private configuration,
+wallets, mining, administration and complete atlas resources are retained.
+
+Acceptance passed 52 isolated GitHub Chromium checks, 40 existing Social browser
+checks, 44 local UI checks and 59 read-only public UI checks. All 12 changed
+public HTTP hashes, both languages, responsive order, keyboard opening,
+reduced motion and all 11,751 atlas types were verified. The website update
+required no production backend change, service restart, database migration,
+credential replacement, fixture account or chain transaction. Actual user
+wallet-extension and physical-device acceptance remain separate.
+See the infrastructure `STITCH_COMMUNITY_REFINEMENT_ACCEPTANCE.json` and the web
+component's `docs/STITCH_COMMUNITY_REFINEMENT.md`.
+
 ## GitHub Star opening and verification
 
 Release `github-star-flow-20261014-v1` separates Star verification from points.
