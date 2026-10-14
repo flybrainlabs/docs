@@ -16,7 +16,8 @@ The wallet modal shows eligible detected providers, genuine missing-provider
 guidance, official install links and Check again. Late registration is visible
 without refreshing. Real connection advances to an explicit message-signature
 action; rejected connection remains visible in the dialog. No automatic signature,
-deposit or grant is added. Native dialogs have bounded short-screen scrolling,+a visible close header, keyboard cycling and restored trigger focus. Chinese
+deposit or grant is added. Native dialogs have bounded short-screen scrolling,
+a visible close header, keyboard cycling and restored trigger focus. Chinese
 includes the existing `zh-CN` document language and open connection controls.
 
 Acceptance passed 46 local UI checks, 41 read-only public UI checks, 32 isolated
