@@ -46,11 +46,11 @@ Edit an owning checkout, register new files, then assemble explicitly with `--wo
 
 Run checks that address the actual change. Full-model checks require existing verified resources and explicit arguments. Do not clear a model or browser profile to make a static or documentation test easier. Large exports need disk-backed scratch space.
 
-For documentation, edit `docs/handbook/`, regenerate using `tools/build_documentation.py`, inspect links/figures and run its consistency check. [Documentation maintenance](https://github.com/flybrainlabs/docs/blob/main/docs/DOCUMENTATION_CENTER.md) describes the source and generation contract.
+For the public handbook, edit the English `docs/handbook/` and Chinese `docs/handbook/zh/` sources, regenerate using `tools/build_documentation.py`, inspect links/figures and run its consistency check. [Documentation maintenance](https://github.com/flybrainlabs/docs/blob/main/docs/DOCUMENTATION_CENTER.md) describes the source and generation contract.
 
 ## English changes and publication
 
-All new documentation, technical comments, commits and release text use English. Product interfaces may be bilingual. Preserve hashed historical content even when a display field contains another language.
+Technical documentation, comments, commits and release text use English. The product interface and public handbook support English and Chinese. Preserve hashed historical content even when a display field contains another language.
 
 After verified changes, scan staged files/history, inspect authorized remote changes, commit and push with normal fast forwards. Update infra pins to the verified component commits and publish the containing infrastructure commit. Do not force-push, merge the old draft PR or publish to retired accounts.
 

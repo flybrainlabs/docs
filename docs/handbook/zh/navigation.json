@@ -1,0 +1,220 @@
+{
+  "schema": "flybrainlabs-handbook-v1",
+  "updated": "2026-10-14",
+  "language": "zh",
+  "categories": [
+    {
+      "id": "start",
+      "title": "从这里开始",
+      "description": "了解项目，找到适合自己的第一步。",
+      "articles": [
+        {
+          "slug": "overview",
+          "title": "项目概览",
+          "description": "flybrainwork 计算什么、服务谁，以及各部分如何协作。",
+          "label": "指南"
+        },
+        {
+          "slug": "quickstart",
+          "title": "开始您的首次会话",
+          "description": "从首次访问到保存证据的实用操作路径。",
+          "label": "指南"
+        },
+        {
+          "slug": "availability",
+          "title": "功能可用性",
+          "description": "已发布能力、有限 Devnet 范围与待验收事项。",
+          "label": "参考"
+        }
+      ]
+    },
+    {
+      "id": "mining",
+      "title": "挖矿与钱包",
+      "description": "准备模型、控制计算，并理解授权的范围。",
+      "articles": [
+        {
+          "slug": "mining",
+          "title": "挖矿流程",
+          "description": "下载、构建、搜索、提交，以及阅读计算结果。",
+          "label": "指南"
+        },
+        {
+          "slug": "storage",
+          "title": "模型缓存与恢复",
+          "description": "校验下载、持久化成果、快照与安全恢复。",
+          "label": "指南"
+        },
+        {
+          "slug": "wallets",
+          "title": "钱包连接与登录",
+          "description": "Wallet Standard、登录消息、账户隔离和会话密钥。",
+          "label": "Devnet"
+        },
+        {
+          "slug": "grants",
+          "title": "授权、租金与退款",
+          "description": "有限授权、Result 租金、续期、撤销及未使用本金。",
+          "label": "Devnet"
+        },
+        {
+          "slug": "performance",
+          "title": "性能与图形显示",
+          "description": "真实吞吐量、线程控制、3D 视图与设备要求。",
+          "label": "指南"
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "title": "科学模型与证据",
+      "description": "阅读模型、任务定义和可复现的成果。",
+      "articles": [
+        {
+          "slug": "model",
+          "title": "科学模型",
+          "description": "MaleCNS 解剖结构、整数 LIF 动力学与科学结论的范围。",
+          "label": "参考"
+        },
+        {
+          "slug": "tasks",
+          "title": "任务与竞争",
+          "description": "冻结任务、候选资格、承诺揭示和赢家规则。",
+          "label": "参考"
+        },
+        {
+          "slug": "verification",
+          "title": "完整验证",
+          "description": "完整复算、证据类别与当前运营者的信任边界。",
+          "label": "参考"
+        },
+        {
+          "slug": "atlas",
+          "title": "神经元图谱",
+          "description": "查找解剖类型，探索代表性骨架，理解来源标注。",
+          "label": "指南"
+        },
+        {
+          "slug": "results",
+          "title": "成果与复现",
+          "description": "阅读公开证据、下载数据包，并主动执行复现。",
+          "label": "指南"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "经济模型与 Explorer",
+      "description": "理解预算、最终付款和公开记录。",
+      "articles": [
+        {
+          "slug": "economics",
+          "title": "经济模型",
+          "description": "供应分配、有限阶段、独立账簿和历史权益。",
+          "label": "参考"
+        },
+        {
+          "slug": "devnet",
+          "title": "FBW Devnet 参考",
+          "description": "既有 flybrainwork 资产、公开回执和已完成的测试预算。",
+          "label": "Devnet"
+        },
+        {
+          "slug": "explorer",
+          "title": "Explorer 使用指南",
+          "description": "追踪轮次、候选、验证以及链上结算证据。",
+          "label": "指南"
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "title": "社区贡献",
+      "description": "验证身份，理解社区积分和未来分配规则。",
+      "articles": [
+        {
+          "slug": "social",
+          "title": "社区贡献与 Social",
+          "description": "钱包登录、X 公开挑战、贡献积分、实际排名与社区分配预算。",
+          "label": "指南"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "计算服务与 Marketplace",
+      "description": "提交明确范围的请求，了解拟议产品目录。",
+      "articles": [
+        {
+          "slug": "services",
+          "title": "计算服务请求",
+          "description": "私有工单、报价、授权、交付和保留政策。",
+          "label": "指南"
+        },
+        {
+          "slug": "marketplace",
+          "title": "Marketplace 路线图",
+          "description": "产品系列、真实训练、有限 API 使用与拟议结算流程。",
+          "label": "规划中"
+        }
+      ]
+    },
+    {
+      "id": "developers",
+      "title": "开发与运维",
+      "description": "构建固定版本，在保留状态的前提下运营服务。",
+      "articles": [
+        {
+          "slug": "architecture",
+          "title": "系统架构",
+          "description": "组件归属、数据流、信任边界与仓库依赖。",
+          "label": "参考"
+        },
+        {
+          "slug": "development",
+          "title": "构建与贡献",
+          "description": "认证检出、工作区组装、构建、英文维护和发布。",
+          "label": "指南"
+        },
+        {
+          "slug": "integrations",
+          "title": "集成原则",
+          "description": "版本化身份、浏览器客户端、Explorer 访问和有限权限。",
+          "label": "参考"
+        },
+        {
+          "slug": "operations",
+          "title": "运维与恢复",
+          "description": "就绪检查、一致性备份、限定部署和资金对账。",
+          "label": "指南"
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "title": "支持与参考",
+      "description": "排查常见问题，理解网站使用的术语。",
+      "articles": [
+        {
+          "slug": "troubleshooting",
+          "title": "故障排查",
+          "description": "准备、图形、钱包、未知付款与有限阶段的诊断。",
+          "label": "指南"
+        },
+        {
+          "slug": "privacy",
+          "title": "隐私与安全",
+          "description": "公开证据、私有数据、浏览器存储、权限与支持。",
+          "label": "参考"
+        },
+        {
+          "slug": "glossary",
+          "title": "术语表",
+          "description": "科学、钱包和资金术语的通俗解释。",
+          "label": "参考"
+        }
+      ]
+    }
+  ],
+  "revision": "docs-bilingual-20261014-v1"
+}

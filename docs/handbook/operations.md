@@ -38,6 +38,6 @@ Read permanent unit/intent state, actual transaction history and recipient evide
 
 ## Future funding and capacity
 
-The two-unit test plan is exhausted. A new rewarded stage requires new calibrated goals, prospective budget reservation and reviewed admission. Measure queue/archive capacity and cost before setting operating limits.
+The initial two-unit test plan is exhausted; a separate renewal stage reserved new goals. A new rewarded stage requires new calibrated goals, prospective budget reservation and reviewed admission. Measure queue/archive capacity and cost before setting operating limits.
 
 Mainnet, production payments and formal emission remain inactive. Full operating agreements, asset identities, authorities, finite budgets, security review and actual acceptance must precede their activation.

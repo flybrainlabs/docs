@@ -1,6 +1,6 @@
 {
   "schema": "flybrainlabs-handbook-v1",
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "language": "en",
   "categories": [
     {
@@ -216,5 +216,5 @@
       ]
     }
   ],
-  "revision": "docs-20261013-v8"
+  "revision": "docs-bilingual-20261014-v1"
 }

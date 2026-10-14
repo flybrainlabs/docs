@@ -6,7 +6,7 @@ The mining interface reports actual neural updates per second, work progress and
 
 An inactive session displays **Not running** and hides the updates-per-second unit. A started session without a usable sample displays **Measuring**. Only a finite, actual pool measurement displays a number with **neuron updates/s**. A measured zero is distinct from missing data; historical averages remain separately identified.
 
-The current finite plan has no open round after its two paid units completed. Connect the wallet first to enter mining, then inspect the task/funding state. Wallet connection alone does not generate a throughput sample or a new paid task.
+The initial finite plan has no open round after its two paid units completed; a separate stage registered new targets. Connect the wallet first to enter mining, then inspect the task/funding state. Wallet connection alone does not generate a throughput sample or a new paid task.
 
 ## Model time and wall-clock time
 

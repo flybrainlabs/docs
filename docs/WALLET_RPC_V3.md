@@ -10,8 +10,8 @@ exists, or that a transaction failed on chain.
 The maintained sources now support an authenticated gateway backed by a private
 provider endpoint, including Helius. **Provider activation is pending:** the
 requested credential is not available in the current private configuration.
-The live website remains on `mining-start-20261013-v1` and its existing public RPC
-until the private endpoint is supplied, verified and deployed. Passing fixtures
+The live mining modules remain on `mining-start-20261013-v1` and their existing
+public RPC until the private endpoint is supplied, verified and deployed. Passing fixtures
 does not establish that an actual provider key works.
 
 ## Transport and chain identity

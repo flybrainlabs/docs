@@ -80,11 +80,14 @@ scientific or financial records. See [NOTICE](NOTICE).
 
 ## Website handbook
 
-Read the [public documentation center](https://flybrain.work/docs/). The initial
-handbook has 25 English guides in seven categories, spanning the project, mining,
-wallets, science, economics, Explorer, services, development and support.
+Read the [public documentation center](https://flybrain.work/docs/). The handbook
+has 26 guides in English and Chinese across eight categories, spanning the project,
+mining, wallets, science, economics, Explorer, community, services, development
+and support. The website language control switches the full reading experience.
 
-Maintained human-readable sources are under [docs/handbook](docs/handbook).
+Maintained sources are under [docs/handbook](docs/handbook), with the owner-requested
+Chinese product reading edition in [docs/handbook/zh](docs/handbook/zh). Technical
+maintenance documentation and publication text continue to use English.
 [Documentation maintenance](docs/DOCUMENTATION_CENTER.md) explains the deterministic
 web generator, local search, public downloads, validation and scoped publication.
 Edit the Markdown and navigation in this repository; generated HTML and browser

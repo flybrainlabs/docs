@@ -1,12 +1,12 @@
 # Feature availability
 
-This page describes the documented release as of **13 October 2026**. It is a capability reference; the live mining page and public configuration determine the currently admitted task and funding state. An older successful acceptance run does not imply that the same task is still open.
+This page describes the documented release as of **14 October 2026**. It is a capability reference; the live mining page and public configuration determine the currently admitted task and funding state. An older successful acceptance run does not imply that the same task is still open.
 
 ## Published website capabilities
 
 | Capability | Documented state | Practical scope |
 | --- | --- | --- |
-| Documentation and public reading | Available | English guides with categories, local search and section links |
+| Documentation and public reading | Available | English and Chinese guides with categories, local search and section links |
 | Neuron atlas | Available | 11,751 source types and representative structural views |
 | Model preparation and cache reuse | Implemented and deployed | Verified resources, browser persistence and retained chunks |
 | Complete-model computation | Implemented and deployed | Frozen model/task rules; explicit user action |

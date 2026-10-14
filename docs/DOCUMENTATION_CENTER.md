@@ -6,8 +6,9 @@ The main navigation, footer and Help page provide entry points.
 
 ## Content and information architecture
 
-The current release contains 26 English guides in eight categories and 15,177
-rendered words. Eight diagram designs are used in eleven figures. Categories are:
+The bilingual release contains 26 guides in English and Chinese across eight
+categories, with 16,006 rendered English words and 25,519 Chinese reading units
+(CJK characters and Latin tokens). Eight diagram designs are used in eleven figures. Categories are:
 
 1. Start here: project overview, first session and feature availability.
 2. Mining and wallets: workflow, cache/recovery, sign-in, grants and performance.
@@ -29,17 +30,48 @@ The project name remains flybrainlabs. The existing test asset remains
 flybrainwork / FBW on Devnet. Current issuance, payment, Result-close and refund
 effects are documentation inputs; no transaction driver is part of this build.
 
-## Community extension
+## Bilingual layout correction
+
+The release is published at the official documentation URL. Local and public
+Chromium each passed 158 bilingual reading/layout cases plus 32 compact and
+short-screen cases. Local search-failure and no-JavaScript fallback checks passed.
+The deployment verified a coherent replaced-file backup and all 71 object hashes;
+HTTP reading matched 65 changed objects and 13 retained execution/configuration
+objects. The full retained atlas contains 11,751 types. All 52 localized Markdown
+downloads and 3,463 internal links validate, with 177 search sections per language.
+Physical-device acceptance remains separate.
+
+`docs-bilingual-20261014-v1` repairs malformed generated landing-card headings.
+The live reproduction parsed 26 cards as 52 broken link blocks; balanced headings
+and explicit card containment restore the intended structure. The bilingual build
+validates canonical heading IDs, navigation order and all source hashes for both
+languages. Eight figure designs and eleven instances have Chinese text.
+
+Each native page retains an English reading fallback and an inert Chinese frame.
+Only one article, heading and set of IDs is live at a time. The existing website
+language control selects the complete frame, persists its preference and keeps
+canonical section anchors. Mounted listeners and asynchronous search callbacks
+are canceled when a frame changes. Chinese titles, directory, breadcrumbs, TOC,
+reading metadata, figure captions, search, feedback and Markdown use the same
+language. Index-fetch failure retains category navigation and can be retried.
+
+`--docs-only` on the scoped builder updates reading pages, local search, downloads
+and their shared language helper. It preserves live mining, wallet transport,
+financial configuration, CSP and science assets from the verified baseline.
+The prepared private-RPC source does not become live through a documentation
+release. Provider activation and the original mining acceptance remain pending.
+
+## Historical community extension
 
 The V5 handbook adds `/docs/social/`, a practical contribution guide with a
-wallet-to-allocation diagram. Current website revision is
+wallet-to-allocation diagram. Its website revision was
 `social-community-20261013-v1`; it preserves the mining-session corrections below.
 The new guide distinguishes 25,000,000 FBW pool-internal budget from points and
 actual transfers. All 27 handbook pages, 26 Markdown sources, 2,117 internal
 links and 174 searchable sections validate. See `SOCIAL_COMMUNITY_ACCEPTANCE.json`
 for live service, migration and browser acceptance.
 
-## Current session corrections
+## Historical session corrections
 
 The V4 handbook explains silent wallet restoration, same-tab login expiry,
 explicit disconnect, and the distinction between a prepared model and task
@@ -52,12 +84,14 @@ Actual extension and physical-device acceptance remain separate pending gates.
 ## Maintained source and generated files
 
 The **docs** repository owns `docs/handbook/navigation.json` and the article
-Markdown files under `docs/handbook/`. It also owns this maintenance explanation.
+Markdown files under `docs/handbook/`, including localized sources and navigation
+under `docs/handbook/zh/`. It also owns this English maintenance explanation.
 The **web** repository owns:
 
 - `tools/build_documentation.py` and pinned `tools/requirements-docs.txt`.
 - Generated `web/pages/docs.html`, `web/docs/*.html` and `web/docs/routes.rs`.
-- Generated `web/data/docs-manifest-v1.json` and `docs-search-v1.json`.
+- Generated `web/data/docs-manifest-v1.json` and both `docs-search-v1.json`
+  and `docs-search-zh-v1.json`.
 - `web/docs.css`, `web/docs.js`, shell navigation and native route integration.
 - Static export, scoped release builder, link checks and Chromium acceptance.
 
@@ -65,7 +99,8 @@ All new files must be registered in the owning `component.json`. The generated
 Rust include embeds the same guide HTML and Markdown downloads into native web
 routes; it does not parse Markdown at runtime. Its allowlisted slugs return 404
 for unknown articles. Static deployment emits `/docs/<slug>/index.html` and
-`/downloads/docs/<slug>.md` from the same maintained sources.
+`/downloads/docs/<slug>.md` and `/downloads/docs/zh/<slug>.md` from the
+same maintained sources. Native routes provide the same localized downloads.
 
 ## Regenerate from an assembled workspace
 
@@ -85,7 +120,8 @@ deterministic under Markdown 3.8.2. The exporter checks article source hashes
 before writing their public derivatives. Register a new slug in both source and
 generated ownership maps; review and assemble before publication.
 
-Use H2 headings for stable section links. Add a cross-guide link with its actual
+Use matching H2/H3 heading levels and order in both languages. English canonical
+IDs are reused in Chinese so existing links keep their identity. Add a cross-guide link with its actual
 `/docs/<slug>/` route. Tables are wrapped for narrow-screen scrolling. A standalone
 `:::diagram <name>` marker selects a reviewed HTML/CSS figure, with an ordered
 text sequence and caption. Diagram content must preserve its scientific or
@@ -98,11 +134,11 @@ The desktop layout has a category directory, readable article column and section
 navigation. Narrow layouts collapse the directory and section navigation using native
 disclosures. Open panels and search results remain in normal document flow, and
 only one compact navigation panel is expanded at a time. Guides have breadcrumbs, calculated reading time, update
-date, previous/next links and per-section permalinks. The article subtree declares
-English and is excluded from automatic interface translation. The shell can
-retain its normal language toggle.
+date, previous/next links and per-section permalinks. Each article declares its
+actual language and is excluded from text-by-text shell translation. The normal
+website language toggle replaces the complete localized reading frame.
 
-The public search index has 162 title/section entries. It is loaded on an actual
+Each localized public search index has 177 title/section entries. It is loaded on an actual
 search; queries are filtered in the browser and are not sent to the authority or
 a third-party search engine. Keyboard navigation, highlighted snippets, no-result
 messages and recoverable index-fetch errors use native elements and text nodes.
@@ -128,16 +164,18 @@ to an existing dedicated scratch directory when `/tmp` is too small. Do not
 delete model, atlas or browser caches to make that test pass.
 
 Chromium reading acceptance is `tests/documentation_site.py`. It checks real
-rendering at 320/390/768/1280/1440 widths, both shell languages, all 25 guides,
-full-text/keyboard search, print layout, native navigation without JavaScript and
-home/mining navigation compatibility. `--fault-checks` adds isolated local index
+rendering at 320/390/768/1024/1280/1440 widths, both content languages and all 26
+guides. It checks cards, prose, figures, duplicate IDs, short-screen menus, 125%
+text, anchor/refresh persistence, localized search/downloads and print feedback.
+The English native fallback remains readable without JavaScript. `--fault-checks` adds isolated local index
 failure/recovery checks. These are simulated viewports, not physical-device or
 wallet-extension acceptance.
 
-`tools/build_documentation_release.py` refreshes an independent complete retained
-export. It updates shared navigation, public handbook, downloads, search assets,
-sitemap and the reviewed wallet-entry/throughput presentation. The current
-revision is `documentation-20261013-v3`. Scientific WASM, worker execution,
+`tools/build_documentation_release.py --docs-only` refreshes an independent
+complete retained export for reading-only updates. The broader historical mode
+without that flag also updates the shared product shell. It updates shared navigation, public handbook, downloads, search assets,
+sitemap and the reviewed wallet-entry/throughput presentation in that historical
+mode. The earlier entry revision was `documentation-20261013-v3`. Scientific WASM, worker execution,
 candidate submission and frozen financial configuration stay byte-identical;
 11 checked execution/configuration assets are retained. The research-app and
 wallet-interface wrappers change deliberately to implement wallet-first entry.

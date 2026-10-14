@@ -1,6 +1,28 @@
 # Implementation and acceptance status
 
-Updated: 2026-10-13. Repository organization does not change production capability.
+Updated: 2026-10-14. Repository organization does not change production capability.
+
+## Bilingual handbook layout correction
+
+`docs-bilingual-20261014-v1` provides all 26 guides in English and Chinese across
+eight categories. The generated landing-card headings are balanced; the earlier
+26-card layout no longer becomes 52 broken browser link blocks. Full translated
+prose, directory, TOC, diagrams, local search, reading metadata and 52 Markdown
+downloads use the selected language. Canonical section IDs survive switching,
+refresh retains the preference, and print/copy feedback follows the article.
+
+Local and public real-Chromium acceptance each passed 158 bilingual reading/layout
+cases and 32 compact/short-screen cases. The verified deployment matched all 71
+changed server objects; public HTTP matched 65 changed and 13 retained objects. Generation, source/download hashes, 3,463 internal
+links, 177 search sections per language, eight static export tests, five workspace
+safety tests and native library compilation passed. These are simulated browser
+viewports; physical Android acceptance remains separate. Public deployment and
+acceptance are recorded in the infrastructure bilingual acceptance file.
+
+The scoped reading release preserves all executable mining and wallet modules,
+financial descriptors, CSP and scientific resources from the verified live
+baseline. It introduces no chain transaction or model download. The requested
+private RPC provider remains unconfigured and mining acceptance remains pending.
 
 ## Private wallet RPC transport prepared
 
@@ -13,8 +35,8 @@ the original candidate for explicit retry; no chain write was introduced by
 these checks.
 
 The requested Helius credential is unavailable in the current private inputs.
-Activation is pending; the live website and runtime still use the existing
-public RPC and `mining-start-20261013-v1`. The 24 transport, 41 gateway and 10
+Activation is pending; the live mining interface and runtime still use the
+existing public RPC and mining-module revision `mining-start-20261013-v1`. The 24 transport, 41 gateway and 10
 Chromium fixture checks do not verify an actual Helius key or real-device mining.
 See [transport and activation](WALLET_RPC_V3.md).
 
@@ -155,8 +177,9 @@ was required.
 ## Public handbook and compact navigation
 
 The documentation center is published at [flybrain.work/docs](https://flybrain.work/docs/)
-with 26 English guides, eight categories, 15,650 rendered words, eight diagram
-designs in eleven figures and 176 searchable title/section entries. Header/footer
+with 26 English and Chinese guides, eight categories, 16,006 rendered English
+words, eight diagram designs in eleven figures per language and 177 searchable
+title/section entries in each localized index. Header/footer
 navigation and Help link to the handbook. Categories cover project introduction,
 mining, storage, wallets/grants, scientific model/tasks/replay, atlas/results,
 economics/Explorer, community contributions, services/Marketplace, development/operations and support.

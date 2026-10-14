@@ -14,7 +14,7 @@ The project is maintained as ten repositories under [flybrainlabs](https://githu
 | contracts | Solana programs and public deployment receipts |
 | sdk | Codecs, wallet integration, clients and durable transport |
 | research | Model preparation, task definitions, calibration and evaluation |
-| docs | Maintained English handbook, protocol explanations and runbooks |
+| docs | English technical documentation, bilingual website handbook, protocol explanations and runbooks |
 | infra | Dependency pins, assembly, deployment and publication tooling |
 
 The **web repository is private**. Other maintained repositories remain public. Complete source checkout therefore requires authorization to web; public website reading does not.
