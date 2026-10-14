@@ -2,6 +2,38 @@
 
 Updated: 2026-10-14. Repository organization does not change production capability.
 
+## Mining presentation and foreground depth
+
+Release `mining-depth-20261014-v2` is live at `/mining/`. Preparation and pending
+actions show a loading indicator with a disabled primary button and repeated
+click protection. Explicit preparation pause remains available. Animated progress
+uses the actual native progress value; unknown progress does not invent a percent.
+The console and brain use equal desktop columns and stack on narrow screens.
+
+White scrolling logs use existing preparation and computation observations.
+Qualified candidates and confirmed wins have distinct bold labels. The original
+accessible log remains available. Dark foreground backing reuses the actual brain
+and lower nerve cord surfaces, so background characters cannot show through the
+transparent anatomy. It follows rotation, pan, zoom and part visibility without
+replacing geometry or changing neuron propagation. Graphics and reduced-motion
+controls retain their behavior.
+
+Acceptance passed 11 presentation checks, 30 isolated Chromium checks and 23
+read-only public Chromium checks, including four framebuffer checks per browser
+run after rotation and zoom. Both languages, five viewport sizes, the complete
+11,751-type atlas and foreground detail were verified. The incremental correction
+matched all 12 changed server objects and 21 changed/retained public HTTP objects.
+The earlier presentation deployment and its verified backup remain in the private
+publication archive. Scientific execution, wallet/RPC configuration, community v2,
+databases and cached results are retained; this release introduces no backend
+restart, model download, budget or chain transaction.
+
+These are software Chromium and simulated viewport checks. Physical Android,
+extension-wallet and full-model mining acceptance remain separate. The requested
+private RPC provider remains inactive. See
+[Mining presentation and motion](MINING_PRESENTATION_MOTION.md) and
+`infra/docs/MINING_PRESENTATION_MOTION_ACCEPTANCE.json`.
+
 ## Community daily contributions and invitations
 
 Release `community-daily-invites-20261014-v1` is live at `/social/`. Public ranking
