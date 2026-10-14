@@ -597,3 +597,41 @@ created by importing definitions.
 
 No production issuance, paid service, formal FBW reward or mainnet change is
 activated by this repository work.
+
+
+## Continuous task supply and retained participation — 2026-10-14
+
+Release `continuous-task-supply-20261014-v1` installs a bounded, durable task
+supplier in the original wallet gateway and publishes explicit browser standby.
+The existing authority, serial verifier and community service remain running;
+scientific identities, previous result evidence, wallet defaults and funding
+fields are retained.
+
+The dispatcher uses the signed authority outbox/SSE with a shared one-minute
+fallback. It announces at most one current plus four future goals, replenishes
+below two unopened eligible goals, and checks finalized finite funding, verifier
+readiness, replay backlog and storage reserves before publication. Prepared
+requests and signed receipts recover without duplicate goal issuance. Already
+registered scientific work cannot be reintroduced by renaming it.
+
+The browser preserves explicit participation while waiting, dispatches no
+simulation in standby, and checks live identity/grants before continuing after a
+new round or transient connection failure. Explicit pause/stop, wallet changes,
+foreground restrictions and resource limits continue to require user control.
+Normal standby refreshes and telemetry are reduced to approximately one minute.
+
+The first gateway deployment encountered a missing installed RPC dependency.
+Its rollback retained the database but needed correction of the restored runtime
+file owner. The previous gateway was recovered; the completed upgrade now
+includes that dependency, retains rollback ownership and verifies the full Node
+import graph before stopping the service. No funding, reward payment, model
+download, scientific task or production fixture was created by either attempt.
+
+Current source verification found 31 solved scientific goals, 36 historical rounds
+and no pending goal. The dispatcher is installed with an empty reserve and
+reports `waiting-approved-tasks`. A new approved calibrated task catalog and a
+finite Devnet funding amount are still required to resume real competition.
+Continuous full-model campaign, physical-device and independent-operator
+acceptance remain pending. See `CONTINUOUS_TASK_SUPPLY_PLAN.md` and the
+infrastructure `CONTINUOUS_TASK_SUPPLY_ACCEPTANCE.json` for the implemented
+boundaries and retained evidence.

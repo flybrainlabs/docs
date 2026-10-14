@@ -1,8 +1,10 @@
 # Continuous competition with bounded task supply
 
-Status: proposal following the owner's questions on 2026-10-14. No new scientific
-tasks, calibration run, funded budget, payment or mining behavior was activated by
-this investigation.
+Status: bounded dispatcher and continuous-participation implementation for
+`continuous-task-supply-20261014-v1`. The original node still needs a new approved
+calibrated catalog and a finitely funded Devnet stage. The previous scientific
+plan and reward units are exhausted. No new task, calibration run, funded stage
+or payment is created by installing this implementation.
 
 ## Observed condition
 
@@ -90,3 +92,99 @@ load cannot be promised to remain identical.
 
 The current queue needs actual new approved work. Installing an event listener
 alone cannot supply tasks from an empty scientific plan.
+
+## Implemented dispatcher
+
+`node/tools/continuous_task_supply.mjs` runs inside the existing wallet gateway.
+It uses one connection to the authority's signed event stream, its committed
+outbox for cursor recovery, and a shared 60-second fallback with jitter. It does
+not subscribe to every Solana block or run calibration on the original node.
+`ROUND_FINALIZED` is the authority's committed scientific result event; new
+funding is checked against finalized chain state before tasks are published.
+Replenishment can happen ahead of the previous payment because all issued reward
+units must already belong to the approved finite stage. No reward is paid by the
+dispatcher and settlement is still reconciled by the existing relayer.
+
+The defaults allow one active goal and four announced future goals. Replenishment
+starts below two unopened goals. Signed readiness must show two model-ready
+verifier identities and fewer than two eligible verification jobs. Archive and
+disk reserves must cover the additional goals and one complete candidate per
+already announced goal. The default reserves are 256 MiB of declared archive
+capacity and 2 GiB of filesystem space. Existing admission limits remain active.
+Two local identities do not establish independent operators.
+
+The reserve is an operator-signed `flybrain-continuous-task-catalog-v1` containing
+at most 128 complete goal/calibration objects per catalog, a fixed stage, exact
+integer reward atoms, and distinct economic and scientific task identities.
+Catalogs require enabled calibration levels with training and holdout evidence.
+The existing authority performs its full goal, calibration, family and identity
+validation when accepting each plan revision. Renaming an existing goal cannot
+create another eligible scientific objective. Already registered goals are
+recorded as historical and never reissued.
+
+The private `continuous-task-supply.sqlite` retains approved catalog hashes,
+reserved/issued states, event cursors and signed outgoing requests. The outgoing
+request is committed before its HTTP POST. A lost response is reconciled using
+the original signed receipt or the identical request, including after restart.
+An unrelated admin revision creates a reviewable conflict rather than silently
+rebasing an uncertain publication. A durable lease serializes dispatchers.
+
+An empty reserve reports `waiting-approved-tasks` and performs no simulation,
+calibration, funding read or new scientific publication. An unfunded reserve
+reports `waiting-finalized-budget`. Verifier and archive backpressure also remain
+distinct states. These states do not renew funding, extend stage deadlines or
+clear scientific archives.
+
+## Browser continuation
+
+After explicit wallet sign-in and complete-model preparation, the primary action
+can enter **Wait for tasks and continue** even when the scientific plan is empty.
+Standby retains the model, artifacts, resource counters and participation intent.
+It dispatches no Worker simulation and consumes no active-computation time.
+
+A newly signed round is adopted after rechecking the signing identity, wallet
+account/generation, live login, finite grant, frozen stage and session resources.
+Missing or expired grants require a user action. Wallet changes, explicit pause,
+stop, hidden-page events and time/storage boundaries never automatically restart.
+Temporary authority or RPC admission failures suspend execution and may recover
+after a fresh authority sync within the same live authorization. Input-domain
+exhaustion waits for a different announced goal rather than pretending that a new
+nonce is new scientific work. Refresh never restores CPU execution automatically.
+
+The browser coalesces snapshot reads and event bursts. Its shared recovery poll
+uses jitter and capped exponential backoff; normal standby reconciliation and
+telemetry use roughly one-minute intervals. Pending settlement and completed
+artifact recovery remain durable and keep their existing checks.
+
+## Operator intake
+
+1. Prepare and review distinct complete-model objectives and their calibration.
+2. Approve the finite Devnet reward amount, stage and operation-cost cap. Register
+   and finalize exactly those units through the existing funding workflow.
+3. Publish the matching wallet plan and adopt it using the unchanged identity and
+   permission defaults. A stage may now have 1–128 unique finite units; this does
+   not expand an existing wallet grant or any token supply.
+4. Sign the complete catalog with the existing plan-admin key using
+   `tools/approve_task_catalog.mjs`. It refuses to create a replacement identity.
+5. Atomically install the signed catalog at the configured private catalog path.
+   The dispatcher detects it on its next check without another service restart.
+
+The example configuration is
+`infra/deploy/target-v2/continuous-task-supply.example.json`. The wallet runtime
+uses its private `continuousSupplyConfig` path. The scoped upgrade tool backs up
+the database and runtime, preserves existing rows and changes only the gateway;
+the authority, verifier, community service and their identities stay in place.
+
+## Evidence and remaining acceptance
+
+Isolated scheduler tests cover bounded refill, calibrated identity checks,
+funding/verifier/archive gates, duplicate events, durable leases, lost-response
+recovery and restart. Coordinator and Chromium fixtures cover explicit standby,
+new-round dispatch, temporary connection loss, manual stop and expired/changed
+wallet authority. Fixtures create no production users, tasks or chain payments.
+
+These tests do not establish a sustained full-model mining campaign, physical
+Android operation or independent scientific acceptance. Current deployment has
+an empty reserve. New approved tasks and a finite reward budget are still needed
+before real miners can resume competition; sustained throughput and resource
+growth must then be measured against actual complete replays.
