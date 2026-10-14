@@ -2,6 +2,39 @@
 
 Updated: 2026-10-14. Repository organization does not change production capability.
 
+## Stitch Social and wallet presentation
+
+`stitch-social-wallet-20261014-v1` implements three actual Google Stitch design
+references on the existing website: desktop Social, mobile Social and wallet
+connection/sign-in. The allocation and personal cards now share a compact
+desktop grid and stack on narrow screens; conflicting inherited hero styles are
+scoped explicitly. Existing task verification, real profile metrics, empty
+leaderboard, point history, privacy and community administration are retained.
+The supplied Logo, flybrainwork branding and monochrome appearance remain in use.
+
+The wallet modal shows eligible detected providers, genuine missing-provider
+guidance, official install links and Check again. Late registration is visible
+without refreshing. Real connection advances to an explicit message-signature
+action; rejected connection remains visible in the dialog. No automatic signature,
+deposit or grant is added. Native dialogs have bounded short-screen scrolling,+a visible close header, keyboard cycling and restored trigger focus. Chinese
+includes the existing `zh-CN` document language and open connection controls.
+
+Acceptance passed 46 local UI checks, 41 read-only public UI checks, 32 isolated
+SQLite/Ed25519 community checks, 18 public community checks, 24 public cross-route
+wallet layouts and eight static-export tests. Complete static validation retains
+all 11,751 atlas types. Deployment verified its backup and all 69 scoped object
+hashes; public HTTP matched 63 changed and eight retained objects, with the
+unchanged CSP independently verified over SSH. English design/integration notes
+and the infrastructure acceptance record describe the delivery.
+
+The local Stitch skill and its credential-free client are validated; credentials
+and raw design responses stay outside repositories and public builds. This UI
+update retains the deployed RPC bundle, financial configuration, CSP, scientific
+execution, cached results and bilingual handbook. It introduces no chain
+transaction, model download, budget, backend restart or production fixture user.
+Actual wallet-extension, physical-device and earlier mining/RPC acceptance remain
+open.
+
 ## Bilingual handbook layout correction
 
 `docs-bilingual-20261014-v1` provides all 26 guides in English and Chinese across
