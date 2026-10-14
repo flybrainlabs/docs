@@ -4,6 +4,28 @@
 contribution and see where your points place you on the real leaderboard.
 The page is open to visitors; only participation requires a signed-in wallet.
 
+## GitHub community tasks
+
+Sign in with your wallet, then select **Connect GitHub** in Community Tasks.
+GitHub verifies your developer identity and returns you to this page. The original
+wallet and sign-in session must still be selected before the first **50 points**
+are credited. Reauthorization renews the same identity and awards no extra points.
+
+The GitHub group includes a **10-point Follow** task for
+[flybrainlabs](https://github.com/flybrainlabs) and ten independent **1-point Star**
+tasks for miner, explorer, contracts, protocol, node, sdk, infra, research, docs and
+[examples](https://github.com/flybrainlabs/examples). Open the target on GitHub,
+perform the action yourself, return here and select **Verify**. Follow/Star rewards
+are awaiting activation under the project's platform-review gate; the page shows
+their real availability. All twelve configured tasks total **70 points**, once.
+
+Completed tasks remain completed after refresh, reauthorization or undoing a
+relationship on GitHub. One GitHub numeric identity belongs to one reward wallet.
+Your private GitHub identity appears in your task group; public ranking keeps its
+existing masked wallet display. GitHub credits share your usual point history,
+rank and future community snapshots. X-based invitations keep their existing
+qualification rule. GitHub authorization never follows or stars on your behalf.
+
 ## What the community budget means
 
 The page highlights **25,000,000 FBW** for future community airdrops. This budget
@@ -120,7 +142,7 @@ attempt under the published task rules.
 The public oEmbed method establishes **challenge_verified** control. It is not
 OAuth and may not provide a stable numeric X user ID. That field remains empty.
 X usernames can change or be reassigned; disputed changes need review. Official
-OAuth verification is a future identity upgrade, not a claimed current feature.
+Official X OAuth verification remains a future identity upgrade. GitHub uses the separate flow described above.
 
 ## Points and the leaderboard
 

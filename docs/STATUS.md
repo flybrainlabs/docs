@@ -2,6 +2,42 @@
 
 Updated: 2026-10-14. Repository organization does not change production capability.
 
+## GitHub community tasks
+
+Release `community-github-20261014-v1` is deployed at `/social/`. It reuses the
+existing SIWS sessions, SQLite/WAL, immutable community ledger, ranking and
+allocation snapshots. GitHub binding is configured for a once-only 50-point
+reward. Follow is configured for 10 points and ten public repository Star tasks
+for one point each; interaction rewards remain disabled pending the owner's
+required platform review. The `examples` auxiliary repository is public and has
+original integration examples. The `web` repository remains private.
+
+The third additive migration preserves the first two migration hashes and all
+historical community rows. A coherent database backup and separate raw WAL/SHM
+copies were retained. Only the community process was restarted, including one
+subsequent gate-hardening update; scientific and financial process identities
+were unchanged. Website updates matched 28 original scoped objects and two
+subsequent callback-header correction objects. Model, wallet/RPC, mining and
+anatomy resources retain their original hashes.
+
+Acceptance includes 57 GitHub/SIWS/SQLite fixture checks, 23 provider-contract
+checks, 74 existing backend checks, 31 GitHub Chromium checks, 40 existing Social
+Chromium checks, 10 wallet Chromium checks, eight export tests, five workspace
+safety tests, native compilation, bilingual documentation and public route/hash
+checks. These do not establish an actual user's OAuth consent or wallet-extension
+confirmation. The owner confirmed the exact application callback URL:
+`https://flybrain.work/api/auth/github/callback`. The deployed callback has a
+verified `no-referrer` policy. Managed-host callback query-log redaction requires
+hosting configuration verification; application and node callback logs contain
+no OAuth code/token output.
+
+See `COMMUNITY_GITHUB.md` for routes, private configuration, privacy boundaries,
+task identities and operation. A read-only mining investigation found exhausted
+plan revision 3 with no current or pending goals and 36 historical rounds.
+`CONTINUOUS_TASK_SUPPLY_PLAN.md` records the proposed bounded, event-driven task
+pipeline. No new scientific plan, calibration, budget or mining behavior was
+activated by that investigation.
+
 ## Mining presentation and foreground depth
 
 Release `mining-depth-20261014-v2` is live at `/mining/`. Preparation and pending
