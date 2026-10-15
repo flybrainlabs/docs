@@ -190,6 +190,22 @@ editing or administrative registration-marker reset.
   timeout cannot discard it. Pause stops new commitments/activation but permits
   reveals, votes, acceptance and existing payout. Resume/Advance recover progress.
 
+The mining page offers **Continue contract task** after the finalized chain
+clock passes the verification deadline. With an empty queue, it explicitly says
+the attempt expired instead of claiming candidates are settling. The connected
+wallet confirms `Expire`; the contract retries the same descriptor within its
+frozen attempt limit or activates the supplied next catalog account. An eligible
+verified candidate instead offers `Finalize verified result`. Earlier live
+commitments retain their original reveal/verification windows. `Advance` handles
+a scheduled successor when no task is active.
+
+Recovery requires the verified personal RPC and signed-in wallet. It never
+automatically opens a wallet signature prompt, spends a new reward budget or
+changes task content. Each recovery receipt is scoped to its task and attempt;
+an ambiguous expired transaction is retained for reconciliation rather than
+blind replacement. Idle timers do not burn through the finite catalog. Local
+preparation, saved results and model caches survive recovery and cancellation.
+
 ## Money and retained compatibility
 
 Initialization reserves only an explicitly approved finite amount from the
@@ -224,6 +240,8 @@ cargo test --locked -p flybrainlabs-mining-v3
 cargo check --locked -p flypow-economy-v2-program
 node tools/build_browser.mjs
 node tests/task_factory_v4.mjs
+node tests/task_factory_recovery_v4.mjs
+node tests/factory_wallet_recovery_v4.mjs
 node tests/factory_storage_v4.mjs
 node tests/factory_gateway_v4.mjs
 node tests/product_deployment.mjs
