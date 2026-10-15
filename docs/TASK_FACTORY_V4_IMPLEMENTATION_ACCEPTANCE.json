@@ -1,7 +1,7 @@
 {
   "schema": "flybrainlabs-task-factory-v4-implementation-acceptance",
   "date": "2026-10-15",
-  "status": "implemented-and-locally-verified-public-activation-pending",
+  "status": "implemented-locally-verified-devnet-program-deployed-factory-activation-pending",
   "sbf": {
     "architecture": "v3",
     "programSha256": "606eac05dda6210fc6cfa68f677060f3545b44aa8118983a1334c44e261a33e8",
@@ -47,7 +47,8 @@
     "mainnet": false,
     "existingV3ServiceChanged": false,
     "approvedCalibratedCatalogRequired": true,
-    "actualWalletAndIndependentOperatorAcceptance": false
+    "actualWalletAndIndependentOperatorAcceptance": false,
+    "publicChainTransactionsScope": "Factory lifecycle instructions only; the Devnet program-loader upgrade is recorded separately"
   },
   "publication": {
     "sshIdentity": "flybrainlabs",
@@ -60,5 +61,14 @@
     "remotelyVerifiedComponentRepositories": 7,
     "mainMerged": false,
     "releasePinEvidence": "Infrastructure feature branch release-manifest.json and docs/TASK_FACTORY_V4_PUBLICATION.json; verified separately from implementation tests"
+  },
+  "devnetProgramDeployment": {
+    "slot": "511257144",
+    "commitment": "finalized",
+    "programSha256": "606eac05dda6210fc6cfa68f677060f3545b44aa8118983a1334c44e261a33e8",
+    "existingProgramAccountDataPreserved": 24,
+    "verifierInstalledButInactive": true,
+    "realWalletFullModelCandidateAcceptance": false,
+    "evidence": "infra/docs/TASK_FACTORY_V4_DEPLOYMENT.json"
   }
 }

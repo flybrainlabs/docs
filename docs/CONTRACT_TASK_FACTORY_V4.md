@@ -3,9 +3,10 @@
 ## Status and scope
 
 Implemented as an opt-in versioned lifecycle on 2026-10-15 and verified on an
-isolated local validator. Public Devnet/mainnet activation is pending. Existing
-V3 services, signed formats, financial grants, receipts, archives and OPFS data
-are retained. This change creates no public task, funding grant or token issue.
+isolated local validator. The existing Devnet program was upgraded at finalized
+slot `511257144`; task-factory activation is pending. Existing V3 services,
+signed formats, financial grants, receipts, archives and OPFS data are retained.
+No public V4 task, new FBW reward budget or token issue has been activated.
 
 Actual SBF acceptance is recorded by `contracts` in
 `deploy/task-factory-v4/local-sbf-acceptance.json`: 20 checks, 38 successful
@@ -29,6 +30,39 @@ unconfigured; this Git publication performs no API account operation.
 The infrastructure feature branch maintains exact component pins and a
 `docs/TASK_FACTORY_V4_PUBLICATION.json` receipt. Source publication does not merge
 `main`, activate a public factory or fund new tasks.
+
+## Devnet program deployment
+
+Program `5yxjnH1PSk8iQKfK3ejG4jfSkewkTKfcpJygojdb6sam` now contains the reviewed
+404944-byte SBPF v3 executable with SHA-256
+`606eac05dda6210fc6cfa68f677060f3545b44aa8118983a1334c44e261a33e8`.
+The intended cluster's v3 feature, existing authority and genesis were checked.
+The upgrade was simulated before sending, then its finalized bytes were read
+back. All 24 existing program-owned accounts retained their data. The preceding
+executable and private transport journals were retained outside repositories;
+the upload buffer's rent was returned. Historical V3 deployment receipts remain
+unchanged. Current evidence is `contracts/deploy/task-factory-v4/devnet-program.json`.
+
+Thirteen verifier source files were installed beside the existing original-node
+services. Their import graph and the existing complete native model hashes were
+checked. No service was restarted or V4 verifier enabled. A separate read-only
+Devnet simulation of factory initialization and first descriptor upload passed
+(737 bytes, 83593 CU); it sent no transaction and persisted no factory or budget.
+See `infra/docs/TASK_FACTORY_V4_DEPLOYMENT.json` for the combined evidence.
+
+An operator-workstation proposal contains eight distinct downstream readouts,
+excluding all 31 historical scientific identities. Each was evaluated on 20
+retained complete-model input streams, including eight held-out inputs, with
+two fixed public backgrounds. Kernel reuse is explicit and establishes neither
+new mining work nor biological accuracy. This catalog is not approved or
+registered. The proposed eight-task, eight-FBW Devnet budget requires owner
+confirmation before registration or activation.
+
+The deployed product view still selects V3. Public V4 use additionally requires
+the approved immutable catalog, finite budget, available content, configured
+verifier operators, connected-wallet transaction sender and durable artifact
+publisher. Real-wallet/full-model candidate acceptance remains pending. Source
+installation and a program upgrade do not complete those activation checks.
 
 ## Responsibilities
 

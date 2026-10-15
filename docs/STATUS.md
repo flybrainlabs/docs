@@ -705,6 +705,11 @@ entitlements with separate retryable payment. Nodes validate predefined work.
 An isolated SBF run passed 20 checks across 38 transactions (718 maximum packet
 bytes; 138409 maximum compute units). Browser and replay orchestration tests use
 explicit fixtures and do not establish new scientific or physical-wallet acceptance.
-Existing V3 data, grants and deployed services are retained. Public V4 activation,
-new calibrated tasks and finite funding remain pending. See
+The existing Devnet program was upgraded at finalized slot 511257144, and all
+24 existing program-owned account data records were preserved. The V4 verifier
+is installed but inactive on the original node; no service was restarted. A
+read-only Devnet initialization/upload simulation passed. Existing V3 data,
+grants and product UI are retained. Public V4 activation and the proposed
+eight-task/eight-FBW test budget require approval; real-wallet and complete-model
+candidate acceptance remain pending. See
 [the implementation and operation guide](CONTRACT_TASK_FACTORY_V4.md).
