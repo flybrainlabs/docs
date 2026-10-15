@@ -286,15 +286,18 @@ Frozen scheduled descriptors and paid history are cached; active tasks remain
 chain authoritative. Explicit stop or refresh retains saved artifacts and
 the model cache. Refresh does not automatically start CPU work.
 
-Release `contract-factory-v4-20261015-r5` adds personal Helius Devnet RPC settings
-to the mining console, including free-registration guidance, masked input,
-exact network/factory checks, tab storage, explicit browser persistence and a
-default reset. These preferences affect browser reads and broadcasts; node
+Release `contract-factory-v4-20261015-r6` requires a personal Helius API key
+before preparing or starting mining. The network follows the published
+deployment automatically. Settings include free-registration guidance, masked
+key input, exact network/factory checks, tab storage, explicit browser
+persistence and key removal. Missing or unavailable keys never fall back to a
+shared RPC. These preferences affect browser reads and broadcasts; node
 verification retains its separately configured connection. See
 [personal mining RPC](PERSONAL_MINING_RPC.md) for scope and actual test evidence.
 
 Deployment objects require schema `flybrainlabs-task-factory-deployment-v4`,
-explicit enablement, `localnet`/`devnet`, approved RPC URL, genesis hash, program ID,
+explicit enablement, `localnet`/`devnet`, a supplied personal connection for the
+public browser, genesis hash, program ID,
 policy hash, factory PDA/ID and catalog root. Readers check these bindings,
 ownership, discriminators, account sizes and PDAs. The active website and
 original node bind to the approved factory above. Mainnet, production payments
