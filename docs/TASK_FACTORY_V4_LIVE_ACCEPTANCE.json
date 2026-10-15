@@ -10,7 +10,7 @@
   "taskCount": 8,
   "rewardFbwPerWinner": 200,
   "budgetFbw": 1600,
-  "websiteRevision": "contract-factory-v4-20261015-r4",
+  "websiteRevision": "contract-factory-v4-20261015-r5",
   "actualPaidTasks": 2,
   "actualPaidFbw": 400,
   "scriptedWalletStandard": true,
@@ -489,5 +489,14 @@
     "completeModelCached": true,
     "preparation": "ready",
     "newOfficialModelDownloads": 0
+  },
+  "fullModelPaymentAcceptanceWebsiteRevision": "contract-factory-v4-20261015-r4",
+  "personalRpcSettings": {
+    "deployed": true,
+    "acceptance": "infra/docs/PERSONAL_MINING_RPC_V4_ACCEPTANCE.json",
+    "provider": "Helius",
+    "browserStorageOnly": true,
+    "actualPrivateProviderAcceptance": false,
+    "nodeRpcChanged": false
   }
 }

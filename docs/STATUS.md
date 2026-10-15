@@ -700,6 +700,12 @@ performed for this planning record.
 
 ## Contract task factory V4 — 2026-10-15
 
+The mining console also provides personal Helius Devnet RPC settings in release
+`contract-factory-v4-20261015-r5`, with free-signup guidance, connection checks,
+local persistence and default reset. Six SDK groups and six official-browser
+checks passed using explicit provider fixtures; actual private-provider
+acceptance still requires a valid user endpoint. See [personal mining RPC](PERSONAL_MINING_RPC.md).
+
 The versioned implementation now includes an immutable on-chain catalog, public
 advancement, ordered commit/reveal, frozen 2-of-3 replay quorum and durable
 entitlements with separate retryable payment. Nodes validate predefined work.
