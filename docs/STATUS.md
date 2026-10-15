@@ -694,3 +694,15 @@ are not funded or active. New scientific work, measured replay/archive capacity,
 verified balances and a separate verifier/operating budget remain prerequisites.
 No payment, grant change, task publication, server restart or deployment was
 performed for this planning record.
+
+## Contract task factory V4 — 2026-10-15
+
+The versioned implementation now includes an immutable on-chain catalog, public
+advancement, ordered commit/reveal, frozen 2-of-3 replay quorum and durable
+entitlements with separate retryable payment. Nodes validate predefined work.
+An isolated SBF run passed 20 checks across 38 transactions (718 maximum packet
+bytes; 138409 maximum compute units). Browser and replay orchestration tests use
+explicit fixtures and do not establish new scientific or physical-wallet acceptance.
+Existing V3 data, grants and deployed services are retained. Public V4 activation,
+new calibrated tasks and finite funding remain pending. See
+[the implementation and operation guide](CONTRACT_TASK_FACTORY_V4.md).

@@ -1,0 +1,59 @@
+{
+  "schema": "flybrainlabs-task-factory-v4-implementation-acceptance",
+  "date": "2026-10-15",
+  "status": "implemented-and-locally-verified-public-activation-pending",
+  "sbf": {
+    "architecture": "v3",
+    "programSha256": "606eac05dda6210fc6cfa68f677060f3545b44aa8118983a1334c44e261a33e8",
+    "checks": 20,
+    "successfulTransactions": 38,
+    "maxPacketBytes": 718,
+    "maxComputeUnits": 138409,
+    "evidence": "contracts/deploy/task-factory-v4/local-sbf-acceptance.json",
+    "isolatedLocalValidatorStopped": true
+  },
+  "checks": {
+    "nativeRust": {
+      "passed": true,
+      "tests": 11,
+      "includesRetainedV3Checks": true
+    },
+    "contractCheckLocked": true,
+    "sdkIntegration": {
+      "passed": true,
+      "groups": 7,
+      "nativeReplayOutcomes": "injected fixtures; not new full-model science"
+    },
+    "v4Opfs": {
+      "passed": true,
+      "groups": 3
+    },
+    "retainedV2StorageRunnerAndProtocol": true,
+    "browserBuild": true,
+    "staticExport": {
+      "passed": true,
+      "tests": 8,
+      "initialAttempt": "temporary filesystem exhausted during bulk immutable resource copy",
+      "verifiedAttempt": "workspace temporary directories with identical immutable inputs hardlinked; all checks passed",
+      "sourceResourcesModified": false
+    },
+    "sourceWhitespaceSyntaxAndCredentialPatterns": true
+  },
+  "activation": {
+    "publicChainTransactions": 0,
+    "publicTasksCreated": 0,
+    "newPublicFbwBudget": 0,
+    "productionPayments": false,
+    "mainnet": false,
+    "existingV3ServiceChanged": false,
+    "approvedCalibratedCatalogRequired": true,
+    "actualWalletAndIndependentOperatorAcceptance": false
+  },
+  "publication": {
+    "sshIdentity": "flybrainlabs",
+    "matchingApiIdentityConfigured": false,
+    "pushed": false,
+    "mainMerged": false,
+    "releasePinsChanged": false
+  }
+}
