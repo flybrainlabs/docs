@@ -23,18 +23,20 @@ historical rows and private configuration were verified unchanged. Authority,
 verifier and community process identities were retained, and all four services
 were active with zero unexpected systemd restarts during acceptance.
 
-The original node still reports 31 solved goals, zero pending or unopened goals,
+During that recorded verification, the original node reported 31 solved goals,
+zero pending or unopened goals,
 event sequence 244 and dispatcher state `waiting-approved-tasks`. No new task,
 funded stage, grant renewal or reward payment was created by deployment. An empty
 catalog still needs distinct approved calibrated work and finite finalized funding.
 This acceptance does not establish sustained mining capacity or a paid live task.
-The contract-owned successor scheduler remains unimplemented.
+Contract-owned successor scheduling is now implemented in the opt-in V4 lifecycle
+described below; public activation remains pending.
 
-Repository publication remains pending: dedicated GitHub SSH authentication is
-verified as `flybrainlabs`, but a matching authenticated API identity is unavailable.
-The `AGENTS.md` publication gate remains in force. This explicitly authorized
-server update does not mark its unpublished commit as an available pinned release;
-verified release pins remain at their last remote revisions. External public HTTP
+The dispatcher commit is included in the remotely verified source branch
+`feat/contract-task-factory-v4-20261015`. Publication used the existing dedicated
+SSH identity, authenticated as `flybrainlabs`. CLI/API authentication remains
+unconfigured and no API account operation was performed. Exact source revisions
+are recorded by the infrastructure feature branch. External public HTTP
 verification was not repeated for this update. Read-only loopback HTTP checks on
 the original node passed, including the wallet configuration endpoint.
 

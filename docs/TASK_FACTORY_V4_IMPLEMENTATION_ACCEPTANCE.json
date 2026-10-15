@@ -51,9 +51,14 @@
   },
   "publication": {
     "sshIdentity": "flybrainlabs",
+    "sshIdentityVerified": true,
+    "transport": "ssh",
     "matchingApiIdentityConfigured": false,
-    "pushed": false,
+    "apiAccountOperations": 0,
+    "branch": "feat/contract-task-factory-v4-20261015",
+    "pushed": true,
+    "remotelyVerifiedComponentRepositories": 7,
     "mainMerged": false,
-    "releasePinsChanged": false
+    "releasePinEvidence": "Infrastructure feature branch release-manifest.json and docs/TASK_FACTORY_V4_PUBLICATION.json; verified separately from implementation tests"
   }
 }

@@ -19,6 +19,17 @@ The combined verification record is
 passed using identical immutable resources via local hardlinks; an initial bulk
 copy exceeded the small temporary filesystem. No source resource was modified.
 
+## Source publication
+
+The `protocol`, `contracts`, `sdk`, `node`, `miner`, `web` and `docs` source
+branches were pushed and their remote commits checked using the dedicated
+`flybrainlabs` GitHub SSH identity. The shared branch is
+`feat/contract-task-factory-v4-20261015`. CLI/API authentication remains
+unconfigured; this Git publication performs no API account operation.
+The infrastructure feature branch maintains exact component pins and a
+`docs/TASK_FACTORY_V4_PUBLICATION.json` receipt. Source publication does not merge
+`main`, activate a public factory or fund new tasks.
+
 ## Responsibilities
 
 | Actor | Responsibility |
