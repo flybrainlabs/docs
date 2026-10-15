@@ -14,6 +14,10 @@ grant, or an activated emission schedule.
   an instruction to spend project funds. Current execution remains on Devnet.
 - Increase early rewards while preserving finite budgets, scientific uniqueness,
   and the existing node resource and verification limits.
+- On 2026-10-15 the owner removed the artificial task-speed limit. Eligible
+  approved work may advance as soon as verified results and available resources
+  permit. There is no target-time cooldown between successful tasks; Solana's
+  own block production and transaction capacity remain network properties.
 
 The start timestamp is not configured. Freeze the start and end before eligible
 participation; the phase lasts 30 consecutive 24-hour windows from that start.
@@ -97,7 +101,9 @@ much more expensive than the previous unmeasured 1,000-task/day illustration.
 
 Approximately 17,088 successful units/day implies one distinct paid winner every
 5.056 seconds on average, before considering losing candidates, full-model
-replays and archival work. Existing evidence does not establish that capacity.
+replays and archival work. This ratio is a cost illustration, not a minimum
+interval, a five-second timer, or a required completion rate. Existing evidence
+does not establish that capacity.
 Reward adjustments alone cannot ensure either this expenditure target or more
 scientific work without additional node load.
 

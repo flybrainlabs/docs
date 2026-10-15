@@ -1,6 +1,37 @@
 # Implementation and acceptance status
 
-Updated: 2026-10-14. Repository organization does not change production capability.
+Updated: 2026-10-15. Repository organization does not change production capability.
+
+## Immediate task supply events (local verification)
+
+Node commit `006b875` on `fix/immediate-task-supply-20261015` contains this
+locally verified change. It has not been published or deployed.
+
+The owner removed artificial task pacing. The local dispatcher no longer drops
+relevant signed events received within ten seconds of its previous check. It
+coalesces bursts, retains a follow-up during an in-flight check and handles
+recovered outbox events immediately. The one-minute recovery poll, finite budgets,
+verification and storage bounds, signed cursors and idempotent publication remain.
+
+The existing 27 scheduler checks, nine evaluator checks and actual loopback SSE
+regression passed. Consecutive relevant events trigger successive immediate
+checks; duplicate events do not trigger an additional one. The fixtures publish
+no production scientific task, read no chain funding and create no payment.
+
+Publication and live deployment of this update remain pending. The dedicated
+SSH identity is verified as `flybrainlabs`, but the required matching authenticated
+GitHub API identity is unavailable in the current environment. The repository
+publication gate in `AGENTS.md` still applies. Existing release pins remain at the
+last verified remote revisions. Public HTTP checks failed at the outbound proxy.
+A read-only SSH check against the original node succeeded: its installed dispatcher
+still has the ten-second filter, and its loopback authority reports
+`RESEARCH_STAGE_COMPLETE`, 31 solved goals, zero pending goals, zero unopened
+goals and event sequence 244. No task was opened by this check. The local fix is
+not evidence of an updated live dispatcher or of sustained mining capacity.
+
+This change does not implement the proposed contract-owned scheduler or activate
+a new reward stage. See [continuous supply](CONTINUOUS_TASK_SUPPLY_PLAN.md) and
+[the 30-day incentive plan](MINING_INCENTIVE_STAGE_30D_PLAN.md).
 
 ## Community page refinement with Stitch
 

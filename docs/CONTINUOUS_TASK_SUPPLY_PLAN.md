@@ -135,6 +135,44 @@ reports `waiting-finalized-budget`. Verifier and archive backpressure also remai
 distinct states. These states do not renew funding, extend stage deadlines or
 clear scientific archives.
 
+## Immediate event processing
+
+On 2026-10-15 the owner removed artificial task pacing. The local dispatcher
+update removes the ten-second elapsed-time filter on signed `ROUND_FINALIZED`,
+`ROUND_EXPIRED` and `FUTURE_PLAN_APPENDED` events. Relevant events recovered from
+the durable outbox also trigger a check immediately, rather than waiting for the
+periodic fallback. This update is locally verified; publication and deployment
+of the new dispatcher are still pending. The earlier deployment record above
+refers to `continuous-task-supply-20261014-v1`.
+
+A single evaluator coalesces event bursts and retains a follow-up when a new
+wakeup arrives during an asynchronous check. Checks and publications never run
+in parallel in this process. Signed event cursors, the persistent publication
+lease, response reconciliation and idempotent outgoing requests remain in use.
+Repeated events cannot issue the same task again. Shutdown drains an in-flight
+check before closing its database.
+
+The roughly one-minute fallback is a recovery mechanism, not a minimum task
+interval. It is not shortened, and no per-block RPC subscription is added.
+Verifier, archive, finite-funding, queue and wallet-authorization checks retain
+their existing bounds. Failed scientific searches retain their frozen retry
+policy; an unsuccessful attempt does not count as a valid result or new reward.
+No completed round, scientific identity or historical receipt is rewritten.
+
+This change removes a dispatcher delay. It does not implement the proposed
+contract-owned task scheduler: the current contract still does not open a
+successor task during settlement. That requires a versioned lifecycle extension,
+approved calibrated task sources and independently measured verification costs.
+An empty approved catalog or an exhausted finite budget still has an explicit
+waiting state. Removing a timer creates neither task content nor funding.
+
+Regression checks exercise successive real loopback SSE events within the old
+ten-second window, duplicate event suppression, burst coalescing, an event during
+an in-flight check, failure recovery and orderly shutdown. They also retain the
+isolated finite-dispatcher funding, verification, archive, signature, restart and
+lost-response checks. No production task, grant or payment is created by these
+fixtures.
+
 ## Browser continuation
 
 After explicit wallet sign-in and complete-model preparation, the primary action
