@@ -4,9 +4,12 @@
 
 Implemented as an opt-in versioned lifecycle on 2026-10-15 and verified on an
 isolated local validator. The existing Devnet program was upgraded at finalized
-slot `511257144`; task-factory activation is pending. Existing V3 services,
-signed formats, financial grants, receipts, archives and OPFS data are retained.
-No public V4 task, new FBW reward budget or token issue has been activated.
+slot `511257144`. The official website and original node now select V4 on
+Devnet. Eight reviewed task descriptors are sealed in the contract, with
+**200 FBW per winning solution and a 1,600 FBW total budget**. The first task
+was opened at finalized slot `511275308`. Historical signed formats, financial
+grants, receipts, archives and OPFS data are retained. No new token issuance or
+mainnet activation is included.
 
 Actual SBF acceptance is recorded by `contracts` in
 `deploy/task-factory-v4/local-sbf-acceptance.json`: 20 checks, 38 successful
@@ -38,31 +41,55 @@ Program `5yxjnH1PSk8iQKfK3ejG4jfSkewkTKfcpJygojdb6sam` now contains the reviewed
 `606eac05dda6210fc6cfa68f677060f3545b44aa8118983a1334c44e261a33e8`.
 The intended cluster's v3 feature, existing authority and genesis were checked.
 The upgrade was simulated before sending, then its finalized bytes were read
-back. All 24 existing program-owned accounts retained their data. The preceding
+back. At upgrade time all 24 existing program-owned accounts retained their data.
+Subsequent approved catalog registration changes the available miner-pool budget
+counter and creates V4 accounts. The preceding
 executable and private transport journals were retained outside repositories;
 the upload buffer's rent was returned. Historical V3 deployment receipts remain
 unchanged. Current evidence is `contracts/deploy/task-factory-v4/devnet-program.json`.
 
-Thirteen verifier source files were installed beside the existing original-node
-services. Their import graph and the existing complete native model hashes were
-checked. No service was restarted or V4 verifier enabled. A separate read-only
-Devnet simulation of factory initialization and first descriptor upload passed
-(737 bytes, 83593 CU); it sent no transaction and persisted no factory or budget.
-See `infra/docs/TASK_FACTORY_V4_DEPLOYMENT.json` for the combined evidence.
+The initial inactive program deployment is preserved in
+`infra/docs/TASK_FACTORY_V4_DEPLOYMENT.json`. Subsequent activation uses the
+original node and website, retaining their databases, official atlas, model and
+browser storage. The old node task generator and old verifier are disabled.
+The shared wallet gateway retains historical operations and authenticates V4
+uploads; it does not create V4 tasks or consume old rent grants.
 
-An operator-workstation proposal contains eight distinct downstream readouts,
-excluding all 31 historical scientific identities. Each was evaluated on 20
-retained complete-model input streams, including eight held-out inputs, with
-two fixed public backgrounds. Kernel reuse is explicit and establishes neither
-new mining work nor biological accuracy. This catalog is not approved or
-registered. The proposed eight-task, eight-FBW Devnet budget requires owner
-confirmation before registration or activation.
+The approved catalog contains eight distinct downstream readouts, excluding
+all 31 historical scientific identities. Each was evaluated on 20 retained
+complete-model input streams, including eight held-out inputs, using two fixed
+public backgrounds. This preparation reused retained simulation streams and is
+not new mining work or biological validation. The earlier unapproved eight-FBW
+proposal is superseded by the owner's deployment and higher-reward request.
+The approved finite catalog is identified by:
 
-The deployed product view still selects V3. Public V4 use additionally requires
-the approved immutable catalog, finite budget, available content, configured
-verifier operators, connected-wallet transaction sender and durable artifact
-publisher. Real-wallet/full-model candidate acceptance remains pending. Source
-installation and a program upgrade do not complete those activation checks.
+- Factory: `4uYEL2rErQdAUHGBggZn5dssRs95H2jHeUgXZcvhzzgL`
+- Catalog root: `586813288ec9e8cd332a3f828b776e322a854f87b39f48373a2812ebbfcfa62d`
+- Reward: `20000000000` atoms per winner (eight decimals).
+- Total budget: `160000000000` atoms from the existing Devnet miner pool.
+- Frozen claim/reveal/verification windows: 1,800 / 3,600 / 7,200 seconds.
+- Maximum attempts per task: two.
+
+The original node runs one serial native replay lane and two admitted signing
+keys under one operator. These are separate complete replays, with a frozen
+2-of-3 trusted-key quorum; they do not establish independent operators.
+
+Current public Devnet evidence is `TASK_FACTORY_V4_LIVE_ACCEPTANCE.json` and the
+infrastructure `docs/TASK_FACTORY_V4_ACTIVATION.json`. The first newly computed
+complete-model candidate passed both backgrounds, both complete node replays
+and the real wallet commit/upload/reveal flow. Two newly computed candidates each received a finalized 200 FBW payment, and
+the contract atomically opened each successor. The miner ATA increased by exactly
+400 FBW; task 3 is now active. An idle restart retained upload reservations, all
+four complete replay decisions, signed journals, content, financial identities
+and unrelated service PIDs. Finalized state and balances were unchanged after
+restart, with no duplicate payment. Intermittent public-RPC errors recovered
+during this bounded acceptance; a private upstream remains unconfigured.
+
+The acceptance controller uses known calibrated inputs to bound later runs,
+recomputing full Worker artifacts rather than reusing calibration archives.
+Task 1's passing input was found by the existing traversal. Scripted Wallet
+Standard signing occurs in a separate restricted process; private keys never
+enter Chromium. This is not wallet-extension confirmation or biological validation.
 
 ## Responsibilities
 
@@ -184,8 +211,9 @@ not automatically project revenue or irreversible fees. V3's historical
 
 The 30-day stage and aggregate 100-SOL/day miner expenditure remain planning
 targets, not funds, guaranteed demand or an FBW budget. Without successful-task
-pacing, a finite catalog/budget can finish before day 30. This work changes no
-existing reward, grant, public spending setting or emission allocation.
+pacing, a finite catalog/budget can finish before day 30. The 1,600 FBW catalog
+is a bounded development allocation, not the full 30-day emission plan. Existing
+grants and historical entitlements are preserved.
 
 ## Tools and integration
 
@@ -197,6 +225,8 @@ cargo check --locked -p flypow-economy-v2-program
 node tools/build_browser.mjs
 node tests/task_factory_v4.mjs
 node tests/factory_storage_v4.mjs
+node tests/factory_gateway_v4.mjs
+node tests/product_deployment.mjs
 ```
 
 `compile_task_catalog_v4.mjs APPROVED_PLAN.json NEW_DIRECTORY` prepares content
@@ -214,7 +244,10 @@ commit/reveal flow. The application supplies a connected wallet, standard wallet
 transaction sender and durable content publisher. Browser Solana dependencies
 are included in the generated `factory-wallet-v4.mjs` bundle. Before computing,
 the Worker checks `task-factory-deployment-v4.json` against finalized chain state.
-No enabled public V4 configuration is added; the existing V3 view remains selected.
+The public deployment explicitly selects V4. The connected wallet signs exact
+commit/reveal transactions, with original signed bytes retained in IndexedDB
+before sending. Immutable content is uploaded in bounded resumable chunks,
+authorized by the real wallet session, CSRF token and chain commitment.
 
 `FactoryContentStoreV4` supports multiple sources, finite byte limits and an
 injected authorized uploader, with hash checks and retrieval verification.
@@ -230,9 +263,33 @@ work and backs off infrastructure faults. Watch mode requires a finite
 not task pacing. Native binary, verified model, content/output directories and
 verifier key paths are private runtime inputs, never repository files.
 
+The deployed original-node unit runs `factory_service_v4.mjs` with a private
+runtime file. It serves a finalized read-only RPC allowlist, exact wallet-owned
+V4 writes and commitment-scoped artifact uploads. A wallet login plus CSRF is
+required for writes. Content is reserved against finite storage, uploaded in
+one-MiB resumable chunks and hash checked before publication. CORS explicitly
+admits the browser Solana client header. Content fetch functions retain their
+browser receiver semantics.
+
+One native child runs at a time. The service has one CPU core of quota, a
+384-MiB memory high threshold and a 512-MiB hard limit. Verifier transactions
+use persistent journals with finite fee/transaction ceilings. Payments scan
+only opened, unpaid tasks; repeated genesis checks are coalesced. The gateway and verifier share one upstream lane, a 400-ms minimum RPC gap,
+a finite 16-request queue and bounded read caching. Signed sends are never
+cached; writes invalidate cached reads. This is resource control, not a
+successful-task interval. Public RPC capacity errors remain retryable. A successful replay is never inferred from
+a transport error or missing artifact.
+
+The browser persists signed transaction bytes before sending, reconciles an
+unknown send using its original signature and resumes exact upload chunks.
+Frozen scheduled descriptors and paid history are cached; active tasks remain
+chain authoritative. Explicit stop or refresh retains saved artifacts and
+the model cache. Refresh does not automatically start CPU work.
+
 Deployment objects require schema `flybrainlabs-task-factory-deployment-v4`,
 explicit enablement, `localnet`/`devnet`, approved RPC URL, genesis hash, program ID,
 policy hash, factory PDA/ID and catalog root. Readers check these bindings,
-ownership, discriminators, account sizes and PDAs. Public activation still needs
-an approved unused calibrated catalog, available content, finite funding, actual
-verifier operators and prospective wallet/cluster acceptance.
+ownership, discriminators, account sizes and PDAs. The active website and
+original node bind to the approved factory above. Mainnet, production payments
+and formal issuance remain disabled. Extension confirmation, physical devices,
+independent operators and biological prediction accuracy require their own evidence.

@@ -29,8 +29,9 @@ event sequence 244 and dispatcher state `waiting-approved-tasks`. No new task,
 funded stage, grant renewal or reward payment was created by deployment. An empty
 catalog still needs distinct approved calibrated work and finite finalized funding.
 This acceptance does not establish sustained mining capacity or a paid live task.
-Contract-owned successor scheduling is now implemented in the opt-in V4 lifecycle
-described below; public activation remains pending.
+This is a historical acceptance of the former node dispatcher. Contract-owned
+successor scheduling has since replaced task generation on the original node;
+the current V4 deployment is described below.
 
 The dispatcher commit is included in the remotely verified source branch
 `feat/contract-task-factory-v4-20261015`. Publication used the existing dedicated
@@ -705,11 +706,22 @@ entitlements with separate retryable payment. Nodes validate predefined work.
 An isolated SBF run passed 20 checks across 38 transactions (718 maximum packet
 bytes; 138409 maximum compute units). Browser and replay orchestration tests use
 explicit fixtures and do not establish new scientific or physical-wallet acceptance.
-The existing Devnet program was upgraded at finalized slot 511257144, and all
-24 existing program-owned account data records were preserved. The V4 verifier
-is installed but inactive on the original node; no service was restarted. A
-read-only Devnet initialization/upload simulation passed. Existing V3 data,
-grants and product UI are retained. Public V4 activation and the proposed
-eight-task/eight-FBW test budget require approval; real-wallet and complete-model
-candidate acceptance remain pending. See
+The existing Devnet program was upgraded at finalized slot 511257144, preserving
+all 24 existing program-owned account data records at upgrade time. The original
+node and official website now select the approved eight-task catalog, with
+200 FBW per winner and a finite 1,600 FBW Devnet budget. The old node task
+generator and verifier are disabled; shared wallet sessions and historical V3
+data, grants and receipts are retained.
+
+Two fresh complete-model candidates passed both public backgrounds and
+two complete native node replays each. Both 200 FBW payments are finalized;
+the miner ATA increased by exactly 400 FBW and task 3 is active. An idle node
+restart retained all logical work and journals, with no duplicate payment or
+change to finalized balances. The public RPC produced intermittent 429/503
+errors during acceptance; private-provider configuration remains pending. Current evidence is
+`TASK_FACTORY_V4_LIVE_ACCEPTANCE.json`; the initial inactive installation record
+is historical. Signing uses a restricted external scripted wallet and two
+trusted verifier keys controlled by one operator. Extension confirmation,
+physical devices, independent operators and biological accuracy are unverified.
+Mainnet, formal issuance and production payments remain disabled. See
 [the implementation and operation guide](CONTRACT_TASK_FACTORY_V4.md).
