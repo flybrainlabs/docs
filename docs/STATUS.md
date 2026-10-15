@@ -2,35 +2,44 @@
 
 Updated: 2026-10-15. Repository organization does not change production capability.
 
-## Immediate task supply events (local verification)
+## Immediate task supply events (server deployment verified)
 
-Node commit `006b875` on `fix/immediate-task-supply-20261015` contains this
-locally verified change. It has not been published or deployed.
+Node commit `006b875` on `fix/immediate-task-supply-20261015` is installed on the
+original node following the owner's explicit deployment request. Its installed
+SHA-256 is `ec9c33e5602e4774369eca4eb3f85d016fdff5a2b604efdcd3daf02128b6930c`.
+Independent SSH verification at 2026-10-15 04:22:01 UTC confirmed that the ten-second
+event filter is absent and the replacement wakeup helper is present.
 
-The owner removed artificial task pacing. The local dispatcher no longer drops
-relevant signed events received within ten seconds of its previous check. It
-coalesces bursts, retains a follow-up during an in-flight check and handles
-recovered outbox events immediately. The one-minute recovery poll, finite budgets,
-verification and storage bounds, signed cursors and idempotent publication remain.
+The dispatcher processes relevant signed events immediately. It coalesces bursts,
+retains a follow-up during an in-flight check and handles recovered outbox events.
+The one-minute recovery poll, finite budgets, verification and storage bounds,
+signed cursors and idempotent publication retain their existing behavior.
 
 The existing 27 scheduler checks, nine evaluator checks and actual loopback SSE
-regression passed. Consecutive relevant events trigger successive immediate
-checks; duplicate events do not trigger an additional one. The fixtures publish
-no production scientific task, read no chain funding and create no payment.
+regression passed before deployment. The server import graph and source hash
+also passed. The scoped upgrade replaced one source and restarted only the wallet
+gateway once. Coherent SQLite backups and the previous source are retained;
+historical rows and private configuration were verified unchanged. Authority,
+verifier and community process identities were retained, and all four services
+were active with zero unexpected systemd restarts during acceptance.
 
-Publication and live deployment of this update remain pending. The dedicated
-SSH identity is verified as `flybrainlabs`, but the required matching authenticated
-GitHub API identity is unavailable in the current environment. The repository
-publication gate in `AGENTS.md` still applies. Existing release pins remain at the
-last verified remote revisions. Public HTTP checks failed at the outbound proxy.
-A read-only SSH check against the original node succeeded: its installed dispatcher
-still has the ten-second filter, and its loopback authority reports
-`RESEARCH_STAGE_COMPLETE`, 31 solved goals, zero pending goals, zero unopened
-goals and event sequence 244. No task was opened by this check. The local fix is
-not evidence of an updated live dispatcher or of sustained mining capacity.
+The original node still reports 31 solved goals, zero pending or unopened goals,
+event sequence 244 and dispatcher state `waiting-approved-tasks`. No new task,
+funded stage, grant renewal or reward payment was created by deployment. An empty
+catalog still needs distinct approved calibrated work and finite finalized funding.
+This acceptance does not establish sustained mining capacity or a paid live task.
+The contract-owned successor scheduler remains unimplemented.
 
-This change does not implement the proposed contract-owned scheduler or activate
-a new reward stage. See [continuous supply](CONTINUOUS_TASK_SUPPLY_PLAN.md) and
+Repository publication remains pending: dedicated GitHub SSH authentication is
+verified as `flybrainlabs`, but a matching authenticated API identity is unavailable.
+The `AGENTS.md` publication gate remains in force. This explicitly authorized
+server update does not mark its unpublished commit as an available pinned release;
+verified release pins remain at their last remote revisions. External public HTTP
+verification was not repeated for this update. Read-only loopback HTTP checks on
+the original node passed, including the wallet configuration endpoint.
+
+See infrastructure `docs/IMMEDIATE_TASK_SUPPLY_DEPLOYMENT.json`,
+[continuous supply](CONTINUOUS_TASK_SUPPLY_PLAN.md) and
 [the 30-day incentive plan](MINING_INCENTIVE_STAGE_30D_PLAN.md).
 
 ## Community page refinement with Stitch

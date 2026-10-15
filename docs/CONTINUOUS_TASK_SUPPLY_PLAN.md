@@ -141,9 +141,19 @@ On 2026-10-15 the owner removed artificial task pacing. The local dispatcher
 update removes the ten-second elapsed-time filter on signed `ROUND_FINALIZED`,
 `ROUND_EXPIRED` and `FUTURE_PLAN_APPENDED` events. Relevant events recovered from
 the durable outbox also trigger a check immediately, rather than waiting for the
-periodic fallback. This update is locally verified; publication and deployment
-of the new dispatcher are still pending. The earlier deployment record above
+periodic fallback. After an explicit deployment request, commit `006b875` was
+installed on the original node on 2026-10-15. The installed source hash and import
+graph, wallet HTTP health, retained historical rows, private configuration and
+unchanged authority/verifier/community process identities passed acceptance.
+Only the wallet gateway was restarted, once. The earlier deployment record above
 refers to `continuous-task-supply-20261014-v1`.
+
+This scoped server update remains unpublished in GitHub: the matching API login
+required by `AGENTS.md` is unavailable. Verified release pins retain their last
+remote revisions; an available fully pinned release is not claimed. Deployment
+acceptance is recorded in infrastructure `docs/IMMEDIATE_TASK_SUPPLY_DEPLOYMENT.json`.
+The dispatcher remains `waiting-approved-tasks` with no approved catalog or new
+funded stage. The update added no scientific task or reward allocation.
 
 A single evaluator coalesces event bursts and retains a follow-up when a new
 wakeup arrives during an asynchronous check. Checks and publications never run
