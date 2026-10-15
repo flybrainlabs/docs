@@ -1,7 +1,7 @@
 # Personal mining RPC
 
 The official mining page requires **RPC settings** before model preparation and
-mining. Release `contract-factory-v4-20261015-r6` accepts a Helius API key and
+mining. Release `contract-factory-v4-20261015-r7` accepts a Helius API key and
 selects its RPC endpoint from the published deployment. The current deployment
 uses Solana Devnet. Wallet connection remains available from the header.
 
@@ -45,6 +45,20 @@ and settlement. Personal RPC settings control this browser's chain reads and
 wallet-signed broadcasts. Content uploads and wallet login retain their
 original authenticated project routes.
 
+## Model preparation and balances
+
+After verifying a key and signing in, **Build brain model** prepares the local
+model even if a task's commitment window has closed, the catalog is paused or
+the task connection is temporarily unavailable. It validates retained data and
+loads the Worker; it does not start mining, submit a transaction or change a
+task deadline. Missing or unsuccessfully restored keys still require setup.
+
+The mining wallet's SOL and FBW balances use the same personal provider. The
+mining page does not call the legacy `/api/mining/v3/balances` route. A balance
+outage after successful login retains that login and reports the sync issue;
+it cannot turn a local build into task polling. Historical grants, unused
+deposits and earlier receipts remain available on the account page.
+
 ## Storage and privacy
 
 The default preference lasts for the current browser tab and survives reloads.
@@ -77,6 +91,11 @@ isolation, removal and cancellation of queued requests. Browser acceptance also
 checks mandatory setup, key-only input, reloads, provider outages and English /
 Chinese layouts at desktop and 390px widths. It monitors both browser mining
 RPC gateway routes to detect any shared fallback.
+
+The build regression additionally forces the legacy balances route to return
+503 and supplies a closed task window. Real Chromium must complete retained
+model validation and Worker loading during a simulated personal-provider
+outage, preserving saved candidates without downloads or chain writes.
 
 Provider responses are explicit public-account fixtures; no real Helius API key
 was supplied. Actual private-provider acceptance requires a user's valid key.
