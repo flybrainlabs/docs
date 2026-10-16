@@ -206,6 +206,14 @@ an ambiguous expired transaction is retained for reconciliation rather than
 blind replacement. Idle timers do not burn through the finite catalog. Local
 preparation, saved results and model caches survive recovery and cancellation.
 
+The V4 page and wallet transport use the same check for a matching wallet and
+an unexpired login. An expired, missing or mismatched login offers **Sign in**
+before model preparation, mining or recovery. Explicit sign-in restores the
+appropriate task action while retaining the loaded model and saved results;
+it does not request a recovery transaction signature automatically. Browser
+fixtures cover expiry and renewal. Actual wallet-extension confirmation remains
+a separate acceptance requirement.
+
 ## Money and retained compatibility
 
 Initialization reserves only an explicitly approved finite amount from the
