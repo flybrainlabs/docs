@@ -20,13 +20,14 @@ flowchart LR
   G --> A
 ```
 
-This diagram describes the selected supply design. The complete successor
-registration, discovery and switching path is **not deployed** in the current
-V4 service.
+The successor registration, signed discovery and switching path is deployed on
+the original Devnet node. The r13 website enables its pinned task-pool trust.
+The original eight-task anchor and two new 16-task catalogs retain their own
+immutable rules and accounting.
 
 ## Current behavior and concrete limits
 
-The activated catalog has eight frozen tasks. `Factory::append` accepts only a
+The original anchor catalog has eight frozen tasks. `Factory::append` accepts only a
 draft factory; a running or exhausted catalog cannot be extended. A permanent
 science marker prevents paying the same scientific task in another catalog.
 Changing a label, seed, calibration label or catalog ID does not create a new
@@ -39,8 +40,9 @@ sends on Pause, Lock, insufficient SOL, missing personal RPC or an ambiguous
 receipt. Starting during a closed claim window can enter standby without CPU
 work or another signature. Existing verification deadlines still apply.
 
-This recovery feature reopens an allowed attempt or advances an existing task.
-It does not create a new catalog or remove the eight-task limit.
+Recovery reopens an allowed attempt or advances an existing task. The separate
+pool supply service creates new approved catalogs, and the browser switches
+between them without waiting for an unrelated closed anchor window.
 
 ## Calibrated reserve prepared on 2026-10-19
 
@@ -58,11 +60,22 @@ needed because all simulation inputs matched retained complete event archives.
 These correlated simulator readouts are development calibration evidence, not
 independent biological discoveries, a large-miner load test or mined rewards.
 
-The reserve is unregistered and unfunded. Its raw events and preregistration
-evidence remain outside source repositories. Following generations must include
-all registered and previously reserved science in their historical inventory.
-An exhausted anatomical selection envelope requires a reviewed new template;
-the generator must not silently recycle goals or tune thresholds to outcomes.
+This reserve was initially unregistered and unfunded. The owner subsequently
+authorized a finite 6,400 FBW Devnet pool allocation, and its 16 descriptors now
+form the first successor catalog. Raw events and preregistration evidence remain
+outside source repositories. Following generations include all registered and
+previously reserved science in their historical inventory.
+
+The reviewed `overlapping-readouts-v1` template preregisters lexicographic
+12-cell combinations from 64 anatomically ranked cells before evaluation. It
+excludes stimulus/off-target populations and every prior scientific identity.
+Readout overlap is disclosed as correlated development work. Its first 16 goals
+each passed qualification over 20 inputs, including eight held-out inputs and
+two held-out successes, after excluding 55 historical identities. A further
+unfunded review iteration excluded all 71 preceding identities and produced a
+different qualified goal. Thresholds and simulation definitions were unchanged.
+The first 16 generated goals form the second successor catalog. Both catalogs
+are finalized and discoverable through the authority-signed manifest.
 
 ## Implemented pool source and activation boundary
 
@@ -84,15 +97,39 @@ It never automatically creates that authorization or mints funds. Calibration
 and registration pause under replay/archive backpressure. The local mining
 wallet continues without a spending budget.
 
-This source implementation has passed local queue, VM and browser acceptance. It
-is not enabled on the
-original node. Its private runtime is still unreadable to the current account.
-The website's public task-pool trust configuration also remains inactive. The
-existing single-catalog service and its frozen deadlines still apply until an
-authorized administrator completes the documented deployment gate.
+The original node now runs the persistent pool service with PostgreSQL 16,
+scoped private signer configuration and one shared native lane for calibration
+and replay. Installation, source hashes, coherent backups, service restart and
+an actual rollback to the original service followed by pool restoration were
+verified. Signed packets and existing archives were retained.
+
+## Actual Devnet acceptance
+
+A controlled SDK wallet completed fresh full-model computation and authenticated
+commit/upload/reveal in both successor catalogs. Two verifier identities each
+performed both complete native backgrounds for each candidate. Both tasks paid
+200 FBW, the controlled wallet's finalized balance increased by 400 FBW, and both
+catalogs advanced automatically to their next task. The controlled wallet paid
+9,133,360 lamports across both complete acceptance flows. This aggregate includes
+PDA rent and transaction fees; the interface obtains the current per-operation
+amounts from RPC rather than treating this aggregate as a fixed price.
+
+The original host has two logical CPUs and approximately 1 GiB of RAM. A measured
+complete native background took about 14-15 seconds with approximately 298 MiB
+of peak resident memory. Capacity for a large miner population remains
+unmeasured. Native replay, verification backpressure and disk reserve remain
+bounded.
+
+The 6,400 FBW allocation funded 32 new tasks; two were used for acceptance.
+Fully allocated project rewards pause preparation of additional catalogs while
+already funded computation and settlement continue. This project reward limit
+is separate from the mining wallet, which has no spending budget. Further reward
+authorization remains an explicit operator action.
 
 See [Factory pool operations](FACTORY_POOL_V4_OPERATIONS.md) for installation,
 finite funding, retained-data recovery and the capacity acceptance procedure.
-Full-model throughput at the target miner scale and real personal-RPC acceptance
-remain separate gates. Queue tests, VM transactions and fixture-backed browser
-checks do not establish either outcome.
+Full-model throughput at the target miner scale and real user personal-RPC browser
+acceptance remain separate gates. Browser wallet and cross-catalog Worker checks
+use explicit RPC/login fixtures. The live SDK acceptance used the retained node
+RPC and a controlled signer. External wallet extension confirmation,
+physical-device acceptance and independent operators remain separate checks.

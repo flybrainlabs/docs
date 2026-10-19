@@ -9,10 +9,11 @@ boundary. Previously saved candidates keep their original OPFS paths and reader.
 
 The source implementation is opt-in. Publishing it does not activate the node,
 fund a catalog, change the public deployment configuration, or establish native
-model throughput. The example runtime is deliberately disabled. The original
-node's private runtime remains unreadable to the current maintenance account;
-installation requires its existing authorized administrator. Do not elevate or
-try another identity to read that configuration.
+model throughput. The example runtime is deliberately disabled. On 2026-10-19
+the owner authorized scoped sudo maintenance on the original node and directed
+operation under the proposed finite 6,400 FBW Devnet allocation. Private runtime
+and signer material remain outside source and public deployment files. The
+acceptance record distinguishes staged installation from live activation.
 
 ## Components
 
@@ -97,6 +98,33 @@ catalogs available. A queued future task behind a closed claim window does not
 satisfy that requirement. Preparation/registration latency also determines when
 a still-open catalog loses sufficient runway and replenishment should start.
 
+For the original small development host, `serializeCalibrationWithReplay`
+shares one native lane between calibration and replay. Its two logical CPUs and
+approximately 1 GiB of RAM do not establish large-miner capacity. A measured
+development input required about 14-15 seconds per complete background and
+approximately 298 MiB of native peak resident memory. Two verifier identities
+still perform their own complete replays. Initial preparation and registration
+latency bounds are conservative bootstrap estimates until deployment samples
+replace them; they are not a target-scale latency measurement.
+Size the finite per-verifier transaction allowance for votes, finalization and
+payment together, including competing candidates. The original 64-transaction
+allowance cannot cover three first-verifier transactions for every winner in a
+32-task pool. The approved development runtime uses 192 transactions per verifier
+while retaining the existing 1,000,000-lamport fee ceiling per signer. Exhausted
+allowances remain explicit financial backpressure, separate from miner wallets,
+which have no spending budget.
+
+The calibration tool accepts explicit retained `cacheDir`, `modelDir`, `binary`
+and `goalFile` paths. Install the system NumPy evaluator dependency and keep the
+same pinned tool hash in private policy. The `overlapping-readouts-v1` template
+preregisters lexicographic 12-cell combinations from 64 anatomically ranked
+cells before outcome evaluation. It excludes all prior scientific identities
+and stimulus/off-target members. Overlapping readouts are correlated development
+predicates, not independent discoveries. Each admitted predicate still requires
+20 inputs, eight held-out inputs, a held-out success and a nontrivial pass rate.
+The original disjoint template remains available. Exhausted templates stop with
+an explicit code instead of repeatedly retrying an impossible proposal.
+
 Start the new service on a temporary loopback port first. Verify its database,
 native model readiness, signed manifest, content, CORS, personal-RPC browser
 flow and all pending old submissions. Select replay concurrency only after
@@ -116,6 +144,11 @@ the tested release, and publish the pinned `taskPool` trust and manifest URL in
 the website deployment. Returning users explicitly approve the pool payment
 scope after unlocking. Preserve the original service for rollback. No contract
 upgrade, mainnet activation, main merge or model download is required.
+
+When installing a public source bundle under a private maintenance umask, make
+the release directory and its public dependency directories readable and
+searchable by the service account. Keep runtime, DSN and signer files private;
+their permissions must not follow public source permissions.
 
 ## Financial recovery and backpressure
 
