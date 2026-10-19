@@ -13,14 +13,22 @@ scientific descriptors, FBW budget, model caches and saved candidates.
 3. Verify a personal Helius API key. Network selection follows the deployment;
    the activated environment remains Solana Devnet and requires test SOL.
 4. Transfer SOL to the displayed mining-wallet address. Review the live rent
-   quote and explicitly approve a finite SOL cap for the session.
+   quote and explicitly enable automatic payments. There is no spending budget.
 5. Prepare the retained model and select **Start mining**. An expired task is
    recovered under the frozen contract rules before computation begins. The
-   local wallet signs permitted mining transactions within the approved cap.
+   local wallet signs permitted mining transactions and deducts their actual
+   chain costs directly from its SOL balance.
+
+Once explicitly started, a running, unpaused session automatically finalizes
+valid candidates or expires eligible empty attempts and advances frozen tasks.
+Idle pages, paused sessions, and single-round mode do not advance the catalog.
+Queued sends check the active session before signing or sending. Unknown receipts
+pause the session instead of blindly signing another recovery transaction.
 
 Neither creating, unlocking nor funding a wallet starts computation. Reloading
-locks the wallet and requires a new payment approval. The approval expires after
-four hours. Locking stops new signatures and sends; a transaction already
+locks the wallet and requires automatic payments to be enabled again. Approval
+lasts only while the browser wallet is unlocked, with no monetary or four-hour
+limit. Locking stops new signatures and sends; a transaction already
 broadcast can still confirm. Existing ambiguous transaction receipts remain
 available for reconciliation and are not blindly replaced.
 
@@ -41,8 +49,19 @@ or network transaction fee.
 - Unused wallet SOL remains controlled by the phrase holder. A compatible Solana
   wallet can restore the same standard address to move the available balance.
 - Actual rent is queried from the selected RPC. A VM's rent amount need not
-  equal the current Devnet amount. The allowance reserves conservative costs;
-  it is not presented as a receipt for confirmed spending.
+  equal the current Devnet amount. The new-submission PDA quote is displayed;
+  network fees and optional reward token-account rent are separate costs.
+  Computation steps do not each create a PDA or consume that deposit.
+
+## Header balances
+
+On the mining page the top-right header shows finalized available SOL and FBW
+from the same personal RPC used for task state. FBW reads the wallet's associated
+token account for the frozen mint. Pending rewards are excluded; wallet balance
+is not a claim of lifetime mining profit. Unknown balances display a dash, an
+actual zero displays zero, and failed synchronization marks the retained data as
+stale with a timestamp. Existing periodic refresh also updates reward receipts.
+English/Chinese and compact navigation keep balances beside the wallet.
 
 ## Local secrets and signing scope
 
@@ -65,7 +84,10 @@ canonical instructions for this factory. It rejects arbitrary messages, SOL
 transfers, administration, unrelated accounts/programs, changed beneficiaries,
 excessive network fees, a wrong chain and unapproved spending. Associated token
 account creation is limited to this wallet and the frozen mint. Replaying a
-signed receipt reserves its cost within the current session before another send.
+signed receipt reserves its cost before another send, with duplicate receipts
+coalesced. There is no cumulative spending cap; insufficient SOL blocks a new
+transaction. Program/account/beneficiary checks and the network fee sanity
+ceiling remain enforced.
 
 The phrase and local password are never passed to RPC, the project gateway,
 Stitch, diagnostics or the Worker. A Worker receives a bounded MessagePort with
@@ -81,11 +103,14 @@ Actual Stitch outputs were generated in project `5326488884783619575`:
 | --- | --- |
 | Desktop setup and funding | `d5abdb2253f148759410924d860baf12` |
 | Mobile backup and verification | `8a1896dba71446ada8b482f66a6f1ed9` |
+| Automatic payments and header balances | `d6287f1626b040f0978495a1cc88b2a2` |
 
 Implementation adopts the numbered rail, restrained monochrome panels,
 two-column cost explanation, masked phrase grid and funding controls. Generated
 sample addresses, fixed fees, throughput, protocol labels and shared-RPC copy
-were discarded. Interface text is English/Chinese, with native labelled forms,
+were discarded. The balance refinement also discarded invented protocol
+labels, suggested funding amounts, zero-confirmation claims and shared RPC
+copy. Interface text is English/Chinese, with native labelled forms,
 explicit phrase reveal and responsive layout. Design exports contain masked
 placeholders; browser screenshots are taken before any phrase is generated.
 
