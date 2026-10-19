@@ -64,36 +64,35 @@ all registered and previously reserved science in their historical inventory.
 An exhausted anatomical selection envelope requires a reviewed new template;
 the generator must not silently recycle goals or tune thresholds to outcomes.
 
-## Required service work before activation
+## Implemented pool source and activation boundary
 
-1. Add a persistent batch dispatcher with an exclusive lease and immutable
-   request receipts. Restarting after an uncertain transaction must reconcile
-   the same catalog and signed transaction, without publishing a duplicate.
-2. Maintain a reserve ahead of observed consumption. Size it using measured
-   task completion and calibration time; a fixed count alone does not establish
-   capacity for many miners. Pause publication under replay or archive pressure.
-3. Register unique task markers and seal a successor factory before the current
-   catalog drains. Allocate only available, authorized FBW. Preserve accepted
-   unpaid rewards and close old accounting only after reconciliation.
-4. Publish a verifiable predecessor/successor relation bound to the same
-   authority, program, genesis, mint, policy and approved calibration envelope.
-   Miners must verify it from finalized chain state. A changed HTTP URL alone
-   cannot authorize another factory to spend from an unlocked wallet.
-5. Switch the browser reader, scoped signer, Worker read capability and
-   candidate store together at a safe boundary. Keep previous stores, receipts,
-   pending submissions and reward claims recoverable.
-6. Admit work according to actual verifier capacity. The current service has
-   one serial replay lane and two trusted keys under one operator. More miners
-   do not increase its throughput or establish operator independence.
-7. Verify repeated catalog rollover, multiple miners, crashes, low funds,
-   pending winners and backpressure before claiming continuous availability.
+The pool source now includes a PostgreSQL dispatcher with exclusive server-time
+leases, fencing, immutable jobs and signed transaction outboxes. Approved plans
+register and seal separate V4 factories. A signed manifest binds their authority,
+program, genesis, mint, policy, scientific envelope and frozen catalog roots.
 
-The original node returned `EACCES` when this session attempted to read its
-private runtime configuration. No privilege escalation was attempted. No node
-runtime, public catalog, contract executable or new reward budget was changed.
-Activation of the supply service remains pending an authorized maintenance path
-and the implementation and acceptance steps above. The wallet/balance UI release
-can be deployed independently with its narrower verified scope.
+The browser includes authenticated input assignments and a safe catalog switch
+that updates the reader, scoped signer, Worker capability and candidate store
+together. Previous contexts retain their archives and reconcile submissions and
+rewards. Valid candidates finalize before task expiry/retry. SSE notifications
+are hints; personal RPC remains the browser's chain authority.
 
-Miner SOL and project FBW are separate: the local mining wallet has no spending
-budget, while project reward accounting must remain solvent and prevent replay.
+The supply worker can run the exact approved calibration generator against a
+frozen complete historical inventory, validate its held-out evidence and import
+the resulting catalog within an explicit finite aggregate reward authorization.
+It never automatically creates that authorization or mints funds. Calibration
+and registration pause under replay/archive backpressure. The local mining
+wallet continues without a spending budget.
+
+This source implementation has passed local queue, VM and browser acceptance. It
+is not enabled on the
+original node. Its private runtime is still unreadable to the current account.
+The website's public task-pool trust configuration also remains inactive. The
+existing single-catalog service and its frozen deadlines still apply until an
+authorized administrator completes the documented deployment gate.
+
+See [Factory pool operations](FACTORY_POOL_V4_OPERATIONS.md) for installation,
+finite funding, retained-data recovery and the capacity acceptance procedure.
+Full-model throughput at the target miner scale and real personal-RPC acceptance
+remain separate gates. Queue tests, VM transactions and fixture-backed browser
+checks do not establish either outcome.
