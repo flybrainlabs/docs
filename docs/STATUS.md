@@ -519,30 +519,20 @@ particular user's physical Android storage.
 
 ## Current repository ownership and publication
 
-The owner selected `flybrainlabs` as both the project name and GitHub account on
-2026-10-12 and authorized recreating all ten component repositories: web, node,
-miner, explorer, protocol, contracts, sdk, infra, research and docs. Each has an
-English README, an ownership map and the English development agreement.
-See [project identity](PROJECT_IDENTITY.md) for the branding and compatibility
-policy and the infrastructure `release-manifest.json` for verified publication
-status and exact dependency revisions.
+The project identity and GitHub owner are `flybrainlabs`. The ten maintained
+components are web, node, miner, explorer, protocol, contracts, sdk, infra,
+research and docs. Each has an English README, an ownership map and the English
+development agreement. See [project identity](PROJECT_IDENTITY.md) for current
+naming and compatibility policy and the infrastructure `release-manifest.json`
+for verified publication status and exact dependency revisions.
 
-The replacement SSH key authenticates as `flybrainlabs`. CLI/API authentication
-is verified independently before repository creation. Repository access and exact
+The dedicated SSH identity authenticates as `flybrainlabs`. CLI/API authentication
+is verified independently before account operations. Repository access and exact
 remote commits must be checked even when SSH recognizes a key. Publication uses
-normal fast forwards to the new account and never falls back to a retired one.
+normal fast forwards to the maintained repositories under `flybrainlabs`.
 
-Historical deployment evidence is retained locally. Repository publication does
-not re-execute it or claim a new production deployment.
-
-### Historical migration attempt
-
-The earlier `flybrainwork` account created ten repositories and accepted four
-initial source uploads before GitHub reported an account suspension. The protocol
-upload was unconfirmed and six uploads remained unverified or pending. Those
-records describe the earlier attempt only; they are not evidence of current
-`flybrainlabs` access or publication. Source commits and verified local bundles
-were retained during the account transition.
+Deployment evidence is retained independently. Repository publication does not
+re-execute it or claim a new production deployment.
 
 ## Logo release and FBW Devnet token
 
