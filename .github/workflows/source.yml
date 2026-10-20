@@ -26,7 +26,8 @@ jobs:
           for name in filter(None,tracked):
               p=root/name
               data=p.read_bytes()
-              if p.suffix=='.md':
+              localized_handbook=p.parts[:3]==('docs','handbook','zh')
+              if p.suffix=='.md' and not localized_handbook:
                   assert not re.search('[\u3400-\u9fff]',data.decode('utf-8')), name
               assert not re.search(rb'-----BEGIN (?:OPENSSH |RSA |EC |DSA |ENCRYPTED )?PRIVATE KEY-----',data), name
               assert not re.search(rb'\bgh[pousr]_[A-Za-z0-9]{30,}\b',data), name

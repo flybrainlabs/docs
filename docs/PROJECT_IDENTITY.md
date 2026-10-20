@@ -4,10 +4,9 @@ The maintained project name and GitHub owner are both `flybrainlabs`. Use this
 exact lowercase spelling for source ownership, repository descriptions and
 contributor-facing technical explanations.
 
-The owner selected **flybrainwork** as the public website UI name on 2026-10-13.
-Website wordmarks, page titles, metadata and reader-facing product introductions
-use this name. The official website remains `https://flybrain.work/`. This display
-change does not transfer repositories or alter compatibility identifiers.
+**flybrainwork** is the public website name. Website wordmarks, page titles,
+metadata and reader-facing product introductions use this name. The official
+website is `https://flybrain.work/`.
 
 ## Maintained repositories
 
@@ -18,9 +17,7 @@ whether the source release has actually been verified remotely.
 All new documentation, commits, issues, pull requests, release notes and technical
 comments are written in English. Product interfaces remain bilingual.
 
-The official website remains `https://flybrain.work/`. The owner's separately
-specified social link remains `https://x.com/flybrainwork`. A GitHub account
-change does not select a new domain or social account.
+The official social link is `https://x.com/flybrainwork`.
 
 ## Compatibility identifiers
 
@@ -39,8 +36,8 @@ pins keep the maintained sources distinct from persistent runtime state.
 
 Use the dedicated `github-flybrainlabs` SSH alias for Git publication and an
 isolated GitHub CLI configuration that authenticates as `flybrainlabs` for account
-operations. Verify both identities separately. The retired accounts and their
-connectors are not publication targets.
+operations. Verify both identities separately. Publication targets are limited
+to the maintained repositories under `flybrainlabs`.
 
 Completed and verified updates are committed and pushed automatically using
 normal fast forwards. Preserve remote changes, skip empty commits and refresh
@@ -49,10 +46,9 @@ component and the containing infrastructure commit have been verified remotely.
 
 ## Test token naming
 
-The owner separately selected `flybrainwork` as the name of the FBW token on
-Solana Devnet. This asset name does not rename the `flybrainlabs` project or
-GitHub owner. Its supply and allocation follow the V2 model; immutable legacy
-identifiers and production FBW configuration retain their existing meanings.
+The FBW token on Solana Devnet is named `flybrainwork`. Its supply and allocation
+follow the V2 model; immutable legacy identifiers and production FBW
+configuration retain their existing meanings.
 
 ## Current public token and compact navigation
 
