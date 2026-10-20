@@ -65,8 +65,8 @@ only a live SQLite main file is not a complete backup. Retain multiple generatio
 and restore to a separate private directory first. Verify identities, winners,
 archive roots, customer tickets and public projection consistency on loopback.
 
-Repository migration does not move or erase the existing live state. The complete
-disaster-recovery drill remains a separate pending acceptance item.
+Source maintenance preserves existing live state. The complete disaster-recovery
+drill remains a separate pending acceptance item.
 
 ## Financial configuration
 

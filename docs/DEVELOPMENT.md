@@ -81,7 +81,7 @@ Do not treat a source scan as a replacement for functional tests. No changes
 means no empty commit. Remote changes must be preserved before publishing; the
 helper stops on divergence. Update `infra/release-manifest.json` to the verified
 new dependency commits and publish that infrastructure update as well. Publishing
-does not authorize merging the former draft PR or activating formal funds.
+does not authorize merging main or activating formal funds.
 
 ## English documentation and immutable inputs
 
