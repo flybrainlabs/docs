@@ -4,9 +4,19 @@
 
 This is a reviewable implementation on `feat/continuous-mining-20261021`.
 It is not accepted as a complete live mining release. The matching original
-node service has not been activated. The website overlay is staged locally.
+node service was activated on October 21 after the owner authorized privileged
+maintenance. The website overlay is staged locally.
 The full qualified-candidate handoff timeline and real personal-RPC reward
 acceptance remain required gates. V5 stays disabled.
+
+The original node passed additive schema migration with all 33 original jobs,
+49 signed transaction records and 32 scientific identities preserved. An
+authenticated controlled miner woke the independent keeper; two bounded Devnet
+expiry operations finalized and restored two funded claim windows. No new
+reward allocation or miner transaction was made. Existing new-task authorization
+remains fully allocated. The deployment evidence is
+`docs/CONTINUOUS_MINING_V4_ORIGINAL_NODE_20261021.json` in the infrastructure
+repository.
 
 The machine-readable evidence map is
 `docs/CONTINUOUS_MINING_V4_20261021_ACCEPTANCE.json` in the infrastructure
@@ -130,8 +140,16 @@ being assigned to whichever wallet is currently unlocked.
   in 399.4 seconds. Download transport was a controlled service of retained
   files matching the frozen hashes; public-network cold download remains unrun.
 - Calibration checkpoint/restart equivalence passed across 29 yielding slices
-  using retained complete-model streams. It does not establish new native-kernel
-  scheduling capacity while actual verification competes for CPU/RAM.
+  using retained complete-model streams.
+- On the original two-vCPU, approximately 1 GB node, an actual cold calibration
+  kernel yielded to a historical valid complete-model A/B replay through the
+  production native lane. Replay waited 14.7 seconds, then verified both frozen
+  trials. Observed aggregate RSS peaked at 373,132 KiB and cgroup memory,
+  including file cache, at 488,947,712 bytes. Only one native process ran. This
+  was an off-chain scheduling test; a newly submitted competing candidate still
+  needs the combined live workflow.
+- A read-only 24-hour backend observer started on October 21. Its scheduled
+  duration is not an observed full mining soak or evidence of browser rewards.
 
 These measurements establish their stated paths, not universal speed, sustained
 utilization, completed qualified multi-catalog submission, live rewards or a
