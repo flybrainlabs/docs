@@ -92,3 +92,17 @@ maintenance documentation and publication text continue to use English.
 web generator, local search, public downloads, validation and scoped publication.
 Edit the Markdown and navigation in this repository; generated HTML and browser
 assets are maintained by web. Current capabilities and future gates are explicit.
+
+## Continuous V4 mining candidate
+
+Implementation, scope and remaining acceptance gates for continuous V4 mining. The feature branch is `feat/continuous-mining-20261021`.
+
+Run from the assembled workspace with the existing pinned dependencies:
+
+```sh
+python3 tools/workspace.py assemble --working-tree
+```
+
+See `docs/CONTINUOUS_MINING_V4_20261021.md` and the infrastructure
+`docs/CONTINUOUS_MINING_V4_20261021_ACCEPTANCE.json` for evidence boundaries.
+Source publication does not establish live acceptance or activate the service.
