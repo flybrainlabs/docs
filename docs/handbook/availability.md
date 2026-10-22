@@ -1,6 +1,6 @@
 # Feature availability
 
-This page describes the documented release as of **14 October 2026**. It is a capability reference; the live mining page and public configuration determine the currently admitted task and funding state. An older successful acceptance run does not imply that the same task is still open.
+This page describes the documented release as of **22 October 2026**. It is a capability reference; the live mining page and public configuration determine the currently admitted task and funding state. An older successful acceptance run does not imply that the same task is still open.
 
 ## Published website capabilities
 
@@ -31,7 +31,7 @@ The first dedicated Result was closed after archive certification; the second re
 | Real extension wallet confirmations | Mock-wallet Chromium and scripted signing checks exist; actual extension confirmation remains pending |
 | Physical Android Chrome and GPU devices | Simulated viewport/WebGL checks exist; physical-device acceptance remains pending |
 | Low memory, higher concurrency and simultaneous compute/3D | Broader device and capacity acceptance remains pending |
-| Independent operators | Three verifier identities currently belong to one operator |
+| Validator participation | Voluntary FBW user participation under each task's published admission and evidence policy |
 | External biological validation | Authorized observations, calibration/holdout evaluation and review remain pending |
 | Full snapshot disaster recovery | Backup/restart records exist; the complete disaster-recovery drill remains pending |
 
@@ -39,7 +39,7 @@ The first dedicated Result was closed after archive certification; the second re
 
 The proposed catalog, draft price templates, migrations and read-only catalog API are implemented. Host-tested financial primitives enforce finite allowances, accounting and claims. Native service workers, real Ridge training/export, service SBF/SPL integration, finite paid API usage, settlement/refunds and historical-claim flows remain incomplete.
 
-Installable open validators, non-fixed-domain admission, staking and independent multi-operator participation are future work. Mainnet, formal production issuance and customer payment routes remain inactive. Read the [Marketplace roadmap](/docs/marketplace/) and [Economic model](/docs/economics/) for the prerequisites.
+Validation participation follows task-specific admission and evidence policies. Installation, broader admission and staking have their own release criteria. Network, asset and customer payment activation use their published configuration, approvals and funded budgets. Read the [Marketplace roadmap](/docs/marketplace/) and [Economic model](/docs/economics/) for those criteria.
 
 ## How to interpret status
 

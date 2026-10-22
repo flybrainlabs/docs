@@ -21,11 +21,11 @@ The response record, task identity and archive commitments preserve the original
 
 The documented acceptance included a fresh complete replay of deliberately corrupted response bytes. It returned INVALID_RESULT after actual execution, which is stronger evidence than manufacturing an invalid result from an infrastructure failure.
 
-## Operator trust
+## User participation and task policy
 
-The current policy uses three verifier identities with a two-of-three threshold. They are operated by **one operator**. This does not establish independent institutions, permissionless consensus or resistance to a common administrative failure.
+FBW users participate in validation voluntarily. Membership can evolve as users join or leave; each task records the admission rules, required evidence and decision policy that apply to that task.
 
-The plan includes open validator installation, independent operators and staking, but these require further implementation and acceptance. See [Feature availability](/docs/availability/).
+A participating validator maintains the registered complete model, executes every required background and signs a report bound to the task and result. Reports are checked for identity, numerical agreement and task eligibility before acceptance. See [Feature availability](/docs/availability/) for the current participation path.
 
 ## Evidence classes
 
@@ -37,7 +37,7 @@ The plan includes open validator installation, independent operators and staking
 | Finalized Solana receipt | The exact recorded financial action on the specified cluster |
 | Licensed external observation evaluation | Predictive performance within the defined scientific evaluation |
 
-A result may have strong numerical integrity while lacking external biological validation. Read its claims at the appropriate evidence level.
+Computational reproducibility describes agreement within the registered model. Evaluation against biology uses separately licensed observations, declared calibration and held-out evaluation protocols.
 
 ## Verification costs and compensation
 

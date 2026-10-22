@@ -40,11 +40,10 @@ and authorized scientific task.
 Miners commit, privately upload complete backgrounds, then reveal. Authorized
 verifiers replay every required background. The earliest still-eligible authority
 receipt sequence that ultimately verifies wins. Client clocks, upload throughput
-and verification completion order do not determine the winner. The current public
-deployment has one operator, three verification identities and a two-of-three
-threshold. This is not independent institutional validation or permissionless
-consensus. Replay does not prove a specific physical workload, minimum energy
-cost or cost-free verification.
+and verification completion order do not determine the winner. FBW users participate in validation under the admission and evidence policy
+frozen for each task. Participating workers execute the registered complete model
+and sign reports binding task identity, output and evaluation. Numerical integrity
+and measured operating cost are recorded as separate evidence.
 
 Strictly equivalent numerical optimizations may satisfy the same contract.
 Early failure retains only the genuinely completed scope. Cache reuse or a new

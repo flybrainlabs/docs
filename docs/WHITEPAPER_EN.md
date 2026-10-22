@@ -32,9 +32,8 @@ When supply is exhausted, the miner waits for new calibrated tasks.
 
 Commit, private upload and reveal precede complete replay. The earliest still-eligible
 verified authority receipt sequence wins; client clocks, upload speed and vote timing
-do not select the winner. One current operator controls three keys with a 2-of-3
-policy. This is not independent institutions or permissionless consensus. Full replay
-does not prove a hardware workload, minimum energy consumption or free verification.
+do not select the winner. Participating validators supply complete-model replay evidence under the task-specific acceptance policy. Signed reports identify the task, complete numerical output and evaluation.
+Operating cost is measured separately from numerical integrity.
 Strictly equivalent optimized implementations remain valid. Partial failures preserve
 actual completed coverage. Cached trajectories and new readouts are not newly simulated work.
 

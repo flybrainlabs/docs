@@ -8,7 +8,7 @@ Verify the expected source revision, public deployment identity and signed readi
 
 A health response proves the tested service is reachable. It does not prove complete-model computation, wallet extension compatibility or a physical-device performance claim.
 
-Current verification uses one operator with three identities. Report that arrangement accurately. Open validators and independent operation require additional implementation and real acceptance.
+Validation participants maintain separate worker identities and complete-model runtimes. Operations check model hashes, signed reports, transport health, durable task state and recovery behavior for each participant.
 
 ## Persistent state
 
@@ -38,6 +38,6 @@ Read permanent unit/intent state, actual transaction history and recipient evide
 
 ## Future funding and capacity
 
-The initial two-unit test plan is exhausted; a separate renewal stage reserved new goals. A new rewarded stage requires new calibrated goals, prospective budget reservation and reviewed admission. Measure queue/archive capacity and cost before setting operating limits.
+Each rewarded stage uses calibrated goals, prospective budget reservation and reviewed admission. Queue capacity, archive retention and measured cost determine its operating limits. The live task manifest identifies currently available work.
 
 Mainnet, production payments and formal emission remain inactive. Full operating agreements, asset identities, authorities, finite budgets, security review and actual acceptance must precede their activation.

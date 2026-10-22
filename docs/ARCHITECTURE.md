@@ -54,8 +54,9 @@ Working-tree mode is explicit and cannot be mistaken for a reproducible release.
 
 - Browser miners search frozen tasks; controlled nodes completely replay submitted
   backgrounds and determine the unique valid winner.
-- One operator with three keys is not three independent operators. Open validator
-  installation, staking and multiple operators remain future work.
+- FBW users participate in validation under task-specific admission and evidence
+  policies. Each participant runs a separate complete-model worker and signs
+  replay reports; operational identity and scientific evidence are recorded.
 - The Explorer query process reads only a public projection. It cannot read
   private candidates, salts, customer requests or signing keys.
 - Publication is explicit. Raw events, display samples and private archives are

@@ -31,7 +31,7 @@ Documentation and history reading do not automatically start a simulation. The d
 
 The authority owns durable scientific ordering, eligibility, candidate archives and winner selection. Authorized native workers replay the required backgrounds. Operator identity, model files, databases/WAL and private archives remain outside repositories and website exports.
 
-A serial replay process can use three identities on one small host. This is a resource arrangement, not evidence of three independent operators.
+Each validation participant executes a complete-model worker on its own host. Authenticated transport carries content requests and signed replay reports. Task coordination, scientific validation and financial settlement have explicit responsibilities.
 
 ## Public query boundary
 

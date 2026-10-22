@@ -40,9 +40,10 @@ The repository includes systemd and nginx examples under `deploy/target-v2/`,
 production configuration. Provide actual model paths, key locations, runtime,
 TLS, archive capacity and reviewed budgets before installation.
 
-For a small host, the serial verifier uses three identities in one process and
-replays complete backgrounds sequentially. Do not also start parallel workers
-with the same identities. This is still one operator.
+Each validation participant runs a complete-model worker with its own signing
+identity. Authenticated transport carries content and signed reports. The task
+coordinator checks numerical agreement before using the frozen settlement policy.
+Preserve existing task identities and signer allowances across deployment.
 
 ## Health, release and rollback
 
