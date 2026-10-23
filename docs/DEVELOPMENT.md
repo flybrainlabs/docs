@@ -1,8 +1,10 @@
 # Contributor and publication workflow
 
-All new or updated documentation, commit messages, pull requests, issues,
-release notes and repository descriptions are written in English. The product
-UI remains bilingual. This rule is also recorded in every `AGENTS.md`.
+Technical maintenance documentation, source code, code comments, commit messages,
+pull requests, issues, release notes and repository descriptions use English.
+Chinese is allowed in the localized handbook reading edition described below.
+Product UI translations remain product data. The documentation policy is also
+recorded in this repository's `AGENTS.md`.
 
 ## Checkout and build
 
@@ -83,17 +85,29 @@ helper stops on divergence. Update `infra/release-manifest.json` to the verified
 new dependency commits and publish that infrastructure update as well. Publishing
 does not authorize merging main or activating formal funds.
 
-## English documentation and immutable inputs
+## Documentation languages and immutable inputs
 
-Use English for explanations, examples and technical comments. Preserve immutable
-historical JSON/receipt bytes, even when a display field contains another language.
-Document their interpretation separately. User interface translation dictionaries
-are product data and remain bilingual. Do not translate a scientific object in
-place and silently change its hash.
+Use English for technical maintenance explanations, source code, code comments
+and code examples. Chinese prose is allowed in Markdown reading editions under
+`docs/handbook/zh/`, with Chinese navigation labels in
+`docs/handbook/zh/navigation.json`. This exception applies to documentation
+translations, not executable source or technical comments. Fenced code examples
+and HTML comments remain English even inside translated Markdown. Keep canonical
+section IDs, paths and protocol identifiers unchanged.
 
-Legacy document URLs and the `lang=zh` download query remain compatible aliases;
-their maintained document content is now English. UI language selection does not
-change that documentation policy.
+The source-policy check enforces the localized Markdown and navigation paths;
+placing a source file under the translated handbook directory does not exempt
+it. Other maintained text continues to use English. Secret scans apply to all
+files, including translated documentation.
+
+Preserve immutable historical JSON/receipt bytes, even when a display field
+contains another language. Document their interpretation separately. User
+interface translation dictionaries are product data and remain bilingual.
+Do not translate a scientific object in place and silently change its hash.
+
+Legacy technical-document URLs and the `lang=zh` download query remain compatible
+aliases to English technical documents. Localized handbook routes and downloads
+use the maintained Chinese reading edition.
 
 ## Local secret storage
 

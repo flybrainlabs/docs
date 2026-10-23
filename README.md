@@ -1,12 +1,13 @@
 # flybrainlabs docs
 
-English project documentation for [flybrainlabs](https://flybrain.work/).
+Project documentation for [flybrainlabs](https://flybrain.work/), with English
+technical maintenance guides and localized handbook reading editions.
 See [project identity](docs/PROJECT_IDENTITY.md) for the required project name,
 repository ownership and publication language.
 
 ## Scope
 
-Architecture, scientific and financial protocol, component ownership, contributor workflow, acceptance evidence and operations. English is the maintained documentation language; frozen numerical IDs and historical receipt formats are unchanged.
+Architecture, scientific and financial protocol, component ownership, contributor workflow, acceptance evidence and operations. Technical maintenance documentation uses English; the Chinese handbook is a localized reading edition. Frozen numerical IDs and historical receipt formats are unchanged.
 
 ## Source map
 
@@ -56,8 +57,11 @@ production funds and addresses are never substituted.
 
 ## Development policy
 
-- All maintained documentation, commit messages, issues, PRs and release notes
-  are written in English. Product interfaces may remain bilingual.
+- Technical documentation, source code, code comments, commit messages, issues,
+  PRs and release notes use English. Chinese is allowed only in localized
+  handbook prose under `docs/handbook/zh/` and its navigation translation data;
+  code examples and comments remain English. Product interfaces may remain
+  bilingual.
 - Completed, verified updates are committed and pushed automatically to
   `flybrainlabs/docs` using normal fast forwards.
 - Keys, wallets, customer inputs, node databases, private artifacts, browser

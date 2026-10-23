@@ -86,6 +86,12 @@ Actual extension and physical-device acceptance remain separate pending gates.
 The **docs** repository owns `docs/handbook/navigation.json` and the article
 Markdown files under `docs/handbook/`, including localized sources and navigation
 under `docs/handbook/zh/`. It also owns this English maintenance explanation.
+Chinese is allowed in that localized Markdown prose and its navigation labels.
+Source code, fenced code examples and technical comments, including HTML
+comments inside translated Markdown, continue to use English. The source-policy
+check limits the exception to localized Markdown and the navigation JSON; it
+does not exempt other file types placed in the translated directory.
+
 The **web** repository owns:
 
 - `tools/build_documentation.py` and pinned `tools/requirements-docs.txt`.

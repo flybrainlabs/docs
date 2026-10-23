@@ -14,8 +14,11 @@ website is `https://flybrain.work/`.
 `research` and `docs` use publication targets under
 `https://github.com/flybrainlabs`. The infrastructure release manifest records
 whether the source release has actually been verified remotely.
-All new documentation, commits, issues, pull requests, release notes and technical
-comments are written in English. Product interfaces remain bilingual.
+Technical maintenance documentation, source code, code comments, commits, issues,
+pull requests and release notes use English. Chinese prose is allowed in the
+localized Markdown handbook under `docs/handbook/zh/`, with translated labels in
+its `navigation.json`. Code examples and technical comments remain English,
+including inside translated documents. Product interfaces remain bilingual.
 
 The official social link is `https://x.com/flybrainwork`.
 
