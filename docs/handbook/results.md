@@ -1,6 +1,18 @@
 # Results and reproduction
 
-The [Result center](/results/) presents explicitly authorized scientific publications. It is separate from the Explorer's competition and financial history. A published calibration example may be useful and reproducible without being a current round winner.
+The [Results center](/results/) is a directory of nine research projects and training programs. Open a project to read its goals, method schematic, evaluation design, planned milestones and participation roles. The initial stage is **Training preparation**, with applications open; browsing or applying does not start computation.
+
+## Join a research project
+
+Connect an existing wallet and sign a login message to associate an application with your account. Choose at least one participation role and one contact channel, then confirm use of that information for project coordination. Device details are optional and self-reported. No transfer, deposit, model download or reward authorization is part of the application.
+
+The server returns an application ID, receipt time and review status after persistence. Use [My applications](/results/applications/) to revisit, edit or withdraw a record. Resubmission retains its identity and change history. If a response is interrupted, retry the pending request or inspect your applications before changing it. Switching wallets clears private drafts and receipts.
+
+Interest, applications, selection and first preference are separate. Counts represent authenticated accounts, not independently verified people. Active application counts include submitted, reviewing, waitlisted and selected records; rejected and withdrawn records are excluded. Missing statistics remain unavailable, rather than becoming zero. The community coordinates batches and device matching after review; selection itself does not launch training.
+
+## Published scientific records
+
+[Published research records](/results/publications/) retain explicitly authorized observations, evidence and reproduction packages. These are distinct from project plans and from the Explorer's competition and financial history. A reproducible calibration example does not establish a completed behavioral capability or a current round win. Historical result links and authorized downloads retain their original scientific identities.
 
 ## Read a result in order
 
