@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check component ownership and English documentation
+      - name: Check ownership, documentation languages and source safety
         run: |
           python3 - <<'PYCODE'
           import json, pathlib, re, subprocess
@@ -23,14 +23,38 @@ jobs:
               assert p.is_file() and not p.is_symlink(), source
               assert '..' not in p.parts and '.git' not in p.parts, source
           tracked=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          chinese=re.compile('[\u3400-\u9fff]')
           for name in filter(None,tracked):
               p=root/name
               data=p.read_bytes()
-              if p.suffix=='.md':
-                  assert not re.search('[\u3400-\u9fff]',data.decode('utf-8')), name
+              localized_markdown=p.suffix=='.md' and p.parts[:3]==('docs','handbook','zh')
+              localized_navigation=p.as_posix()=='docs/handbook/zh/navigation.json'
+              try:
+                  text=data.decode('utf-8')
+              except UnicodeDecodeError:
+                  assert p.suffix not in ('.md','.json'), name+': text must use UTF-8'
+                  text=''
+              if localized_markdown:
+                  for comment in re.findall(r'<!--.*?-->',text,re.S):
+                      assert not chinese.search(comment), name+': HTML comments must use English'
+                  fence=None
+                  for number,line in enumerate(text.splitlines(),1):
+                      opening=re.match(r'^[ \t]*(?:>[ \t]*)*(`{3,}|~{3,})(.*)$',line)
+                      if fence is None:
+                          if opening:
+                              assert not chinese.search(line), f'{name}:{number}: code fences must use English'
+                              fence=(opening[1][0],len(opening[1]))
+                      elif re.fullmatch(r'[ \t]*(?:>[ \t]*)*'+re.escape(fence[0])+'{'+str(fence[1])+r',}[ \t]*',line):
+                          fence=None
+                      else:
+                          assert not chinese.search(line), f'{name}:{number}: code examples and comments must use English'
+              elif localized_navigation:
+                  json.loads(text)
+              else:
+                  assert not chinese.search(text), name+': Chinese is limited to localized handbook content'
               assert not re.search(rb'-----BEGIN (?:OPENSSH |RSA |EC |DSA |ENCRYPTED )?PRIVATE KEY-----',data), name
               assert not re.search(rb'\bgh[pousr]_[A-Za-z0-9]{30,}\b',data), name
           message=subprocess.check_output(['git','log','-1','--format=%B']).decode()
           assert not re.search('[\u3400-\u9fff]',message), 'Commit messages must be English'
-          print('Component sources, documentation and commit language passed.')
+          print('Ownership, localized documentation, English code and secret checks passed.')
           PYCODE

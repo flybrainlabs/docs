@@ -27,8 +27,11 @@ repository, asset path, storage key or frozen protocol object.
 - Keep verified dependency pins and the infrastructure release manifest current.
   A release is available only after every pinned component and the containing
   infrastructure commit have been verified on the authorized remote.
-- All new or updated documentation, commit messages, PR text, issues, release
-  notes, repository descriptions and technical comments must be in English.
+- Technical maintenance documentation, source code, code comments, commit
+  messages, PR text, issues, release notes and repository descriptions must be
+  in English. Chinese is allowed in localized handbook prose under
+  `docs/handbook/zh/` and its `navigation.json` translation data. Code examples
+  and technical comments remain English, including inside translated documents.
   Product interfaces may remain bilingual; conversation may remain Chinese.
 - Each repository must contain actual component code, ownership metadata and
   correct build/test instructions. Never describe unfinished features as live.
